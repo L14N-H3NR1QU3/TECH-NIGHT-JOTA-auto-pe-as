@@ -26,12 +26,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="telaInicial" alignment="0" pref="1023" max="32767" attributes="0"/>
+          <Component id="telaInicial" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="telaInicial" alignment="1" pref="634" max="32767" attributes="0"/>
+          <Component id="telaInicial" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -60,6 +60,8 @@
                       <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="buttonCadastroFornecedor1" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
@@ -72,7 +74,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="323" max="32767" attributes="0"/>
+                          <EmptySpace pref="324" max="32767" attributes="0"/>
                           <Component id="txtTitleMenuPrincipal1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
                       </Group>
@@ -86,7 +88,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Component id="txtTitleMenuPrincipal1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtTitleMenuPrincipal1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -230,7 +235,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="245" max="32767" attributes="0"/>
+                      <EmptySpace pref="172" max="32767" attributes="0"/>
                       <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
@@ -389,6 +394,13 @@
               <Color blue="4b" green="4b" red="4b" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cadastro funcionario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel8">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Ryzen\Pictures\Screenshots\Captura de tela 2024-10-05 012830.png"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

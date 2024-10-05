@@ -48,6 +48,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         txtTitleMenuPrincipal1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         buttonCadastroFornecedor1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 600));
@@ -185,7 +186,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                     .addComponent(comboBoxCarrosAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 245, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(23, 23, 23))
         );
@@ -201,6 +202,8 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         buttonCadastroFornecedor1.setBackground(new java.awt.Color(75, 75, 75));
         buttonCadastroFornecedor1.setText("Cadastro funcionario");
 
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ryzen\\Pictures\\Screenshots\\Captura de tela 2024-10-05 012830.png")); // NOI18N
+
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);
         telaInicialLayout.setHorizontalGroup(
@@ -213,6 +216,8 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7))
                     .addComponent(buttonCadastroFornecedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonCadastroFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -222,7 +227,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(telaInicialLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 324, Short.MAX_VALUE)
                         .addComponent(txtTitleMenuPrincipal1)
                         .addGap(289, 289, 289))))
         );
@@ -232,7 +237,9 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(txtTitleMenuPrincipal1))
+                        .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtTitleMenuPrincipal1)
+                            .addComponent(jLabel8)))
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -256,11 +263,11 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(telaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, 1023, Short.MAX_VALUE)
+            .addComponent(telaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(telaInicial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
+            .addComponent(telaInicial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -331,6 +338,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel telaInicial;

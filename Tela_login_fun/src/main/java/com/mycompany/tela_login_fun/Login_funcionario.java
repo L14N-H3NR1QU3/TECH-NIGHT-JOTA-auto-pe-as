@@ -38,6 +38,7 @@ public class Login_funcionario extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         Cadastrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 600));
@@ -88,7 +89,7 @@ public class Login_funcionario extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Pictures\\Screenshots\\Captura de tela 2024-10-04 213403.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ryzen\\Pictures\\Screenshots\\Captura de tela 2024-10-05 013528.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -106,7 +107,9 @@ public class Login_funcionario extends javax.swing.JFrame {
                             .addComponent(jTextField1)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE))
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(371, 371, 371)
                         .addComponent(Nome_tela))
@@ -123,15 +126,29 @@ public class Login_funcionario extends javax.swing.JFrame {
                                     .addComponent(Senha)
                                     .addComponent(Usuario)))
                             .addComponent(Entrar))))
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jLabel1)
+                .addGap(393, 393, 393)
+                .addComponent(Entrar)
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Cadrasto_caso)
+                    .addComponent(Cadastrar))
+                .addGap(603, 603, 603)
+                .addComponent(Usuario)
+                .addGap(42, 42, 42)
+                .addComponent(Senha)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(Nome_tela)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(Nome_tela)
                         .addGap(52, 52, 52)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -143,19 +160,9 @@ public class Login_funcionario extends javax.swing.JFrame {
                                 .addComponent(Senha_U)
                                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jLabel1)))
-                .addGap(134, 134, 134)
-                .addComponent(Entrar)
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cadrasto_caso)
-                    .addComponent(Cadastrar))
-                .addGap(603, 603, 603)
-                .addComponent(Usuario)
-                .addGap(42, 42, 42)
-                .addComponent(Senha)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel2)
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -234,6 +241,7 @@ public class Login_funcionario extends javax.swing.JFrame {
     private javax.swing.JLabel Senha_U;
     private javax.swing.JLabel Usuario;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
