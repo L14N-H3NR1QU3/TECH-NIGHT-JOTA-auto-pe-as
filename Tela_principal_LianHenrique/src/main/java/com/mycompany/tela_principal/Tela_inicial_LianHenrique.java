@@ -198,8 +198,6 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         txtTitleMenuPrincipal1.setForeground(new java.awt.Color(244, 237, 237));
         txtTitleMenuPrincipal1.setText("Menu principal");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Pictures\\Screenshots\\Captura de tela 2024-10-04 211925.png")); // NOI18N
-
         buttonCadastroFornecedor1.setBackground(new java.awt.Color(75, 75, 75));
         buttonCadastroFornecedor1.setText("Cadastro funcionario");
 
