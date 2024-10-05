@@ -27,7 +27,6 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     private void initComponents() {
 
         telaInicial = new javax.swing.JPanel();
-        buttonCadastroFuncionario = new javax.swing.JButton();
         buttonCadastroFornecedor = new javax.swing.JButton();
         buttonCadastroCarro = new javax.swing.JButton();
         buttonEstoque = new javax.swing.JButton();
@@ -35,16 +34,20 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         txtTitleMenuPrincipal = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        comboBoxCarrosAgenda1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jButton2 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        comboBoxCarrosAgenda2 = new javax.swing.JComboBox<>();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        comboBoxCarrosAgenda3 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         txtTitleMenuPrincipal1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        buttonCadastroFornecedor1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 600));
@@ -52,14 +55,6 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         telaInicial.setBackground(new java.awt.Color(46, 46, 46));
         telaInicial.setForeground(new java.awt.Color(75, 75, 75));
         telaInicial.setPreferredSize(new java.awt.Dimension(1024, 600));
-
-        buttonCadastroFuncionario.setBackground(new java.awt.Color(75, 75, 75));
-        buttonCadastroFuncionario.setText("Cadastro funcionario");
-        buttonCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonCadastroFuncionarioActionPerformed(evt);
-            }
-        });
 
         buttonCadastroFornecedor.setBackground(new java.awt.Color(75, 75, 75));
         buttonCadastroFornecedor.setText("Cadastro fornecedor");
@@ -83,10 +78,6 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("hh:mm");
 
-        comboBoxCarrosAgenda1.setBackground(new java.awt.Color(75, 75, 75));
-        comboBoxCarrosAgenda1.setForeground(new java.awt.Color(75, 75, 75));
-        comboBoxCarrosAgenda1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Preferencial", "Emergencia", "Troca", "Venda", "Compra" }));
-
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setForeground(new java.awt.Color(46, 46, 46));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -95,63 +86,79 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Nome");
+        jLabel3.setText("Nome/Id");
 
         jLabel4.setText("pedido");
 
-        jRadioButton1.setText("Imediato");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton2.setText("Recente");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setBackground(new java.awt.Color(75, 75, 75));
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setForeground(new java.awt.Color(46, 46, 46));
         jButton2.setText("Pesquisa");
+
+        jLabel6.setText("Funcionario");
+
+        comboBoxCarrosAgenda2.setBackground(new java.awt.Color(255, 255, 255));
+        comboBoxCarrosAgenda2.setForeground(new java.awt.Color(75, 75, 75));
+        comboBoxCarrosAgenda2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nenhum", "Presidente", "Diretor", "Gerente", "Supervisor", "Operario" }));
+
+        jCheckBox1.setText("Preferencial");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox2.setText("Recente");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+
+        comboBoxCarrosAgenda3.setBackground(new java.awt.Color(255, 255, 255));
+        comboBoxCarrosAgenda3.setForeground(new java.awt.Color(75, 75, 75));
+        comboBoxCarrosAgenda3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nenhum", "Preferencial", "Emergencia", "Troca", "Venda", "Compra" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtTitleMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel1))
-                    .addComponent(jLabel2))
-                .addGap(40, 40, 40))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel3))
+                                .addGap(57, 57, 57)
+                                .addComponent(jTextField1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(105, 105, 105)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(comboBoxCarrosAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(comboBoxCarrosAgenda3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCheckBox1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCheckBox2))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel4))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(comboBoxCarrosAgenda1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)
-                        .addGap(259, 259, 259))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 665, Short.MAX_VALUE)
-                                .addComponent(jButton2))
-                            .addComponent(jTextField1))
-                        .addGap(40, 40, 40))))
+                                .addComponent(txtTitleMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(250, 250, 250)
+                                .addComponent(jLabel1))
+                            .addComponent(jLabel2))))
+                .addGap(40, 40, 40))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,19 +169,23 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(34, 34, 34)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBoxCarrosAgenda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
-                .addGap(36, 36, 36)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox2)
+                    .addComponent(comboBoxCarrosAgenda3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(comboBoxCarrosAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 245, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(23, 23, 23))
         );
@@ -187,6 +198,11 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         txtTitleMenuPrincipal1.setForeground(new java.awt.Color(244, 237, 237));
         txtTitleMenuPrincipal1.setText("Menu principal");
 
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Pictures\\Screenshots\\Captura de tela 2024-10-04 211925.png")); // NOI18N
+
+        buttonCadastroFornecedor1.setBackground(new java.awt.Color(75, 75, 75));
+        buttonCadastroFornecedor1.setText("Cadastro funcionario");
+
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);
         telaInicialLayout.setHorizontalGroup(
@@ -194,42 +210,48 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
             .addGroup(telaInicialLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonEstoque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonCadastroCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCadastroFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, telaInicialLayout.createSequentialGroup()
-                    .addContainerGap(509, Short.MAX_VALUE)
-                    .addComponent(txtTitleMenuPrincipal1)
-                    .addGap(276, 276, 276)))
+                    .addComponent(jButton1)
+                    .addGroup(telaInicialLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel7))
+                    .addComponent(buttonCadastroFornecedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonCadastroFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(telaInicialLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(telaInicialLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE)
+                        .addComponent(txtTitleMenuPrincipal1)
+                        .addGap(289, 289, 289))))
         );
         telaInicialLayout.setVerticalGroup(
             telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaInicialLayout.createSequentialGroup()
-                .addGap(115, 115, 115)
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(telaInicialLayout.createSequentialGroup()
-                        .addComponent(buttonCadastroFuncionario)
+                        .addGap(39, 39, 39)
+                        .addComponent(txtTitleMenuPrincipal1))
+                    .addGroup(telaInicialLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(telaInicialLayout.createSequentialGroup()
+                        .addComponent(buttonCadastroFornecedor1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(buttonCadastroFornecedor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(buttonCadastroCarro)
-                        .addGap(13, 13, 13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(buttonEstoque)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(telaInicialLayout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addComponent(txtTitleMenuPrincipal1)
-                    .addContainerGap(545, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -246,21 +268,17 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonCadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroFuncionarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonCadastroFuncionarioActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -300,19 +318,22 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastroCarro;
     private javax.swing.JButton buttonCadastroFornecedor;
-    private javax.swing.JButton buttonCadastroFuncionario;
+    private javax.swing.JButton buttonCadastroFornecedor1;
     private javax.swing.JButton buttonEstoque;
-    private javax.swing.JComboBox<String> comboBoxCarrosAgenda1;
+    private javax.swing.JComboBox<String> comboBoxCarrosAgenda2;
+    private javax.swing.JComboBox<String> comboBoxCarrosAgenda3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel telaInicial;
     private javax.swing.JLabel txtTitleMenuPrincipal;
