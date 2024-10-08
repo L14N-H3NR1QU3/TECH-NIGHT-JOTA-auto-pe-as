@@ -232,7 +232,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Pictures\\Screenshots\\Captura de tela 2024-10-04 211925.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\Imagem de perfil.png")); // NOI18N
 
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);
