@@ -4,6 +4,8 @@
  */
 package com.mycompany.tela_cad_carr;
 
+import com.mycompany.tela_principal.Tela_inicial_LianHenrique;
+
 /**
  *
  * @author p.rosa
@@ -185,6 +187,10 @@ public class Cadastro_de_carro extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        Tela_inicial_LianHenrique volta = new Tela_inicial_LianHenrique();
+        volta.setVisible(true);
+        this.dispose();
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_VoltarActionPerformed
 

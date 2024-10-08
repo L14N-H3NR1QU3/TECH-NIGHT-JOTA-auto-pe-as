@@ -4,6 +4,8 @@
  */
 package com.mycompany.tela_login_fun;
 
+import com.mycompany.cadastro_funcionario.Frame_Cadastro_Funcionario;
+
 /**
  *
  * @author p.rosa
@@ -36,11 +38,11 @@ public class Login_funcionario extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         Cadrasto_caso = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
-        Cadastrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        Cadastrar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 600));
@@ -79,21 +81,21 @@ public class Login_funcionario extends javax.swing.JFrame {
         });
 
         Cadrasto_caso.setForeground(new java.awt.Color(255, 255, 255));
-        Cadrasto_caso.setText("Se não tem um login:");
+        Cadrasto_caso.setText("Se não tem um login");
 
         jPasswordField1.setText("jPasswordField1");
-
-        Cadastrar.setForeground(new java.awt.Color(255, 0, 51));
-        Cadastrar.setText("Cadastre-se");
-        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CadastrarActionPerformed(evt);
-            }
-        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Pictures\\Screenshots\\User2.jpg")); // NOI18N
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Pictures\\Screenshots\\Captura de tela 2024-10-04 213511.png")); // NOI18N
+
+        Cadastrar.setForeground(new java.awt.Color(255, 51, 51));
+        Cadastrar.setText("Cadastrar");
+        Cadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CadastrarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -116,7 +118,7 @@ public class Login_funcionario extends javax.swing.JFrame {
                                 .addComponent(Entrar)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(Cadrasto_caso)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(Cadastrar)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,7 +165,7 @@ public class Login_funcionario extends javax.swing.JFrame {
                                         .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(75, 75, 75)
                                 .addComponent(Entrar)
-                                .addGap(49, 49, 49)
+                                .addGap(52, 52, 52)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Cadrasto_caso)
                                     .addComponent(Cadastrar)))))
@@ -204,9 +206,12 @@ public class Login_funcionario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
+    private void CadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CadastrarMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_CadastrarActionPerformed
+        Frame_Cadastro_Funcionario cadastra = new Frame_Cadastro_Funcionario();
+        cadastra.setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_CadastrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -244,7 +249,7 @@ public class Login_funcionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cadastrar;
+    private javax.swing.JLabel Cadastrar;
     private javax.swing.JLabel Cadrasto_caso;
     private javax.swing.JButton Entrar;
     private javax.swing.JLabel Nome;
