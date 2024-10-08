@@ -4,6 +4,11 @@
  */
 package com.mycompany.tela_principal;
 
+import Cadastro_Fornecedor.Cadastro_Fornecedor;
+import com.mycompany.cadastro_funcionario.Frame_Cadastro_Funcionario;
+import com.mycompany.tela_cad_carr.Cadastro_de_carro;
+import com.mycompany.tela_login_fun.Login_funcionario;
+
 /**
  *
  * @author l.silva
@@ -27,9 +32,9 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     private void initComponents() {
 
         telaInicial = new javax.swing.JPanel();
-        buttonCadastroFornecedor = new javax.swing.JButton();
-        buttonCadastroCarro = new javax.swing.JButton();
-        buttonEstoque = new javax.swing.JButton();
+        botaoCadastroFornecedor = new javax.swing.JButton();
+        botaoCadastroCarro = new javax.swing.JButton();
+        botaoEstoque = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         txtTitleMenuPrincipal = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -38,33 +43,48 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        botaoPesquisa = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         comboBoxCarrosAgenda2 = new javax.swing.JComboBox<>();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        checkBoxPreferencial = new javax.swing.JCheckBox();
+        checkBoxRecente = new javax.swing.JCheckBox();
         comboBoxCarrosAgenda3 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        botaoSaida = new javax.swing.JButton();
         txtTitleMenuPrincipal1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        buttonCadastroFornecedor1 = new javax.swing.JButton();
+        botaoCadastroFuncionario = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 600));
 
         telaInicial.setBackground(new java.awt.Color(46, 46, 46));
         telaInicial.setForeground(new java.awt.Color(75, 75, 75));
         telaInicial.setPreferredSize(new java.awt.Dimension(1024, 600));
 
-        buttonCadastroFornecedor.setBackground(new java.awt.Color(75, 75, 75));
-        buttonCadastroFornecedor.setText("Cadastro fornecedor");
+        botaoCadastroFornecedor.setBackground(new java.awt.Color(75, 75, 75));
+        botaoCadastroFornecedor.setText("Cadastro fornecedor");
+        botaoCadastroFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastroFornecedorActionPerformed(evt);
+            }
+        });
 
-        buttonCadastroCarro.setBackground(new java.awt.Color(75, 75, 75));
-        buttonCadastroCarro.setText("Cadastro carro");
+        botaoCadastroCarro.setBackground(new java.awt.Color(75, 75, 75));
+        botaoCadastroCarro.setText("Cadastro carro");
+        botaoCadastroCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastroCarroActionPerformed(evt);
+            }
+        });
 
-        buttonEstoque.setBackground(new java.awt.Color(75, 75, 75));
-        buttonEstoque.setText("Estoque");
+        botaoEstoque.setBackground(new java.awt.Color(75, 75, 75));
+        botaoEstoque.setText("Estoque");
+        botaoEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoEstoqueActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(148, 148, 148));
 
@@ -91,9 +111,9 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
 
         jLabel4.setText("pedido");
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setForeground(new java.awt.Color(46, 46, 46));
-        jButton2.setText("Pesquisa");
+        botaoPesquisa.setBackground(new java.awt.Color(255, 255, 255));
+        botaoPesquisa.setForeground(new java.awt.Color(46, 46, 46));
+        botaoPesquisa.setText("Pesquisa");
 
         jLabel6.setText("Funcionario");
 
@@ -101,17 +121,17 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         comboBoxCarrosAgenda2.setForeground(new java.awt.Color(75, 75, 75));
         comboBoxCarrosAgenda2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nenhum", "Presidente", "Diretor", "Gerente", "Supervisor", "Operario" }));
 
-        jCheckBox1.setText("Preferencial");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        checkBoxPreferencial.setText("Preferencial");
+        checkBoxPreferencial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                checkBoxPreferencialActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Recente");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        checkBoxRecente.setText("Recente");
+        checkBoxRecente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                checkBoxRecenteActionPerformed(evt);
             }
         });
 
@@ -127,7 +147,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2))
+                        .addComponent(botaoPesquisa))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,18 +159,18 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                                 .addComponent(jTextField1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel4)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(105, 105, 105)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(comboBoxCarrosAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(comboBoxCarrosAgenda3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCheckBox1)
+                                        .addComponent(checkBoxPreferencial)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCheckBox2))
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel4))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addComponent(checkBoxRecente)))
+                                .addGap(0, 333, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -177,8 +197,8 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
+                    .addComponent(checkBoxPreferencial)
+                    .addComponent(checkBoxRecente)
                     .addComponent(comboBoxCarrosAgenda3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -186,23 +206,33 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                     .addComponent(comboBoxCarrosAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
+                .addComponent(botaoPesquisa)
                 .addGap(23, 23, 23))
         );
 
-        jButton1.setBackground(new java.awt.Color(75, 75, 75));
-        jButton1.setText("Saida");
+        botaoSaida.setBackground(new java.awt.Color(75, 75, 75));
+        botaoSaida.setText("Saida");
+        botaoSaida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSaidaActionPerformed(evt);
+            }
+        });
 
         txtTitleMenuPrincipal1.setBackground(new java.awt.Color(244, 237, 237));
         txtTitleMenuPrincipal1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         txtTitleMenuPrincipal1.setForeground(new java.awt.Color(244, 237, 237));
         txtTitleMenuPrincipal1.setText("Menu principal");
 
-        buttonCadastroFornecedor1.setBackground(new java.awt.Color(75, 75, 75));
-        buttonCadastroFornecedor1.setText("Cadastro funcionario");
+        botaoCadastroFuncionario.setBackground(new java.awt.Color(75, 75, 75));
+        botaoCadastroFuncionario.setText("Cadastro funcionario");
+        botaoCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastroFuncionarioActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ryzen\\Pictures\\Screenshots\\Captura de tela 2024-10-05 012830.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Pictures\\Screenshots\\Captura de tela 2024-10-04 211925.png")); // NOI18N
 
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);
@@ -211,16 +241,18 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
             .addGroup(telaInicialLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonEstoque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCadastroCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(botaoEstoque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCadastroCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoSaida)
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7))
-                    .addComponent(buttonCadastroFornecedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCadastroFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botaoCadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCadastroFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -237,24 +269,26 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtTitleMenuPrincipal1)
-                            .addComponent(jLabel8)))
+                        .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(txtTitleMenuPrincipal1)))
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(telaInicialLayout.createSequentialGroup()
-                        .addComponent(buttonCadastroFornecedor1)
+                        .addComponent(botaoCadastroFuncionario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonCadastroFornecedor)
+                        .addComponent(botaoCadastroFornecedor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonCadastroCarro)
+                        .addComponent(botaoCadastroCarro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonEstoque)
+                        .addComponent(botaoEstoque)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(botaoSaida))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -277,13 +311,47 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void checkBoxPreferencialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPreferencialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+        
+    }//GEN-LAST:event_checkBoxPreferencialActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void checkBoxRecenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxRecenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+        
+    }//GEN-LAST:event_checkBoxRecenteActionPerformed
+
+    private void botaoCadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastroFuncionarioActionPerformed
+        // TODO add your handling code here:
+        Frame_Cadastro_Funcionario cadFun = new Frame_Cadastro_Funcionario();
+        cadFun.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoCadastroFuncionarioActionPerformed
+
+    private void botaoSaidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSaidaActionPerformed
+        // TODO add your handling code here:
+        Login_funcionario logFun = new Login_funcionario();
+        logFun.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoSaidaActionPerformed
+
+    private void botaoCadastroFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastroFornecedorActionPerformed
+        // TODO add your handling code here:
+        Cadastro_Fornecedor cadFor = new Cadastro_Fornecedor();
+        cadFor.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoCadastroFornecedorActionPerformed
+
+    private void botaoCadastroCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastroCarroActionPerformed
+        // TODO add your handling code here:
+        Cadastro_de_carro cadCar = new Cadastro_de_carro();
+        cadCar.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoCadastroCarroActionPerformed
+
+    private void botaoEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEstoqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoEstoqueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -321,16 +389,16 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonCadastroCarro;
-    private javax.swing.JButton buttonCadastroFornecedor;
-    private javax.swing.JButton buttonCadastroFornecedor1;
-    private javax.swing.JButton buttonEstoque;
+    private javax.swing.JButton botaoCadastroCarro;
+    private javax.swing.JButton botaoCadastroFornecedor;
+    private javax.swing.JButton botaoCadastroFuncionario;
+    private javax.swing.JButton botaoEstoque;
+    private javax.swing.JButton botaoPesquisa;
+    private javax.swing.JButton botaoSaida;
+    private javax.swing.JCheckBox checkBoxPreferencial;
+    private javax.swing.JCheckBox checkBoxRecente;
     private javax.swing.JComboBox<String> comboBoxCarrosAgenda2;
     private javax.swing.JComboBox<String> comboBoxCarrosAgenda3;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -339,6 +407,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel telaInicial;
