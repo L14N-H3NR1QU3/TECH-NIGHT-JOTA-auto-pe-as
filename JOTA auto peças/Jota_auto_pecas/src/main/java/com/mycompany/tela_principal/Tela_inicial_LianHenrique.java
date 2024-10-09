@@ -55,6 +55,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
         botaoCadastroFuncionario = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,16 +91,12 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
 
         txtTitleMenuPrincipal.setBackground(new java.awt.Color(244, 237, 237));
         txtTitleMenuPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtTitleMenuPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         txtTitleMenuPrincipal.setText("Pesquisa");
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("dd/mm/aaaa");
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("hh:mm");
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setForeground(new java.awt.Color(46, 46, 46));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,13 +108,11 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
 
         jLabel4.setText("pedido");
 
-        botaoPesquisa.setBackground(new java.awt.Color(255, 255, 255));
         botaoPesquisa.setForeground(new java.awt.Color(46, 46, 46));
         botaoPesquisa.setText("Pesquisa");
 
         jLabel6.setText("Funcionario");
 
-        comboBoxCarrosAgenda2.setBackground(new java.awt.Color(255, 255, 255));
         comboBoxCarrosAgenda2.setForeground(new java.awt.Color(75, 75, 75));
         comboBoxCarrosAgenda2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nenhum", "Presidente", "Diretor", "Gerente", "Supervisor", "Operario" }));
 
@@ -135,7 +130,6 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
             }
         });
 
-        comboBoxCarrosAgenda3.setBackground(new java.awt.Color(255, 255, 255));
         comboBoxCarrosAgenda3.setForeground(new java.awt.Color(75, 75, 75));
         comboBoxCarrosAgenda3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nenhum", "Preferencial", "Emergencia", "Troca", "Venda", "Compra" }));
 
@@ -206,7 +200,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                     .addComponent(comboBoxCarrosAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                 .addComponent(botaoPesquisa)
                 .addGap(23, 23, 23))
         );
@@ -232,7 +226,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\Imagem de perfil.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\Imagem de perfil.png")); // NOI18N
 
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);
@@ -250,7 +244,9 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7))
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel10))
                     .addComponent(botaoCadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoCadastroFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -271,7 +267,8 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addComponent(txtTitleMenuPrincipal1)))
+                            .addComponent(txtTitleMenuPrincipal1)
+                            .addComponent(jLabel10)))
                     .addGroup(telaInicialLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(telaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -400,6 +397,7 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboBoxCarrosAgenda2;
     private javax.swing.JComboBox<String> comboBoxCarrosAgenda3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
