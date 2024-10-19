@@ -5,6 +5,7 @@
 package com.mycompany.tela_login_fun;
 
 import com.mycompany.cadastro_funcionario.Frame_Cadastro_Funcionario;
+import com.mycompany.tela_principal.Tela_inicial_LianHenrique;
 
 /**
  *
@@ -93,12 +94,6 @@ public class Login_funcionario extends javax.swing.JFrame {
                 CadastrarMouseClicked(evt);
             }
         });
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\Imagem de perfil.png")); // NOI18N
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\User2.jpg")); // NOI18N
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\Imagem de perfil.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -199,6 +194,9 @@ public class Login_funcionario extends javax.swing.JFrame {
 
     private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // TODO add your handling code here:
+        Tela_inicial_LianHenrique volta = new Tela_inicial_LianHenrique();
+        volta.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_EntrarActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
