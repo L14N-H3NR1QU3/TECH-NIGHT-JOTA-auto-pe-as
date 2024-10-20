@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.tela_principal;
+package Tela_principal;
 
-import Cadastro_Fornecedor.Cadastro_Fornecedor;
-import com.mycompany.cadastro_funcionario.Frame_Cadastro_Funcionario;
-import com.mycompany.tela_cad_carr.Cadastro_de_carro;
-import com.mycompany.tela_login_fun.Login_funcionario;
+import Cadastro_fornecedor.Cadastro_Fornecedor;
+import Cadastro_funcionario.Frame_Cadastro_Funcionario;
+import Tela_cad_carr.Cadastro_de_carro;
+import Tela_login_fun.Login_funcionario;
 
 /**
  *
@@ -231,8 +231,6 @@ public class Tela_inicial_LianHenrique extends javax.swing.JFrame {
                 botaoCadastroFuncionarioActionPerformed(evt);
             }
         });
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\l.silva\\Desktop\\TECH_NIGHT-JOTA_auto_pecas\\imagens\\Imagem de perfil.png")); // NOI18N
 
         javax.swing.GroupLayout telaInicialLayout = new javax.swing.GroupLayout(telaInicial);
         telaInicial.setLayout(telaInicialLayout);

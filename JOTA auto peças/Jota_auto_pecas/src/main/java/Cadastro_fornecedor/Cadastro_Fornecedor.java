@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Cadastro_Fornecedor;
+package Cadastro_fornecedor;
 
 /**
  *
@@ -49,7 +49,6 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 600));
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,7 +112,6 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\f.silva\\Documents\\Sem título.jpg")); // NOI18N
         jLabel11.setText("jLabel11");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.tela_login_fun;
+package Tela_login_fun;
 
-import com.mycompany.cadastro_funcionario.Frame_Cadastro_Funcionario;
+import Cadastro_funcionario.Frame_Cadastro_Funcionario;
 
 /**
  *
@@ -45,7 +45,6 @@ public class Login_funcionario extends javax.swing.JFrame {
         Cadastrar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 600));
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
 
@@ -84,10 +83,6 @@ public class Login_funcionario extends javax.swing.JFrame {
         Cadrasto_caso.setText("Se não tem um login");
 
         jPasswordField1.setText("jPasswordField1");
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Pictures\\Screenshots\\User2.jpg")); // NOI18N
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Pictures\\Screenshots\\Captura de tela 2024-10-04 213511.png")); // NOI18N
 
         Cadastrar.setForeground(new java.awt.Color(255, 51, 51));
         Cadastrar.setText("Cadastrar");
