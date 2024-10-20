@@ -1,5 +1,5 @@
 
-import com.mycompany.tela_principal.Tela_inicial_LianHenrique;
+import Tela_principal.Tela_inicial_LianHenrique;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

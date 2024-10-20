@@ -4,12 +4,9 @@
  */
 package Tela_login_fun;
 
-<<<<<<< HEAD:JOTA auto peças/Jota_auto_pecas/src/main/java/Tela_login_fun/Login_funcionario.java
 import Cadastro_funcionario.Frame_Cadastro_Funcionario;
-=======
-import com.mycompany.cadastro_funcionario.Frame_Cadastro_Funcionario;
-import com.mycompany.tela_principal.Tela_inicial_LianHenrique;
->>>>>>> a72308501fd313d219dd1a117ad5f0f126eb8c95:JOTA auto peças/Jota_auto_pecas/src/main/java/com/mycompany/tela_login_fun/Login_funcionario.java
+import Cadastro_funcionario.Frame_Cadastro_Funcionario;
+import Tela_principal.Tela_inicial_LianHenrique;
 
 /**
  *
