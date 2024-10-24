@@ -1,3 +1,5 @@
+package Tela_mapa;
+
 
 import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 
@@ -89,7 +91,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_balcao.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_balcao.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_balcao.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_balcao.setText("Balcão");
         jpanel_balcao.add(jlbl_balcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
@@ -100,7 +101,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_parafuso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_parafuso.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_parafuso.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_parafuso.setText("Parafuso");
         jpanel_parafuso.add(jlbl_parafuso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
@@ -111,7 +111,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_chaves.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_chaves.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_chaves.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_chaves.setText("Chaves");
         jpanel_chaves.add(jlbl_chaves, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
@@ -122,7 +121,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_pneu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_pneu.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_pneu.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_pneu.setText("Pneu");
         jpanel_pneu.add(jlbl_pneu, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
 
@@ -133,7 +131,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_oleo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_oleo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_oleo.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_oleo.setText("Oleo");
         jpanel_oleo.add(jlbl_oleo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
 
@@ -144,7 +141,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_roda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_roda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_roda.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_roda.setText("Roda");
         jpanel_roda.add(jlbl_roda, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
 
@@ -155,7 +151,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_retrovisor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_retrovisor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_retrovisor.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_retrovisor.setText("Retrovisor");
         jpanel_retrovisor.add(jlbl_retrovisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
@@ -166,7 +161,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_motor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_motor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_motor.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_motor.setText("Motor");
         jpanel_motor.add(jlbl_motor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
@@ -177,7 +171,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_vela.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_vela.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_vela.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_vela.setText("Vela");
         jpanel_vela.add(jlbl_vela, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
@@ -188,7 +181,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_amortecedor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_amortecedor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_amortecedor.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_amortecedor.setText("Amortecedor");
         jpanel_amortecedor.add(jlbl_amortecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
@@ -199,7 +191,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_farol.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_farol.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_farol.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_farol.setText("Farol");
         jpanel_farol.add(jlbl_farol, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
 
@@ -210,7 +201,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_bateria.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_bateria.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_bateria.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_bateria.setText("Bateria");
         jpanel_bateria.add(jlbl_bateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
@@ -221,7 +211,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_pastilha_freio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_pastilho_freio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_pastilho_freio.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_pastilho_freio.setText("Pastilha freio");
         jpanel_pastilha_freio.add(jlbl_pastilho_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 80, -1, -1));
 
@@ -232,7 +221,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_parabrisa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_parabrisa.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_parabrisa.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_parabrisa.setText("Parabrisa");
         jpanel_parabrisa.add(jlbl_parabrisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
@@ -243,7 +231,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_cilindro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_cilindro.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_cilindro.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_cilindro.setText("Cilindro");
         jpanel_cilindro.add(jlbl_cilindro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
@@ -254,7 +241,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_disco_freio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_disco_freio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_disco_freio.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_disco_freio.setText("Disco de freio");
         jpanel_disco_freio.add(jlbl_disco_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 80, -1, -1));
 
@@ -265,7 +251,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_tensor_correia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_tensor_correia.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_tensor_correia.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_tensor_correia.setText("Tensor correia");
         jpanel_tensor_correia.add(jlbl_tensor_correia, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
 
@@ -284,7 +269,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_sair.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_sair.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_sair.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_sair.setText("Sair");
         jpanel_sair.add(jlbl_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
@@ -295,7 +279,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jpanel_volante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_volante.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_volante.setForeground(new java.awt.Color(0, 0, 0));
         jlbl_volante.setText("Volante");
         jpanel_volante.add(jlbl_volante, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
