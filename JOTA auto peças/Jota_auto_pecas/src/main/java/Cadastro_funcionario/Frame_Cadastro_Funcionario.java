@@ -57,14 +57,12 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
         jTextField28 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
 
-        jTextField11.setBackground(new java.awt.Color(255, 255, 255));
         jTextField11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(46, 46, 46));
 
-        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
         jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -134,34 +132,24 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Senha :");
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
         jTextField9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
         jTextField10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField12.setBackground(new java.awt.Color(255, 255, 255));
         jTextField12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField13.setBackground(new java.awt.Color(255, 255, 255));
         jTextField13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
         jTextField14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField16.setBackground(new java.awt.Color(255, 255, 255));
         jTextField16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField17.setBackground(new java.awt.Color(255, 255, 255));
         jTextField17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField20.setBackground(new java.awt.Color(255, 255, 255));
         jTextField20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField22.setBackground(new java.awt.Color(255, 255, 255));
         jTextField22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField28.setBackground(new java.awt.Color(255, 255, 255));
         jTextField28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton5.setBackground(new java.awt.Color(0, 0, 0));

@@ -44,7 +44,6 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jbutton_salvar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1440, 1024));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
@@ -57,12 +56,10 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jPanel1.add(jlbl_atualizao_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 100, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ID peça:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 363, -1, -1));
 
-        jfield_id_peca.setBackground(new java.awt.Color(255, 255, 255));
         jfield_id_peca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
         jfield_id_peca.setPreferredSize(new java.awt.Dimension(430, 50));
         jfield_id_peca.addActionListener(new java.awt.event.ActionListener() {
@@ -73,23 +70,19 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 385, -1, -1));
 
         jlbl_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
-        jlbl_qtd_pecas.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_qtd_pecas.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_qtd_pecas.setText("Nova quantidade de peças :");
         jPanel1.add(jlbl_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 492, -1, -1));
 
-        jfield_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
         jfield_qtd_pecas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
         jfield_qtd_pecas.setPreferredSize(new java.awt.Dimension(430, 50));
         jPanel1.add(jfield_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 502, -1, -1));
 
         jlbl_nome_peca.setBackground(new java.awt.Color(255, 255, 255));
-        jlbl_nome_peca.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_nome_peca.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_nome_peca.setText("Nome peça que foi atualizada :");
         jPanel1.add(jlbl_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 611, -1, -1));
 
-        jfield_nome_peca.setBackground(new java.awt.Color(255, 255, 255));
         jfield_nome_peca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
         jfield_nome_peca.setPreferredSize(new java.awt.Dimension(430, 50));
         jfield_nome_peca.addActionListener(new java.awt.event.ActionListener() {
