@@ -1,6 +1,5 @@
 
-import Tela_principal.Tela_inicial_LianHenrique;
-import Tela_principal.Tela_inicial_LianHenrique;
+import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
