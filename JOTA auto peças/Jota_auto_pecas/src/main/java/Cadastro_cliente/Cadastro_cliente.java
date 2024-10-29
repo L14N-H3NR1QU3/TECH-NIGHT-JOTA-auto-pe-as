@@ -4,10 +4,12 @@
  */
 package Cadastro_cliente;
 
+import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,11 +43,15 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jfield_email_cliente = new javax.swing.JTextField();
         jbutton_sair = new javax.swing.JButton();
         jbutton_cadastrar = new javax.swing.JButton();
+        jlbl_cpf = new javax.swing.JLabel();
+        jfield_cpf_cliente = new javax.swing.JTextField();
+        jlbl_data_nascimento = new javax.swing.JLabel();
+        jfield_data_nascimento = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1036, 612));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jpanel_background.setBackground(new java.awt.Color(46, 46, 46));
         jpanel_background.setPreferredSize(new java.awt.Dimension(1036, 612));
         jpanel_background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -54,33 +60,66 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jlbl_title_cadastro_cliente.setText("Cadastro de cliente");
         jpanel_background.add(jlbl_title_cadastro_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
+        jlbl_nome.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_nome.setText("Nome:");
-        jpanel_background.add(jlbl_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+        jpanel_background.add(jlbl_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
 
+        jlbl_telefone.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_telefone.setText("Telefone:");
-        jpanel_background.add(jlbl_telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
+        jpanel_background.add(jlbl_telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
 
+        jlbl_email.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_email.setText("E-mail:");
-        jpanel_background.add(jlbl_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
-        jpanel_background.add(jfield_nome_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 480, -1));
-        jpanel_background.add(jfield_telefone_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 480, -1));
-        jpanel_background.add(jfield_email_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 480, -1));
+        jpanel_background.add(jlbl_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
+        jpanel_background.add(jfield_nome_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 600, 30));
+        jpanel_background.add(jfield_telefone_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 600, 30));
+
+        jfield_email_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfield_email_clienteActionPerformed(evt);
+            }
+        });
+        jpanel_background.add(jfield_email_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 600, 30));
 
         jbutton_sair.setText("Sair");
+        jbutton_sair.setPreferredSize(new java.awt.Dimension(70, 25));
         jbutton_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbutton_sairActionPerformed(evt);
             }
         });
-        jpanel_background.add(jbutton_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, -1));
+        jpanel_background.add(jbutton_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 90, -1));
 
         jbutton_cadastrar.setText("Cadastrar");
+        jbutton_cadastrar.setPreferredSize(new java.awt.Dimension(70, 25));
         jbutton_cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbutton_cadastrarActionPerformed(evt);
             }
         });
-        jpanel_background.add(jbutton_cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
+        jpanel_background.add(jbutton_cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 450, 90, -1));
+
+        jlbl_cpf.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_cpf.setText("CPF:");
+        jpanel_background.add(jlbl_cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+
+        jfield_cpf_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfield_cpf_clienteActionPerformed(evt);
+            }
+        });
+        jpanel_background.add(jfield_cpf_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 600, 30));
+
+        jlbl_data_nascimento.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_data_nascimento.setText("Data de Nascimento:");
+        jpanel_background.add(jlbl_data_nascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
+
+        jfield_data_nascimento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfield_data_nascimentoActionPerformed(evt);
+            }
+        });
+        jpanel_background.add(jfield_data_nascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 600, 30));
 
         getContentPane().add(jpanel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -89,33 +128,74 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
     private void jbutton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_sairActionPerformed
         // TODO add your handling code here:
+        Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
+        tela_inicial.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbutton_sairActionPerformed
 
     private void jbutton_cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_cadastrarActionPerformed
         // TODO add your handling code here:
-        try {
-            Connection conexao = null;
-            PreparedStatement statement = null;
+        String cpf;
+        String telefone;
+        boolean cpf_valido;
+        boolean telefone_valido;
+        
+        cpf = jfield_cpf_cliente.getText();
+        telefone = jfield_telefone_cliente.getText();
+        
+        cpf_valido = validador_entrada(cpf, 1);
+        telefone_valido = validador_entrada(telefone, 2);
+        
+        if (cpf_valido == true && telefone_valido) {
+            try {
+                Connection conexao = null;
+                PreparedStatement statement = null;
+
+                String url = "jdbc:mysql://localhost:3306/jota_autopecas";
+                String usuario = "root";
+                String senha = "";
+
+                conexao = DriverManager.getConnection(url, usuario, senha);
+
+                String sql = "INSERT INTO cliente(nome, email, cpf, data_nasc, telefone) VALUES(?, ?, ?, ?, ?);";
+                statement = conexao.prepareStatement(sql);
+                statement.setString(1, jfield_nome_cliente.getText());
+                statement.setString(2, jfield_email_cliente.getText());
+                statement.setString(3, jfield_cpf_cliente.getText());
+                statement.setString(4, jfield_data_nascimento.getText());
+                statement.setString(5, jfield_telefone_cliente.getText());
+
+                statement.executeUpdate();
+                System.out.println("Deu certo aqui.");
             
-            String url = "jdbc:mysql://localhost:3306/jota_autopecas";
-            String usuario = "root";
-            String senha = "";
-            
-            conexao = DriverManager.getConnection(url, usuario, senha);
-            
-            String sql = "INSERT INTO cliente(nome, telefone, email) VALUES(?, ?, ?);";
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, jfield_nome_cliente.getText());
-            statement.setString(2, jfield_telefone_cliente.getText());
-            statement.setString(3, jfield_email_cliente.getText());
-            
-            statement.executeUpdate();
-            System.out.println("Deu certo aqui.");
-            
-        } catch (SQLException e) {
-            System.out.println("Deu esse erro aqui ô: " + e.getMessage());
+            } catch (SQLException e) {
+                System.out.println("Deu esse erro aqui ô: " + e.getMessage());
+            }
         }
+        else {
+            if (cpf_valido == false) {
+                JOptionPane.showMessageDialog(null, "CPF INVÁLIDO");
+            }
+            else if (telefone_valido == false) {
+                JOptionPane.showMessageDialog(null, "TELEFONE INVÁLIDO");
+            }
+        }
+        
+        
+        
     }//GEN-LAST:event_jbutton_cadastrarActionPerformed
+
+    private void jfield_cpf_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_cpf_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jfield_cpf_clienteActionPerformed
+
+    private void jfield_data_nascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_data_nascimentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jfield_data_nascimentoActionPerformed
+
+    private void jfield_email_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_email_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jfield_email_clienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,13 +231,55 @@ public class Cadastro_cliente extends javax.swing.JFrame {
             }
         });
     }
+    
+    // Valida a entrada de acordo com o tipo de input.
+    // 1 - CPF; 2 - TELEFONE
+    public static boolean validador_entrada(String num_str, int tipo) {
+        boolean e_num = false;
+        
+        /*
+        try {
+            num = Integer.parseInt(num_str);
+            validador_digitos(num_str, 11);
+            if (tipo == 1) {
+                validador_digitos(num_str, 11);
+                e_num = true;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Erro! Digite um numero.");
+            e_num = false;
+        }
+        */
+        
+        for (int i = 0; i < num_str.length(); i++) {
+            char c = num_str.charAt(i);
+            if (Character.isLetter(c)) {
+                e_num = false;
+                break;
+            }
+            else {
+                e_num = true;
+            }
+        }
+        
+        System.out.println(e_num);
+        return e_num;
+    }
+    
+    public static void validador_digitos(String num_str, int qtd) {
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jbutton_cadastrar;
     private javax.swing.JButton jbutton_sair;
+    private javax.swing.JTextField jfield_cpf_cliente;
+    private javax.swing.JTextField jfield_data_nascimento;
     private javax.swing.JTextField jfield_email_cliente;
     private javax.swing.JTextField jfield_nome_cliente;
     private javax.swing.JTextField jfield_telefone_cliente;
+    private javax.swing.JLabel jlbl_cpf;
+    private javax.swing.JLabel jlbl_data_nascimento;
     private javax.swing.JLabel jlbl_email;
     private javax.swing.JLabel jlbl_nome;
     private javax.swing.JLabel jlbl_telefone;
