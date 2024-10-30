@@ -143,8 +143,8 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         cpf = jfield_cpf_cliente.getText();
         telefone = jfield_telefone_cliente.getText();
         
-        cpf_valido = validador_entrada(cpf, 1);
-        telefone_valido = validador_entrada(telefone, 2);
+        cpf_valido = validador_entrada(cpf, 11);
+        telefone_valido = validador_entrada(telefone, 9);
         
         if (cpf_valido == true && telefone_valido) {
             try {
@@ -233,23 +233,14 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     }
     
     // Valida a entrada de acordo com o tipo de input.
-    // 1 - CPF; 2 - TELEFONE
-    public static boolean validador_entrada(String num_str, int tipo) {
+    // num_str = String a ser validada.
+    // limite = limite de digitos a ser inserido.
+    public static boolean validador_entrada(String num_str, int limite) {
         boolean e_num = false;
-        
-        /*
-        try {
-            num = Integer.parseInt(num_str);
-            validador_digitos(num_str, 11);
-            if (tipo == 1) {
-                validador_digitos(num_str, 11);
-                e_num = true;
-            }
-        } catch (NumberFormatException e) {
-            System.out.println("Erro! Digite um numero.");
-            e_num = false;
-        }
-        */
+
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna false se uma posição for letra e acaba com o código, fazendo o usuário escrever denovo.
+        // Retorna true se tudo for número e prossegue com o código. 
         
         for (int i = 0; i < num_str.length(); i++) {
             char c = num_str.charAt(i);
@@ -262,7 +253,11 @@ public class Cadastro_cliente extends javax.swing.JFrame {
             }
         }
         
-        System.out.println(e_num);
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() != limite) {
+            e_num = false;
+        }
+        
         return e_num;
     }
     
