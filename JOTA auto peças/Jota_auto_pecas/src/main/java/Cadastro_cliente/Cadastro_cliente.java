@@ -135,18 +135,27 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
     private void jbutton_cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_cadastrarActionPerformed
         // TODO add your handling code here:
+        String nome;
+        String email;
         String cpf;
         String telefone;
+   
+        boolean nome_valido;
+        boolean email_valido;
         boolean cpf_valido;
         boolean telefone_valido;
         
+        nome = jfield_nome_cliente.getText();
+        email = jfield_email_cliente.getText();
         cpf = jfield_cpf_cliente.getText();
         telefone = jfield_telefone_cliente.getText();
         
-        cpf_valido = validador_entrada(cpf, 1);
-        telefone_valido = validador_entrada(telefone, 2);
+        nome_valido = validador_entrada_str(nome, 50);
+        email_valido = validador_tamanho_texto(email, 50);
+        cpf_valido = validador_entrada_num(cpf, 11);
+        telefone_valido = validador_entrada_num(telefone, 9);
         
-        if (cpf_valido == true && telefone_valido) {
+        if (nome_valido && email_valido && cpf_valido && telefone_valido) {
             try {
                 Connection conexao = null;
                 PreparedStatement statement = null;
@@ -173,16 +182,19 @@ public class Cadastro_cliente extends javax.swing.JFrame {
             }
         }
         else {
-            if (cpf_valido == false) {
+            if (nome_valido == false) {
+                JOptionPane.showMessageDialog(null, "NOME INVÁLIDO");
+            }
+            else if (email_valido == false) {
+                JOptionPane.showMessageDialog(null, "EMAIL INVÁLIDO");
+            }
+            else if (cpf_valido == false) {
                 JOptionPane.showMessageDialog(null, "CPF INVÁLIDO");
             }
             else if (telefone_valido == false) {
                 JOptionPane.showMessageDialog(null, "TELEFONE INVÁLIDO");
             }
         }
-        
-        
-        
     }//GEN-LAST:event_jbutton_cadastrarActionPerformed
 
     private void jfield_cpf_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_cpf_clienteActionPerformed
@@ -232,42 +244,82 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         });
     }
     
-    // Valida a entrada de acordo com o tipo de input.
-    // 1 - CPF; 2 - TELEFONE
-    public static boolean validador_entrada(String num_str, int tipo) {
-        boolean e_num = false;
+    // Valida a entrada de acordo com o tamanho do input.
+    // num_str = String a ser validada.
+    // limite = limite de digitos a ser inserido.
+    public static boolean validador_tamanho_texto(String num_str, int limite) {
+        boolean tamanho;
         
-        /*
-        try {
-            num = Integer.parseInt(num_str);
-            validador_digitos(num_str, 11);
-            if (tipo == 1) {
-                validador_digitos(num_str, 11);
-                e_num = true;
-            }
-        } catch (NumberFormatException e) {
-            System.out.println("Erro! Digite um numero.");
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() > limite) {
+            tamanho = false;
+        }
+        else {
+            tamanho = true;
+        }
+        
+        System.out.println(tamanho);
+        
+        return tamanho;
+    }
+    
+    // Valida a entrada de acordo com o tipo de input.
+    // num_str = String a ser validada.
+    // limite = limite de digitos a ser inserido.
+    public static boolean validador_entrada_num(String num_str, int limite) {
+        boolean e_num = true;
+        
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() != limite) {
             e_num = false;
         }
-        */
+
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna false se uma posição for letra e acaba com o código, fazendo o usuário escrever denovo.
+        // Retorna true se for número e prossegue com o código.
         
-        for (int i = 0; i < num_str.length(); i++) {
-            char c = num_str.charAt(i);
-            if (Character.isLetter(c)) {
-                e_num = false;
-                break;
-            }
-            else {
-                e_num = true;
+        if (e_num == true) {
+            for (int i = 0; i < num_str.length(); i++) {
+                char c = num_str.charAt(i);
+                if ('0' <= c && c <= '9') {
+                    e_num = true;
+                }
+                else {
+                    e_num = false;
+                    break;
+                }
             }
         }
-        
-        System.out.println(e_num);
+
         return e_num;
     }
     
-    public static void validador_digitos(String num_str, int qtd) {
+    // Valida a entrada de acordo com o tipo de input.
+    // num_str = String a ser validada.
+    // limite = limite de digitos a ser inserido.
+    public static boolean validador_entrada_str(String num_str, int limite) {
+        boolean e_letra;
         
+        // Se e_letra for false o código não executa por completo.
+        e_letra = validador_tamanho_texto(num_str, limite);
+        
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna true se for letra e prossegue com o código. 
+        // Retorna false se for número e para o código, fazendo o usuário digitar novamente.
+        
+        for (int i = 0; i < num_str.length(); i++) {
+            char c = num_str.charAt(i);
+            if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')) {
+                e_letra = true;
+            }
+            else {
+                e_letra = false;
+                break;
+            }
+        }
+        
+        return e_letra;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
