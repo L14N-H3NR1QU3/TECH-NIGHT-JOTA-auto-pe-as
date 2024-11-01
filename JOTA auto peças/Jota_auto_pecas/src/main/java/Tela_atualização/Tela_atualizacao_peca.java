@@ -54,8 +54,8 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
 
         jlbl_atualizao_dados.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_atualizao_dados.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_atualizao_dados.setText("Atualização de dados - peça");
-        jPanel1.add(jlbl_atualizao_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
+        jlbl_atualizao_dados.setText("Atualização de dados de peça");
+        jPanel1.add(jlbl_atualizao_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

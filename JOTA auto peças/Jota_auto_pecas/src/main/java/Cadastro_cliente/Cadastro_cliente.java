@@ -58,7 +58,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jlbl_title_cadastro_cliente.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_title_cadastro_cliente.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_title_cadastro_cliente.setText("Cadastro de cliente");
-        jpanel_background.add(jlbl_title_cadastro_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
+        jpanel_background.add(jlbl_title_cadastro_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jlbl_nome.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_nome.setText("Nome:");

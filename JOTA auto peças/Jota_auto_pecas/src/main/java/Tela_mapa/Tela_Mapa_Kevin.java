@@ -33,10 +33,7 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jpanel_balcao = new javax.swing.JPanel();
         jlbl_balcao = new javax.swing.JLabel();
-        jpanel_parafuso = new javax.swing.JPanel();
-        jlbl_parafuso = new javax.swing.JLabel();
-        jpanel_chaves = new javax.swing.JPanel();
-        jlbl_chaves = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
         jpanel_pneu = new javax.swing.JPanel();
         jlbl_pneu = new javax.swing.JLabel();
         jpanel_oleo = new javax.swing.JPanel();
@@ -45,31 +42,33 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jlbl_roda = new javax.swing.JLabel();
         jpanel_retrovisor = new javax.swing.JPanel();
         jlbl_retrovisor = new javax.swing.JLabel();
+        jpanel_tensor_correia = new javax.swing.JPanel();
+        jlbl_tensor_correia = new javax.swing.JLabel();
+        jpanel_volante = new javax.swing.JPanel();
+        jlbl_volante = new javax.swing.JLabel();
+        jpanel_disco_freio = new javax.swing.JPanel();
+        jlbl_disco_freio = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jpanel_motor = new javax.swing.JPanel();
         jlbl_motor = new javax.swing.JLabel();
-        jpanel_vela = new javax.swing.JPanel();
-        jlbl_vela = new javax.swing.JLabel();
-        jpanel_amortecedor = new javax.swing.JPanel();
-        jlbl_amortecedor = new javax.swing.JLabel();
-        jpanel_farol = new javax.swing.JPanel();
-        jlbl_farol = new javax.swing.JLabel();
+        jpanel_cilindro = new javax.swing.JPanel();
+        jlbl_cilindro = new javax.swing.JLabel();
         jpanel_bateria = new javax.swing.JPanel();
         jlbl_bateria = new javax.swing.JLabel();
         jpanel_pastilha_freio = new javax.swing.JPanel();
         jlbl_pastilho_freio = new javax.swing.JLabel();
         jpanel_parabrisa = new javax.swing.JPanel();
         jlbl_parabrisa = new javax.swing.JLabel();
-        jpanel_cilindro = new javax.swing.JPanel();
-        jlbl_cilindro = new javax.swing.JLabel();
-        jpanel_disco_freio = new javax.swing.JPanel();
-        jlbl_disco_freio = new javax.swing.JLabel();
-        jpanel_tensor_correia = new javax.swing.JPanel();
-        jlbl_tensor_correia = new javax.swing.JLabel();
-        jpanel_sair = new javax.swing.JPanel();
-        jlbl_sair = new javax.swing.JLabel();
-        jpanel_volante = new javax.swing.JPanel();
-        jlbl_volante = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
+        jpanel_parafuso = new javax.swing.JPanel();
+        jlbl_parafuso = new javax.swing.JLabel();
+        jpanel_chaves = new javax.swing.JPanel();
+        jlbl_chaves = new javax.swing.JLabel();
+        jpanel_amortecedor = new javax.swing.JPanel();
+        jlbl_amortecedor = new javax.swing.JLabel();
+        jpanel_farol = new javax.swing.JPanel();
+        jlbl_farol = new javax.swing.JLabel();
+        jpanel_vela = new javax.swing.JPanel();
+        jlbl_vela = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -92,9 +91,117 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
 
         jlbl_balcao.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_balcao.setText("Balcão");
-        jpanel_balcao.add(jlbl_balcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+        jpanel_balcao.add(jlbl_balcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
-        getContentPane().add(jpanel_balcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 195, -1, -1));
+        getContentPane().add(jpanel_balcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 245, -1, 490));
+
+        jPanel20.setBackground(new java.awt.Color(46, 46, 46));
+        jPanel20.setPreferredSize(new java.awt.Dimension(1024, 600));
+
+        jpanel_pneu.setBackground(new java.awt.Color(211, 119, 61));
+        jpanel_pneu.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_pneu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_pneu.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_pneu.setText("Pneu");
+        jpanel_pneu.add(jlbl_pneu, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
+
+        jpanel_oleo.setBackground(new java.awt.Color(184, 168, 80));
+        jpanel_oleo.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_oleo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_oleo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_oleo.setText("Oleo");
+        jpanel_oleo.add(jlbl_oleo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
+
+        jpanel_roda.setBackground(new java.awt.Color(79, 178, 74));
+        jpanel_roda.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_roda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_roda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_roda.setText("Roda");
+        jpanel_roda.add(jlbl_roda, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+
+        jpanel_retrovisor.setBackground(new java.awt.Color(80, 153, 136));
+        jpanel_retrovisor.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_retrovisor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_retrovisor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_retrovisor.setText("Retrovisor");
+        jpanel_retrovisor.add(jlbl_retrovisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+
+        jpanel_tensor_correia.setBackground(new java.awt.Color(114, 255, 210));
+        jpanel_tensor_correia.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_tensor_correia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_tensor_correia.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_tensor_correia.setText("Tensor correia");
+        jpanel_tensor_correia.add(jlbl_tensor_correia, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
+
+        jpanel_volante.setBackground(new java.awt.Color(102, 173, 255));
+        jpanel_volante.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_volante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_volante.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_volante.setText("Volante");
+        jpanel_volante.add(jlbl_volante, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        jpanel_disco_freio.setBackground(new java.awt.Color(115, 122, 255));
+        jpanel_disco_freio.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_disco_freio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_disco_freio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_disco_freio.setText("Disco de freio");
+        jpanel_disco_freio.add(jlbl_disco_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jpanel_motor.setBackground(new java.awt.Color(71, 127, 167));
+        jpanel_motor.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_motor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_motor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_motor.setText("Motor");
+        jpanel_motor.add(jlbl_motor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        jpanel_cilindro.setBackground(new java.awt.Color(183, 76, 140));
+        jpanel_cilindro.setMinimumSize(new java.awt.Dimension(227, 88));
+        jpanel_cilindro.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_cilindro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_cilindro.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_cilindro.setText("Cilindro");
+        jpanel_cilindro.add(jlbl_cilindro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
+
+        jpanel_bateria.setBackground(new java.awt.Color(255, 48, 48));
+        jpanel_bateria.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_bateria.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_bateria.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_bateria.setText("Bateria");
+        jpanel_bateria.add(jlbl_bateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        jpanel_pastilha_freio.setBackground(new java.awt.Color(255, 180, 75));
+        jpanel_pastilha_freio.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_pastilha_freio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_pastilho_freio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_pastilho_freio.setText("Pastilha freio");
+        jpanel_pastilha_freio.add(jlbl_pastilho_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        jpanel_parabrisa.setBackground(new java.awt.Color(250, 255, 103));
+        jpanel_parabrisa.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_parabrisa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlbl_parabrisa.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_parabrisa.setText("Parabrisa");
+        jpanel_parabrisa.add(jlbl_parabrisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         jpanel_parafuso.setBackground(new java.awt.Color(212, 66, 66));
         jpanel_parafuso.setPreferredSize(new java.awt.Dimension(174, 148));
@@ -104,8 +211,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jlbl_parafuso.setText("Parafuso");
         jpanel_parafuso.add(jlbl_parafuso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
-        getContentPane().add(jpanel_parafuso, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 26, -1, -1));
-
         jpanel_chaves.setBackground(new java.awt.Color(113, 255, 117));
         jpanel_chaves.setPreferredSize(new java.awt.Dimension(174, 148));
         jpanel_chaves.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,77 +219,13 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jlbl_chaves.setText("Chaves");
         jpanel_chaves.add(jlbl_chaves, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
-        getContentPane().add(jpanel_chaves, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 851, -1, -1));
-
-        jpanel_pneu.setBackground(new java.awt.Color(211, 119, 61));
-        jpanel_pneu.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_pneu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_pneu.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_pneu.setText("Pneu");
-        jpanel_pneu.add(jlbl_pneu, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
-
-        getContentPane().add(jpanel_pneu, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 53, -1, -1));
-
-        jpanel_oleo.setBackground(new java.awt.Color(184, 168, 80));
-        jpanel_oleo.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_oleo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_oleo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_oleo.setText("Oleo");
-        jpanel_oleo.add(jlbl_oleo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
-
-        getContentPane().add(jpanel_oleo, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 53, -1, -1));
-
-        jpanel_roda.setBackground(new java.awt.Color(79, 178, 74));
-        jpanel_roda.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_roda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_roda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_roda.setText("Roda");
-        jpanel_roda.add(jlbl_roda, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
-
-        getContentPane().add(jpanel_roda, new org.netbeans.lib.awtextra.AbsoluteConstraints(913, 53, -1, -1));
-
-        jpanel_retrovisor.setBackground(new java.awt.Color(80, 153, 136));
-        jpanel_retrovisor.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_retrovisor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_retrovisor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_retrovisor.setText("Retrovisor");
-        jpanel_retrovisor.add(jlbl_retrovisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
-
-        getContentPane().add(jpanel_retrovisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(1182, 53, -1, -1));
-
-        jpanel_motor.setBackground(new java.awt.Color(71, 127, 167));
-        jpanel_motor.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_motor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_motor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_motor.setText("Motor");
-        jpanel_motor.add(jlbl_motor, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
-
-        getContentPane().add(jpanel_motor, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 289, -1, -1));
-
-        jpanel_vela.setBackground(new java.awt.Color(158, 85, 159));
-        jpanel_vela.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_vela.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_vela.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_vela.setText("Vela");
-        jpanel_vela.add(jlbl_vela, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
-
-        getContentPane().add(jpanel_vela, new org.netbeans.lib.awtextra.AbsoluteConstraints(1182, 289, -1, -1));
-
         jpanel_amortecedor.setBackground(new java.awt.Color(73, 87, 181));
         jpanel_amortecedor.setPreferredSize(new java.awt.Dimension(227, 215));
         jpanel_amortecedor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbl_amortecedor.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_amortecedor.setText("Amortecedor");
-        jpanel_amortecedor.add(jlbl_amortecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
-
-        getContentPane().add(jpanel_amortecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 289, -1, -1));
+        jpanel_amortecedor.add(jlbl_amortecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         jpanel_farol.setBackground(new java.awt.Color(117, 78, 195));
         jpanel_farol.setPreferredSize(new java.awt.Dimension(227, 215));
@@ -192,129 +233,105 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
 
         jlbl_farol.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlbl_farol.setText("Farol");
-        jpanel_farol.add(jlbl_farol, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
+        jpanel_farol.add(jlbl_farol, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
 
-        getContentPane().add(jpanel_farol, new org.netbeans.lib.awtextra.AbsoluteConstraints(913, 289, -1, -1));
+        jpanel_vela.setBackground(new java.awt.Color(158, 85, 159));
+        jpanel_vela.setPreferredSize(new java.awt.Dimension(227, 215));
+        jpanel_vela.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpanel_bateria.setBackground(new java.awt.Color(255, 48, 48));
-        jpanel_bateria.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_bateria.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_bateria.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_bateria.setText("Bateria");
-        jpanel_bateria.add(jlbl_bateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
-
-        getContentPane().add(jpanel_bateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 521, -1, -1));
-
-        jpanel_pastilha_freio.setBackground(new java.awt.Color(255, 180, 75));
-        jpanel_pastilha_freio.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_pastilha_freio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_pastilho_freio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_pastilho_freio.setText("Pastilha freio");
-        jpanel_pastilha_freio.add(jlbl_pastilho_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 80, -1, -1));
-
-        getContentPane().add(jpanel_pastilha_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(913, 521, -1, -1));
-
-        jpanel_parabrisa.setBackground(new java.awt.Color(250, 255, 103));
-        jpanel_parabrisa.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_parabrisa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_parabrisa.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_parabrisa.setText("Parabrisa");
-        jpanel_parabrisa.add(jlbl_parabrisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
-
-        getContentPane().add(jpanel_parabrisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(1182, 521, -1, -1));
-
-        jpanel_cilindro.setBackground(new java.awt.Color(183, 76, 140));
-        jpanel_cilindro.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_cilindro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_cilindro.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_cilindro.setText("Cilindro");
-        jpanel_cilindro.add(jlbl_cilindro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
-
-        getContentPane().add(jpanel_cilindro, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 521, -1, -1));
-
-        jpanel_disco_freio.setBackground(new java.awt.Color(115, 122, 255));
-        jpanel_disco_freio.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_disco_freio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_disco_freio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_disco_freio.setText("Disco de freio");
-        jpanel_disco_freio.add(jlbl_disco_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 80, -1, -1));
-
-        getContentPane().add(jpanel_disco_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(913, 757, -1, -1));
-
-        jpanel_tensor_correia.setBackground(new java.awt.Color(114, 255, 210));
-        jpanel_tensor_correia.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_tensor_correia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_tensor_correia.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_tensor_correia.setText("Tensor correia");
-        jpanel_tensor_correia.add(jlbl_tensor_correia, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        getContentPane().add(jpanel_tensor_correia, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 757, -1, -1));
-
-        jpanel_sair.setBackground(new java.awt.Color(255, 0, 0));
-        jpanel_sair.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_sair.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jpanel_sairMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jpanel_sairMouseEntered(evt);
-            }
-        });
-        jpanel_sair.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_sair.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_sair.setText("Sair");
-        jpanel_sair.add(jlbl_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
-
-        getContentPane().add(jpanel_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(1182, 757, -1, -1));
-
-        jpanel_volante.setBackground(new java.awt.Color(102, 173, 255));
-        jpanel_volante.setPreferredSize(new java.awt.Dimension(227, 215));
-        jpanel_volante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbl_volante.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_volante.setText("Volante");
-        jpanel_volante.add(jlbl_volante, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
-
-        getContentPane().add(jpanel_volante, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 757, -1, -1));
-
-        jPanel20.setBackground(new java.awt.Color(46, 46, 46));
-        jPanel20.setPreferredSize(new java.awt.Dimension(1440, 1024));
+        jlbl_vela.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlbl_vela.setText("Vela");
+        jpanel_vela.add(jlbl_vela, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGap(163, 163, 163)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpanel_cilindro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_motor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jpanel_chaves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanel_parafuso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jpanel_pneu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanel_tensor_correia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpanel_oleo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_volante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_bateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_amortecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jpanel_roda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_disco_freio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_pastilha_freio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_farol, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpanel_retrovisor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_parabrisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_vela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1024, Short.MAX_VALUE)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jpanel_parafuso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jpanel_pneu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanel_oleo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanel_roda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanel_retrovisor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(78, 78, 78)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpanel_motor, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_amortecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_farol, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_vela, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(92, 92, 92)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpanel_cilindro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_pastilha_freio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_parabrisa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpanel_bateria, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                        .addComponent(jpanel_chaves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(123, 123, 123))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jpanel_tensor_correia, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanel_volante, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jpanel_disco_freio, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())))
         );
 
-        getContentPane().add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 1024));
+        getContentPane().add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 4, 1440, 1020));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jpanel_sairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel_sairMouseClicked
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
         tela_inicial.setVisible(true);
         this.dispose();
-        
-        
-    }//GEN-LAST:event_jpanel_sairMouseClicked
-
-    private void jpanel_sairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel_sairMouseEntered
-        
-    }//GEN-LAST:event_jpanel_sairMouseEntered
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -352,6 +369,7 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JLabel jlbl_amortecedor;
@@ -369,7 +387,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
     private javax.swing.JLabel jlbl_pneu;
     private javax.swing.JLabel jlbl_retrovisor;
     private javax.swing.JLabel jlbl_roda;
-    private javax.swing.JLabel jlbl_sair;
     private javax.swing.JLabel jlbl_tensor_correia;
     private javax.swing.JLabel jlbl_vela;
     private javax.swing.JLabel jlbl_volante;
@@ -388,7 +405,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
     private javax.swing.JPanel jpanel_pneu;
     private javax.swing.JPanel jpanel_retrovisor;
     private javax.swing.JPanel jpanel_roda;
-    private javax.swing.JPanel jpanel_sair;
     private javax.swing.JPanel jpanel_tensor_correia;
     private javax.swing.JPanel jpanel_vela;
     private javax.swing.JPanel jpanel_volante;
