@@ -91,6 +91,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         });
         jPanel1.add(jfield_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 190, -1));
 
+        jbutton_sair.setBackground(new java.awt.Color(153, 153, 153));
         jbutton_sair.setForeground(new java.awt.Color(255, 255, 255));
         jbutton_sair.setText("Sair");
         jbutton_sair.setBorder(null);
@@ -102,6 +103,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         });
         jPanel1.add(jbutton_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 80, 30));
 
+        jbutton_salvar.setBackground(new java.awt.Color(153, 153, 153));
         jbutton_salvar.setForeground(new java.awt.Color(255, 255, 255));
         jbutton_salvar.setText("Salvar");
         jbutton_salvar.setBorder(null);
