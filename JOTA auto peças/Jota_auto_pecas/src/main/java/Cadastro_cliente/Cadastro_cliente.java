@@ -33,20 +33,32 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField7 = new javax.swing.JTextField();
         jpanel_background = new javax.swing.JPanel();
-        jlbl_title_cadastro_cliente = new javax.swing.JLabel();
+        titulo_cadastrocliente = new javax.swing.JLabel();
         jlbl_nome = new javax.swing.JLabel();
         jlbl_telefone = new javax.swing.JLabel();
         jlbl_email = new javax.swing.JLabel();
-        jfield_nome_cliente = new javax.swing.JTextField();
-        jfield_telefone_cliente = new javax.swing.JTextField();
-        jfield_email_cliente = new javax.swing.JTextField();
-        jbutton_sair = new javax.swing.JButton();
-        jbutton_cadastrar = new javax.swing.JButton();
+        botaosair_cadastrocliente = new javax.swing.JButton();
+        botaocadastro_cadastrocliente = new javax.swing.JButton();
         jlbl_cpf = new javax.swing.JLabel();
-        jfield_cpf_cliente = new javax.swing.JTextField();
         jlbl_data_nascimento = new javax.swing.JLabel();
-        jfield_data_nascimento = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        telefone_cadastrocliente = new javax.swing.JTextField();
+        endereco_cadastrocliente = new javax.swing.JTextField();
+        cpf_cadastrocliente = new javax.swing.JTextField();
+        datanasci_cadastrocliente = new javax.swing.JTextField();
+        Email_cadastrocliente = new javax.swing.JTextField();
+        jlbl_endereco = new javax.swing.JLabel();
+        jlbl_numero = new javax.swing.JLabel();
+        jlbl_cep = new javax.swing.JLabel();
+        jlbl_cidade = new javax.swing.JLabel();
+        nome_cadastrocliente = new javax.swing.JTextField();
+        numero_cadastrocliente = new javax.swing.JTextField();
+        cep_cadastrocliente = new javax.swing.JTextField();
+        cidade_cadastrocliente = new javax.swing.JTextField();
+        cidade_cadastrocliente1 = new javax.swing.JTextField();
+        jlbl_bairro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,85 +67,102 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jpanel_background.setPreferredSize(new java.awt.Dimension(1036, 612));
         jpanel_background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlbl_title_cadastro_cliente.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlbl_title_cadastro_cliente.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_title_cadastro_cliente.setText("Cadastro de cliente");
-        jpanel_background.add(jlbl_title_cadastro_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        titulo_cadastrocliente.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        titulo_cadastrocliente.setForeground(new java.awt.Color(255, 255, 255));
+        titulo_cadastrocliente.setText("Cadastro de cliente");
+        jpanel_background.add(titulo_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jlbl_nome.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_nome.setText("Nome:");
-        jpanel_background.add(jlbl_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
+        jlbl_nome.setText("Nome");
+        jpanel_background.add(jlbl_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         jlbl_telefone.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_telefone.setText("Telefone:");
-        jpanel_background.add(jlbl_telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+        jlbl_telefone.setText("Telefone");
+        jpanel_background.add(jlbl_telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
 
         jlbl_email.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_email.setText("E-mail:");
-        jpanel_background.add(jlbl_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
-        jpanel_background.add(jfield_nome_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 600, 30));
-        jpanel_background.add(jfield_telefone_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 600, 30));
+        jlbl_email.setText("E-mail");
+        jpanel_background.add(jlbl_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
-        jfield_email_cliente.addActionListener(new java.awt.event.ActionListener() {
+        botaosair_cadastrocliente.setText("Sair");
+        botaosair_cadastrocliente.setPreferredSize(new java.awt.Dimension(70, 25));
+        botaosair_cadastrocliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jfield_email_clienteActionPerformed(evt);
+                botaosair_cadastroclienteActionPerformed(evt);
             }
         });
-        jpanel_background.add(jfield_email_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 600, 30));
+        jpanel_background.add(botaosair_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 90, -1));
 
-        jbutton_sair.setText("Sair");
-        jbutton_sair.setPreferredSize(new java.awt.Dimension(70, 25));
-        jbutton_sair.addActionListener(new java.awt.event.ActionListener() {
+        botaocadastro_cadastrocliente.setText("Cadastrar");
+        botaocadastro_cadastrocliente.setPreferredSize(new java.awt.Dimension(70, 25));
+        botaocadastro_cadastrocliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbutton_sairActionPerformed(evt);
+                botaocadastro_cadastroclienteActionPerformed(evt);
             }
         });
-        jpanel_background.add(jbutton_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 90, -1));
-
-        jbutton_cadastrar.setText("Cadastrar");
-        jbutton_cadastrar.setPreferredSize(new java.awt.Dimension(70, 25));
-        jbutton_cadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbutton_cadastrarActionPerformed(evt);
-            }
-        });
-        jpanel_background.add(jbutton_cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 450, 90, -1));
+        jpanel_background.add(botaocadastro_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 580, 90, -1));
 
         jlbl_cpf.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_cpf.setText("CPF:");
-        jpanel_background.add(jlbl_cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
-
-        jfield_cpf_cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jfield_cpf_clienteActionPerformed(evt);
-            }
-        });
-        jpanel_background.add(jfield_cpf_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 600, 30));
+        jlbl_cpf.setText("CPF");
+        jpanel_background.add(jlbl_cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         jlbl_data_nascimento.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_data_nascimento.setText("Data de Nascimento:");
-        jpanel_background.add(jlbl_data_nascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
+        jlbl_data_nascimento.setText("Data de Nascimento");
+        jpanel_background.add(jlbl_data_nascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
-        jfield_data_nascimento.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jpanel_background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 10, 130, 80));
+        jpanel_background.add(telefone_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 280, -1));
+        jpanel_background.add(endereco_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 280, -1));
+
+        cpf_cadastrocliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jfield_data_nascimentoActionPerformed(evt);
+                cpf_cadastroclienteActionPerformed(evt);
             }
         });
-        jpanel_background.add(jfield_data_nascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 600, 30));
+        jpanel_background.add(cpf_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 280, -1));
+        jpanel_background.add(datanasci_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 280, -1));
+        jpanel_background.add(Email_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 280, -1));
+
+        jlbl_endereco.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_endereco.setText("Endereço");
+        jpanel_background.add(jlbl_endereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, -1, -1));
+
+        jlbl_numero.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_numero.setText("Número");
+        jpanel_background.add(jlbl_numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 160, -1, -1));
+
+        jlbl_cep.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_cep.setText("CEP");
+        jpanel_background.add(jlbl_cep, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, -1, -1));
+
+        jlbl_cidade.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_cidade.setText("Cidade");
+        jpanel_background.add(jlbl_cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, -1, -1));
+        jpanel_background.add(nome_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 280, -1));
+        jpanel_background.add(numero_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 280, -1));
+        jpanel_background.add(cep_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 280, -1));
+        jpanel_background.add(cidade_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 280, -1));
+        jpanel_background.add(cidade_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 280, -1));
+
+        jlbl_bairro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_bairro.setText("Bairro");
+        jpanel_background.add(jlbl_bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, -1));
 
         getContentPane().add(jpanel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbutton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_sairActionPerformed
+    private void botaosair_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaosair_cadastroclienteActionPerformed
         // TODO add your handling code here:
         Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
         tela_inicial.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jbutton_sairActionPerformed
+    }//GEN-LAST:event_botaosair_cadastroclienteActionPerformed
 
-    private void jbutton_cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_cadastrarActionPerformed
+    private void botaocadastro_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaocadastro_cadastroclienteActionPerformed
         // TODO add your handling code here:
         String nome;
         String email;
@@ -145,7 +174,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         boolean cpf_valido;
         boolean telefone_valido;
         
-        nome = jfield_nome_cliente.getText();
+        /*nome = jfield_nome_cliente.getText();
         email = jfield_email_cliente.getText();
         cpf = jfield_cpf_cliente.getText();
         telefone = jfield_telefone_cliente.getText();
@@ -168,7 +197,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
                 String sql = "INSERT INTO cliente(nome, email, cpf, data_nasc, telefone) VALUES(?, ?, ?, ?, ?);";
                 statement = conexao.prepareStatement(sql);
-                statement.setString(1, jfield_nome_cliente.getText());
+                /*statement.setString(1, jfield_nome_cliente.getText());
                 statement.setString(2, jfield_email_cliente.getText());
                 statement.setString(3, jfield_cpf_cliente.getText());
                 statement.setString(4, jfield_data_nascimento.getText());
@@ -195,19 +224,12 @@ public class Cadastro_cliente extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "TELEFONE INVÁLIDO");
             }
         }
-    }//GEN-LAST:event_jbutton_cadastrarActionPerformed
+        */
+    }//GEN-LAST:event_botaocadastro_cadastroclienteActionPerformed
 
-    private void jfield_cpf_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_cpf_clienteActionPerformed
+    private void cpf_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpf_cadastroclienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jfield_cpf_clienteActionPerformed
-
-    private void jfield_data_nascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_data_nascimentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jfield_data_nascimentoActionPerformed
-
-    private void jfield_email_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_email_clienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jfield_email_clienteActionPerformed
+    }//GEN-LAST:event_cpf_cadastroclienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,19 +345,31 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jbutton_cadastrar;
-    private javax.swing.JButton jbutton_sair;
-    private javax.swing.JTextField jfield_cpf_cliente;
-    private javax.swing.JTextField jfield_data_nascimento;
-    private javax.swing.JTextField jfield_email_cliente;
-    private javax.swing.JTextField jfield_nome_cliente;
-    private javax.swing.JTextField jfield_telefone_cliente;
+    private javax.swing.JTextField Email_cadastrocliente;
+    private javax.swing.JButton botaocadastro_cadastrocliente;
+    private javax.swing.JButton botaosair_cadastrocliente;
+    private javax.swing.JTextField cep_cadastrocliente;
+    private javax.swing.JTextField cidade_cadastrocliente;
+    private javax.swing.JTextField cidade_cadastrocliente1;
+    private javax.swing.JTextField cpf_cadastrocliente;
+    private javax.swing.JTextField datanasci_cadastrocliente;
+    private javax.swing.JTextField endereco_cadastrocliente;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JLabel jlbl_bairro;
+    private javax.swing.JLabel jlbl_cep;
+    private javax.swing.JLabel jlbl_cidade;
     private javax.swing.JLabel jlbl_cpf;
     private javax.swing.JLabel jlbl_data_nascimento;
     private javax.swing.JLabel jlbl_email;
+    private javax.swing.JLabel jlbl_endereco;
     private javax.swing.JLabel jlbl_nome;
+    private javax.swing.JLabel jlbl_numero;
     private javax.swing.JLabel jlbl_telefone;
-    private javax.swing.JLabel jlbl_title_cadastro_cliente;
     private javax.swing.JPanel jpanel_background;
+    private javax.swing.JTextField nome_cadastrocliente;
+    private javax.swing.JTextField numero_cadastrocliente;
+    private javax.swing.JTextField telefone_cadastrocliente;
+    private javax.swing.JLabel titulo_cadastrocliente;
     // End of variables declaration//GEN-END:variables
 }
