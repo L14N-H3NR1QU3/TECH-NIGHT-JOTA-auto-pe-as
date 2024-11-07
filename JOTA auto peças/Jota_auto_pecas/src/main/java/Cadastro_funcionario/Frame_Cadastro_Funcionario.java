@@ -4,7 +4,6 @@
  */
 package Cadastro_funcionario;
 
-import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 
 /**
  *
@@ -203,9 +202,7 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
-        tela_inicial.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed

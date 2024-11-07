@@ -4,7 +4,6 @@
  */
 package Cadastro_fornecedor;
 
-import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -185,7 +184,7 @@ try {
             String senha = "";
 
             conexao = DriverManager.getConnection(url,usuario,senha);
-            String sql = "Insert Into Dados (Nome_fornecedor,Telefone_fornecedor,Email_fornecedor,cidade_fornecedor) VALUES(?,?,?,?)";
+            String sql = "Insert Into Fornecedor (Nome_fornecedor,Telefone_fornecedor,Email_fornecedor,cidade_fornecedor) VALUES (?,?,?,?)";
             statement = conexao.prepareStatement(sql);
             statement.setString(1, Nome_fornecedor_cadastroF.getText());
             statement.setString(2, Telefone_fornecedor_cadastroF.getText());
@@ -199,9 +198,7 @@ try {
     }//GEN-LAST:event_Cadastro_fornecedorActionPerformed
 
     private void Voltar_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_fornecedorActionPerformed
-    Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
-        tela_inicial.setVisible(true);
-        this.dispose();
+    
         // TODO add your handling code here:
     }//GEN-LAST:event_Voltar_fornecedorActionPerformed
 

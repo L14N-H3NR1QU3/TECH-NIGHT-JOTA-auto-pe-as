@@ -4,7 +4,6 @@
  */
 package Devolucao_pecas;
 
-import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 
 /**
  *
@@ -194,9 +193,7 @@ public class Devolucao_pecas extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
-        tela_inicial.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

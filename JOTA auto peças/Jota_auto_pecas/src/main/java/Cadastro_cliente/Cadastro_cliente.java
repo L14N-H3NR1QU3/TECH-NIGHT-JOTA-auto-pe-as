@@ -4,7 +4,6 @@
  */
 package Cadastro_cliente;
 
-import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -129,9 +128,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
     private void botaosair_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaosair_cadastroclienteActionPerformed
         // TODO add your handling code here:
-        Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
-        tela_inicial.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_botaosair_cadastroclienteActionPerformed
 
     private void botaocadastro_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaocadastro_cadastroclienteActionPerformed
@@ -161,7 +158,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
                 Connection conexao = null;
                 PreparedStatement statement = null;
 
-                String url = "jdbc:mysql://localhost:3306/jota_autopecas";
+                String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
                 String usuario = "root";
                 String senha = "";
 
@@ -174,7 +171,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
                 statement.setString(3, Email_cadastrocliente.getText());
                 statement.setString(4, telefone_cadastrocliente.getText());
                 statement.setString(5, cidade_cadastrocliente1.getText());
-                statement.setString(5,Bairro_cadastrocliente.getText());
+                statement.setString(6,Bairro_cadastrocliente.getText());
 
 
                 statement.executeUpdate();

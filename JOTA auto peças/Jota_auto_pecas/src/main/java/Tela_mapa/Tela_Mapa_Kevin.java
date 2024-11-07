@@ -1,7 +1,6 @@
 package Tela_mapa;
 
 
-import Tela_inicial_LianHenrique.Tela_inicial_LianHenrique;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -328,9 +327,6 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Tela_inicial_LianHenrique tela_inicial = new Tela_inicial_LianHenrique();
-        tela_inicial.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
