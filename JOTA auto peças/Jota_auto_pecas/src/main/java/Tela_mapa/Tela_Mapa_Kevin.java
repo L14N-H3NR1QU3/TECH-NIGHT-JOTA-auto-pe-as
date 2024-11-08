@@ -47,7 +47,7 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jlbl_volante = new javax.swing.JLabel();
         jpanel_disco_freio = new javax.swing.JPanel();
         jlbl_disco_freio = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Sair_Mapa = new javax.swing.JButton();
         jpanel_motor = new javax.swing.JPanel();
         jlbl_motor = new javax.swing.JLabel();
         jpanel_cilindro = new javax.swing.JPanel();
@@ -153,11 +153,11 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         jlbl_disco_freio.setText("Disco de freio");
         jpanel_disco_freio.add(jlbl_disco_freio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Sair_Mapa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Sair_Mapa.setText("Sair");
+        Sair_Mapa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Sair_MapaActionPerformed(evt);
             }
         });
 
@@ -274,7 +274,7 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jpanel_retrovisor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Sair_Mapa, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jpanel_parabrisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jpanel_vela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31))
@@ -315,7 +315,7 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
                             .addComponent(jpanel_tensor_correia, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jpanel_volante, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Sair_Mapa, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jpanel_disco_freio, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
         );
@@ -325,9 +325,13 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Sair_MapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_MapaActionPerformed
+        Tela_inicial telInicial = new Tela_inicial();
+        telInicial.setVisible(true);
+        telInicial .this.dispose();
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Sair_MapaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -365,7 +369,7 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Sair_Mapa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JLabel jlbl_amortecedor;

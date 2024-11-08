@@ -9,5 +9,9 @@ package Cadastro_funcionario;
  * @author p.rosa
  */
 class Tela_inicial {
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

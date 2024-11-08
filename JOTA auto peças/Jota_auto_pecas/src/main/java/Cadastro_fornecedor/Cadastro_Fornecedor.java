@@ -197,7 +197,11 @@ try {
     }//GEN-LAST:event_Cadastro_fornecedorActionPerformed
 
     private void Voltar_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_fornecedorActionPerformed
-    
+        Tela_inicial telInicial = new Tela_inicial();
+        telInicial.setVisible(true);
+        telInicial .this.dispose();
+        
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_Voltar_fornecedorActionPerformed
 

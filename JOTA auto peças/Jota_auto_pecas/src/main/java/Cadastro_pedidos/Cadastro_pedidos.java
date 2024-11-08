@@ -41,7 +41,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Voltar_Cadastro_pedidos = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -71,10 +71,10 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
 
         jButton1.setText("Cadastrar");
 
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Voltar_Cadastro_pedidos.setText("Voltar");
+        Voltar_Cadastro_pedidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Voltar_Cadastro_pedidosActionPerformed(evt);
             }
         });
 
@@ -96,7 +96,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(Voltar_Cadastro_pedidos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addContainerGap())
@@ -162,7 +162,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(Voltar_Cadastro_pedidos))
                 .addContainerGap())
         );
 
@@ -186,11 +186,14 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void Voltar_Cadastro_pedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_Cadastro_pedidosActionPerformed
+        Tela_inicial telInicial = new Tela_inicial();
+        telInicial.setVisible(true);
+        telInicial .this.dispose();
         // TODO add your handling code here:
         
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_Voltar_Cadastro_pedidosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,8 +231,8 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Voltar_Cadastro_pedidos;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

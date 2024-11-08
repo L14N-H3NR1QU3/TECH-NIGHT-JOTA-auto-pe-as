@@ -41,7 +41,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jfield_qtd_pecas = new javax.swing.JTextField();
         jlbl_nome_peca = new javax.swing.JLabel();
         jfield_nome_peca = new javax.swing.JTextField();
-        jbutton_sair = new javax.swing.JButton();
+        Sai_Att_pecas = new javax.swing.JButton();
         jbutton_salvar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,11 +67,11 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
                 jfield_id_pecaActionPerformed(evt);
             }
         });
-        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, -1));
+        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 190, -1));
 
         jlbl_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_qtd_pecas.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_qtd_pecas.setText("Nome");
+        jlbl_qtd_pecas.setText("Nova quantidade de peças :");
         jPanel1.add(jlbl_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         jfield_qtd_pecas.setBorder(null);
@@ -79,7 +79,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
 
         jlbl_nome_peca.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_nome_peca.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_nome_peca.setText("Quantidade");
+        jlbl_nome_peca.setText("Nome peça que foi atualizada :");
         jPanel1.add(jlbl_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         jfield_nome_peca.setBorder(null);
@@ -90,17 +90,17 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         });
         jPanel1.add(jfield_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 190, -1));
 
-        jbutton_sair.setBackground(new java.awt.Color(153, 153, 153));
-        jbutton_sair.setForeground(new java.awt.Color(255, 255, 255));
-        jbutton_sair.setText("Sair");
-        jbutton_sair.setBorder(null);
-        jbutton_sair.setPreferredSize(new java.awt.Dimension(80, 30));
-        jbutton_sair.addActionListener(new java.awt.event.ActionListener() {
+        Sai_Att_pecas.setBackground(new java.awt.Color(153, 153, 153));
+        Sai_Att_pecas.setForeground(new java.awt.Color(255, 255, 255));
+        Sai_Att_pecas.setText("Sair");
+        Sai_Att_pecas.setBorder(null);
+        Sai_Att_pecas.setPreferredSize(new java.awt.Dimension(80, 30));
+        Sai_Att_pecas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbutton_sairActionPerformed(evt);
+                Sai_Att_pecasActionPerformed(evt);
             }
         });
-        jPanel1.add(jbutton_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 80, 30));
+        jPanel1.add(Sai_Att_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 80, 30));
 
         jbutton_salvar.setBackground(new java.awt.Color(153, 153, 153));
         jbutton_salvar.setForeground(new java.awt.Color(255, 255, 255));
@@ -133,13 +133,13 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
             Connection conexao = null;
             PreparedStatement statement = null;
             
-            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+            String url = "jdbc:mysql://localhost:3306/jota_autopecas";
             String usuario = "root";
             String senha = "";
             
             conexao = DriverManager.getConnection(url, usuario, senha);
             
-            String sql = "UPDATE pecas SET qtd_pecas = ?, nome_pecas = ? WHERE id_pecas = ?";
+            String sql = "UPDATE pecas SET quantidade = ?, nome = ? WHERE id_pecas = ?";
             
             statement = conexao.prepareStatement(sql);
             statement.setString(1, jfield_qtd_pecas.getText());
@@ -150,7 +150,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
             
             System.out.println("Quantidade de pecas e nome atualizados com sucesso.");
         } catch (SQLException e) {
-            System.out.println("Deu esse erro aqui o: " + e.getMessage());
+            System.out.println("Deu esse erro aqui ô: " + e.getMessage());
         }
         
         jfield_qtd_pecas.setText(null);
@@ -158,9 +158,13 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jfield_id_peca.setText(null);
     }//GEN-LAST:event_jbutton_salvarActionPerformed
 
-    private void jbutton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_sairActionPerformed
+    private void Sai_Att_pecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sai_Att_pecasActionPerformed
+         /*Tela_inicial telInicial = new Tela_inicial();
+        telInicial.setVisible(true);
+        telInicial .this.dispose();*/
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbutton_sairActionPerformed
+    }//GEN-LAST:event_Sai_Att_pecasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,9 +202,9 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Sai_Att_pecas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbutton_sair;
     private javax.swing.JButton jbutton_salvar;
     private javax.swing.JTextField jfield_id_peca;
     private javax.swing.JTextField jfield_nome_peca;

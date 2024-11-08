@@ -42,7 +42,7 @@ public class Devolucao_pecas extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Voltar_devolucao_pecas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,10 +85,10 @@ public class Devolucao_pecas extends javax.swing.JFrame {
 
         jButton1.setText("Cadastrar");
 
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Voltar_devolucao_pecas.setText("Voltar");
+        Voltar_devolucao_pecas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Voltar_devolucao_pecasActionPerformed(evt);
             }
         });
 
@@ -100,7 +100,7 @@ public class Devolucao_pecas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(Voltar_devolucao_pecas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -163,7 +163,7 @@ public class Devolucao_pecas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(Voltar_devolucao_pecas))
                 .addContainerGap())
         );
 
@@ -191,10 +191,14 @@ public class Devolucao_pecas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void Voltar_devolucao_pecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_devolucao_pecasActionPerformed
+        Tela_inicial telInicial = new Tela_inicial();
+        telInicial.setVisible(true);
+        telInicial .this.dispose();
+
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_Voltar_devolucao_pecasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,8 +236,8 @@ public class Devolucao_pecas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Voltar_devolucao_pecas;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

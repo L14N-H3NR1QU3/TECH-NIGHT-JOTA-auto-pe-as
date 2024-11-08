@@ -127,6 +127,11 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaosair_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaosair_cadastroclienteActionPerformed
+         Tela_inicial telInicial = new Tela_inicial();
+        telInicial.setVisible(true);
+        telInicial .this.dispose();
+
+
         // TODO add your handling code here:
         
     }//GEN-LAST:event_botaosair_cadastroclienteActionPerformed

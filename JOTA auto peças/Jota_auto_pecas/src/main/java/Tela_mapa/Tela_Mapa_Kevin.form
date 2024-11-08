@@ -131,7 +131,7 @@
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jpanel_retrovisor" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="Sair_Mapa" min="-2" pref="97" max="-2" attributes="0"/>
                       <Component id="jpanel_parabrisa" min="-2" max="-2" attributes="0"/>
                       <Component id="jpanel_vela" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -182,7 +182,7 @@
                               <Component id="jpanel_tensor_correia" min="-2" pref="127" max="-2" attributes="0"/>
                               <Component id="jpanel_volante" min="-2" pref="127" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jButton1" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="Sair_Mapa" min="-2" pref="48" max="-2" attributes="0"/>
                                   <Component id="jpanel_disco_freio" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -397,7 +397,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="Sair_Mapa">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -405,7 +405,7 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Sair_MapaActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jpanel_motor">
