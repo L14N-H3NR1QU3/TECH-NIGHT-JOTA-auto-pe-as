@@ -110,6 +110,7 @@ CREATE TABLE `pecas` (
   `id_pecas` int(11) NOT NULL AUTO_INCREMENT,
   `nome_pecas` varchar(50) DEFAULT NULL,
   `tipo_pecas` varchar(50) DEFAULT NULL,
+  `qtd_pecas` int(4) DEFAULT NULL,
   PRIMARY KEY (`id_pecas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -163,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-08 18:28:39
+-- Dump completed on 2024-11-08 18:42:40
