@@ -4,6 +4,7 @@
  */
 package Cadastro_fornecedor;
 
+import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -197,9 +198,9 @@ try {
     }//GEN-LAST:event_Cadastro_fornecedorActionPerformed
 
     private void Voltar_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_fornecedorActionPerformed
-        Tela_inicial telInicial = new Tela_inicial();
+        Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();
+        this.dispose();
         
         
         // TODO add your handling code here:

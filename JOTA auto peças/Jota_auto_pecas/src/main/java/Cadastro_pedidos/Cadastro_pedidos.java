@@ -4,6 +4,8 @@
  */
 package Cadastro_pedidos;
 
+import Tela_Inicial.Tela_Inicial;
+
 
 /**
  *
@@ -187,9 +189,9 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Voltar_Cadastro_pedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_Cadastro_pedidosActionPerformed
-        Tela_inicial telInicial = new Tela_inicial();
+        Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();
+        this.dispose();
         // TODO add your handling code here:
         
         

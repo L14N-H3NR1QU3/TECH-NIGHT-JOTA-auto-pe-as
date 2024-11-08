@@ -1,5 +1,7 @@
 package Tela_mapa;
 
+import Tela_Inicial.Tela_Inicial;
+
 
 
 /*
@@ -326,9 +328,9 @@ public class Tela_Mapa_Kevin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Sair_MapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_MapaActionPerformed
-        Tela_inicial telInicial = new Tela_inicial();
+        Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();
+        this.dispose();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_Sair_MapaActionPerformed

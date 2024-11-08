@@ -4,6 +4,7 @@
  */
 package Cadastro_cliente;
 
+import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -82,7 +83,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
                 botaosair_cadastroclienteActionPerformed(evt);
             }
         });
-        jpanel_background.add(botaosair_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 90, -1));
+        jpanel_background.add(botaosair_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 90, -1));
 
         botaocadastro_cadastrocliente.setText("Cadastrar");
         botaocadastro_cadastrocliente.setPreferredSize(new java.awt.Dimension(70, 25));
@@ -127,9 +128,9 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaosair_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaosair_cadastroclienteActionPerformed
-         Tela_inicial telInicial = new Tela_inicial();
+        Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();
+        this.dispose();
 
 
         // TODO add your handling code here:

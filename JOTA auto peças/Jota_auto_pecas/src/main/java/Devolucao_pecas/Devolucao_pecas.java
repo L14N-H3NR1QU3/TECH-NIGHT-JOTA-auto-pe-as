@@ -4,6 +4,8 @@
  */
 package Devolucao_pecas;
 
+import Tela_Inicial.Tela_Inicial;
+
 
 /**
  *
@@ -192,9 +194,9 @@ public class Devolucao_pecas extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void Voltar_devolucao_pecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_devolucao_pecasActionPerformed
-        Tela_inicial telInicial = new Tela_inicial();
+        Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();
+        this.dispose();
 
         // TODO add your handling code here:
 

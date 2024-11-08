@@ -4,6 +4,8 @@
  */
 package Cadastro_funcionario;
 
+import Tela_Inicial.Tela_Inicial;
+
 
 /**
  *
@@ -11,7 +13,6 @@ package Cadastro_funcionario;
  */
 public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
 
-    private Object telInicial;
     private Object telInicial;
 
     /**
@@ -257,9 +258,9 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
     }//GEN-LAST:event_Cadastrar_FunionarioActionPerformed
 
     private void Voltar_cadastro_funcionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_cadastro_funcionarioActionPerformed
-         Tela_inicial telInicial = new Tela_inicial();
+         Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();
+        this.dispose();
 
 
         // TODO add your handling code here:
