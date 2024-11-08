@@ -25,9 +25,9 @@ DROP TABLE IF EXISTS `cliente`;
 CREATE TABLE `cliente` (
   `id_cliente` int(11) NOT NULL AUTO_INCREMENT,
   `nome_cliente` varchar(50) DEFAULT NULL,
-  `CPF_cliente` int(12) DEFAULT NULL,
+  `CPF_cliente` varchar(11) DEFAULT NULL,
   `email_cliente` varchar(50) DEFAULT NULL,
-  `telefone_cliente` int(11) DEFAULT NULL,
+  `Telefone_cliente` varchar(11) DEFAULT NULL,
   `bairro_clienet` varchar(50) DEFAULT NULL,
   `rua_clienet` varchar(50) DEFAULT NULL,
   `ID_carro_Clienet` int(11) DEFAULT NULL,
@@ -54,11 +54,11 @@ DROP TABLE IF EXISTS `fornecedor`;
 CREATE TABLE `fornecedor` (
   `id_fornecedor` int(11) NOT NULL AUTO_INCREMENT,
   `Nome_fornecedor` varchar(50) DEFAULT NULL,
-  `Telefone_fornecedor` int(11) DEFAULT NULL,
+  `Telefone_fornecedor` varchar(11) DEFAULT NULL,
   `Email_fornecedor` varchar(50) DEFAULT NULL,
   `cidade_fornecedor` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_fornecedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,6 +67,7 @@ CREATE TABLE `fornecedor` (
 
 LOCK TABLES `fornecedor` WRITE;
 /*!40000 ALTER TABLE `fornecedor` DISABLE KEYS */;
+INSERT INTO `fornecedor` VALUES (1,'Pedro','0','Naopossui@gmail.com','Sim'),(2,'Pedro','123456789','Naopossui@gmail.com','Sim'),(3,'Pedro','3456700','Naopossui@gmail.com','Sim'),(4,'Pepsi','2278957831','naotem@gmail.com','Nao');
 /*!40000 ALTER TABLE `fornecedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +81,7 @@ DROP TABLE IF EXISTS `funcionario`;
 CREATE TABLE `funcionario` (
   `id_funcionario` int(11) NOT NULL AUTO_INCREMENT,
   `nome_funcionario` varchar(50) DEFAULT NULL,
-  `CPF_funcionario` int(11) DEFAULT NULL,
+  `CPF_Funcionario` varchar(11) DEFAULT NULL,
   `cidade_funcionario` varchar(50) DEFAULT NULL,
   `Bairro_funcionario` varchar(50) DEFAULT NULL,
   `email_funcionario` varchar(50) DEFAULT NULL,
@@ -109,6 +110,7 @@ CREATE TABLE `pecas` (
   `id_pecas` int(11) NOT NULL AUTO_INCREMENT,
   `nome_pecas` varchar(50) DEFAULT NULL,
   `tipo_pecas` varchar(50) DEFAULT NULL,
+  `qtd_pecas` int(4) DEFAULT NULL,
   PRIMARY KEY (`id_pecas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -133,7 +135,7 @@ CREATE TABLE `pedidos` (
   `id_pecas` int(11) NOT NULL AUTO_INCREMENT,
   `nome_cliente` varchar(50) DEFAULT NULL,
   `email_cliente` varchar(50) DEFAULT NULL,
-  `telefone_cliente` int(11) DEFAULT NULL,
+  `Telefone_cliente` varchar(11) DEFAULT NULL,
   `Local_estab` varchar(50) DEFAULT NULL,
   `precoT` int(11) DEFAULT NULL,
   `data_entrega` date DEFAULT NULL,
@@ -162,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-07 19:31:36
+-- Dump completed on 2024-11-08 18:42:40
