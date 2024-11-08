@@ -67,11 +67,11 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
                 jfield_id_pecaActionPerformed(evt);
             }
         });
-        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 190, -1));
+        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, -1));
 
         jlbl_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_qtd_pecas.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_qtd_pecas.setText("Nova quantidade de peças :");
+        jlbl_qtd_pecas.setText("Nome");
         jPanel1.add(jlbl_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         jfield_qtd_pecas.setBorder(null);
@@ -79,7 +79,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
 
         jlbl_nome_peca.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_nome_peca.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_nome_peca.setText("Nome peça que foi atualizada :");
+        jlbl_nome_peca.setText("Quantidade");
         jPanel1.add(jlbl_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         jfield_nome_peca.setBorder(null);
@@ -133,13 +133,13 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
             Connection conexao = null;
             PreparedStatement statement = null;
             
-            String url = "jdbc:mysql://localhost:3306/jota_autopecas";
+            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
             String usuario = "root";
             String senha = "";
             
             conexao = DriverManager.getConnection(url, usuario, senha);
             
-            String sql = "UPDATE pecas SET quantidade = ?, nome = ? WHERE id_pecas = ?";
+            String sql = "UPDATE pecas SET qtd_pecas = ?, nome_pecas = ? WHERE id_pecas = ?";
             
             statement = conexao.prepareStatement(sql);
             statement.setString(1, jfield_qtd_pecas.getText());
@@ -150,7 +150,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
             
             System.out.println("Quantidade de pecas e nome atualizados com sucesso.");
         } catch (SQLException e) {
-            System.out.println("Deu esse erro aqui ô: " + e.getMessage());
+            System.out.println("Deu esse erro aqui o: " + e.getMessage());
         }
         
         jfield_qtd_pecas.setText(null);
