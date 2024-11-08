@@ -100,7 +100,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
                 Sai_Att_pecasActionPerformed(evt);
             }
         });
-        jPanel1.add(Sai_Att_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 80, 30));
+        jPanel1.add(Sai_Att_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 80, 30));
 
         jbutton_salvar.setBackground(new java.awt.Color(153, 153, 153));
         jbutton_salvar.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,7 +112,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
                 jbutton_salvarActionPerformed(evt);
             }
         });
-        jPanel1.add(jbutton_salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 80, 30));
+        jPanel1.add(jbutton_salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 570, 80, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 612));
 
