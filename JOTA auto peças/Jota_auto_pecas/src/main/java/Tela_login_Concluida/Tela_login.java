@@ -56,8 +56,6 @@ public class Tela_login extends javax.swing.JFrame {
 
         jPasswordField1.setText("jPasswordField1");
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 295, -1));
-
-        jTextField1.setText("jTextField1");
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 295, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
