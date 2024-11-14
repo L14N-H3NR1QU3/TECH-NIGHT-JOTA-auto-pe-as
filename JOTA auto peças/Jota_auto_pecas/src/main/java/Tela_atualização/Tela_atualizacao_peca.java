@@ -1,6 +1,7 @@
 package Tela_atualização;
 
 
+import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -67,7 +68,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
                 jfield_id_pecaActionPerformed(evt);
             }
         });
-        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 90, -1));
 
         jlbl_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_qtd_pecas.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,13 +130,13 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
             Connection conexao = null;
             PreparedStatement statement = null;
             
-            String url = "jdbc:mysql://localhost:3306/jota_autopecas";
+            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
             String usuario = "root";
             String senha = "";
             
             conexao = DriverManager.getConnection(url, usuario, senha);
             
-            String sql = "UPDATE pecas SET quantidade = ?, nome = ? WHERE id_pecas = ?";
+            String sql = "UPDATE pecas SET qtd_pecas = ?, nome_pecas = ? WHERE id_pecas = ?";
             
             statement = conexao.prepareStatement(sql);
             statement.setString(1, jfield_qtd_pecas.getText());
@@ -155,9 +156,9 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
     }//GEN-LAST:event_jbutton_salvarActionPerformed
 
     private void Sai_Att_pecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sai_Att_pecasActionPerformed
-         /*Tela_inicial telInicial = new Tela_inicial();
+        Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
-        telInicial .this.dispose();*/
+        this.dispose();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_Sai_Att_pecasActionPerformed

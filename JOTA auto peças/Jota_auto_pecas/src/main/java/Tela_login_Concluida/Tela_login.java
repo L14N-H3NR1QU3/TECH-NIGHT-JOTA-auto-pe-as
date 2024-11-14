@@ -1,5 +1,16 @@
 package Tela_login_Concluida;
 
+import Cadastro_pedidos.Cadastro_pedidos;
+import Tela_Inicial.Tela_Inicial;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -31,8 +42,8 @@ public class Tela_login extends javax.swing.JFrame {
         Imagem_user = new javax.swing.JLabel();
         Nome_login_telaLogin = new javax.swing.JLabel();
         Senha_login_telaLogin = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        SenhaFuncionario = new javax.swing.JPasswordField();
+        nome_funcionario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         Entrar_Login_funcionario = new javax.swing.JButton();
 
@@ -43,20 +54,17 @@ public class Tela_login extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Imagem_user.setForeground(new java.awt.Color(255, 255, 255));
-        Imagem_user.setIcon(new javax.swing.ImageIcon("C:\\Users\\p.rosa\\Desktop\\Jota\\TECH_NIGHT-JOTA_auto_pecas\\JOTA auto peças\\Jota_auto_pecas\\src\\main\\resources\\User2.jpg")); // NOI18N
         jPanel1.add(Imagem_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 370, 370));
 
         Nome_login_telaLogin.setForeground(new java.awt.Color(255, 255, 255));
-        Nome_login_telaLogin.setText("Login");
+        Nome_login_telaLogin.setText("Nome");
         jPanel1.add(Nome_login_telaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
         Senha_login_telaLogin.setForeground(new java.awt.Color(255, 255, 255));
         Senha_login_telaLogin.setText("Senha");
         jPanel1.add(Senha_login_telaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
-
-        jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 295, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 295, -1));
+        jPanel1.add(SenhaFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 295, -1));
+        jPanel1.add(nome_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 295, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,27 +72,73 @@ public class Tela_login extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, -1, -1));
 
         Entrar_Login_funcionario.setText("Entrar");
+        Entrar_Login_funcionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Entrar_Login_funcionarioActionPerformed(evt);
+            }
+        });
         jPanel1.add(Entrar_Login_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Entrar_Login_funcionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Entrar_Login_funcionarioActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement stat = null;
+            
+            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+            String usuario = "root";
+            String senha = "";
+            
+            conexao = DriverManager.getConnection (url, usuario, senha) ;
+            String sqlNome = "SELECT nome_funcionario from funcionario where nome_funcionario = ?";
+            
+            stat = conexao.prepareStatement(sqlNome);
+            stat.setString(1, nome_funcionario.getText());
+            ResultSet resSetNome = stat.executeQuery();
+            
+            conexao = DriverManager.getConnection (url, usuario, senha) ;
+            String sqlSenha = "SELECT senha_funcionario from funcionario where senha_funcionario = ?";
+            
+            stat = conexao.prepareStatement(sqlSenha);
+            stat.setString(1, String.valueOf(SenhaFuncionario.getPassword()));
+            ResultSet resSetSenha = stat.executeQuery();
+            if(resSetNome.next() && resSetSenha.next()){
+                try {
+                    String nomeFunc = resSetNome.getString("nome_funcionario");
+                } catch (SQLException ex) {
+                    Logger.getLogger(Cadastro_pedidos.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                try {
+                    String senhaFunc = resSetSenha.getString("senha_funcionario");
+                    Tela_Inicial telInicial = new Tela_Inicial();
+                    telInicial.setVisible(true);
+                    this.dispose();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Cadastro_pedidos.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Usuario incorreto!");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Cadastro_pedidos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Entrar_Login_funcionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,10 +179,10 @@ public class Tela_login extends javax.swing.JFrame {
     private javax.swing.JButton Entrar_Login_funcionario;
     private javax.swing.JLabel Imagem_user;
     private javax.swing.JLabel Nome_login_telaLogin;
+    private javax.swing.JPasswordField SenhaFuncionario;
     private javax.swing.JLabel Senha_login_telaLogin;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField nome_funcionario;
     // End of variables declaration//GEN-END:variables
 }
