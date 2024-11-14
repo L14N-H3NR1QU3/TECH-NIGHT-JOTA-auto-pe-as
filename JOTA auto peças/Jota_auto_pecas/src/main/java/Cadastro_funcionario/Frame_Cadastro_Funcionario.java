@@ -245,15 +245,15 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
             String senha = "";
             
             conexao = DriverManager.getConnection (url, usuario, senha) ;
-            String sql = "INSERT INTO Funcionario(nome_funcionario, CPF_funcionario, cidade_funcionario, Bairro_funcionario, email_funcionario, senha_funcioanrio) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Funcionario(nome_funcionario, CPF_funcionario, cidade_funcionario, Bairro_funcionario, email_funcionario, senha_funcionario) VALUES (?, ?, ?, ?, ?, ?)";
             
             statement = conexao.prepareStatement(sql);
             statement.setString(1, Nome_funcionario_CadastroF.getText());
-            statement.setString(1, CPF_funcionario.getText());
-            statement.setString(1, Cidade_funcionario.getText());
-            statement.setString(1, Bairro_funcionario.getText());
-            statement.setString(1, Email_funcionario.getText());
-            statement.setString(1, String.valueOf(Senha_funcionario.getPassword()));
+            statement.setString(2, CPF_funcionario.getText());
+            statement.setString(3, Cidade_funcionario.getText());
+            statement.setString(4, Bairro_funcionario.getText());
+            statement.setString(5, Email_funcionario.getText());
+            statement.setString(6, String.valueOf(Senha_funcionario.getPassword()));
             statement.executeUpdate();
             
             System.out.println("Deu certo");
