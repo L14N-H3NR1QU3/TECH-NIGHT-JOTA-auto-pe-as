@@ -51,6 +51,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         Bairro_cadastrocliente = new javax.swing.JTextField();
         cidade_cadastrocliente1 = new javax.swing.JTextField();
         jlbl_bairro = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -113,14 +114,18 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
         jlbl_cidade.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_cidade.setText("Cidade");
-        jpanel_background.add(jlbl_cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, -1, -1));
+        jpanel_background.add(jlbl_cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
         jpanel_background.add(nome_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 280, -1));
-        jpanel_background.add(Bairro_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 280, -1));
-        jpanel_background.add(cidade_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 280, -1));
+        jpanel_background.add(Bairro_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 280, -1));
+        jpanel_background.add(cidade_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 280, -1));
 
         jlbl_bairro.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_bairro.setText("Bairro");
-        jpanel_background.add(jlbl_bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, -1));
+        jpanel_background.add(jlbl_bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\farne\\OneDrive\\Área de Trabalho\\JOTA_techn\\TECH_NIGHT-JOTA_auto_pecas\\Imagens\\Usuario_imagem.png")); // NOI18N
+        jLabel2.setText("jLabel2");
+        jpanel_background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 42, 510, 520));
 
         getContentPane().add(jpanel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -157,7 +162,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         nome_valido = validador_entrada_str(nome, 50);
         email_valido = validador_tamanho_texto(email, 50);
         cpf_valido = validador_entrada_num(cpf, 11);
-        telefone_valido = validador_entrada_num(telefone, 9);
+        telefone_valido = validador_entrada_num(telefone, 11);
         
         if (nome_valido && email_valido && cpf_valido && telefone_valido) {
             try {
@@ -329,6 +334,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     private javax.swing.JTextField cidade_cadastrocliente1;
     private javax.swing.JTextField cpf_cadastrocliente;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JLabel jlbl_bairro;
     private javax.swing.JLabel jlbl_cidade;

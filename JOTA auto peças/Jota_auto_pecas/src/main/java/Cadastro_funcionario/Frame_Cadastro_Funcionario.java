@@ -112,7 +112,7 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
             }
         });
 
-        Cadastrar_Funionario.setText("Finalizar");
+        Cadastrar_Funionario.setText("Cadastrar");
         Cadastrar_Funionario.setBorderPainted(false);
         Cadastrar_Funionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

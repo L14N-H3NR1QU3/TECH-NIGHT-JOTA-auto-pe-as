@@ -267,7 +267,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="Cadastrar_Funionario">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Finalizar"/>
+            <Property name="text" type="java.lang.String" value="Cadastrar"/>
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
           <Events>

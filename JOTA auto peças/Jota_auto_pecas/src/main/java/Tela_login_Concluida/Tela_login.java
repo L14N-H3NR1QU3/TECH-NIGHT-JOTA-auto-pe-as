@@ -39,22 +39,19 @@ public class Tela_login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Imagem_user = new javax.swing.JLabel();
         Nome_login_telaLogin = new javax.swing.JLabel();
         Senha_login_telaLogin = new javax.swing.JLabel();
         SenhaFuncionario = new javax.swing.JPasswordField();
         nome_funcionario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         Entrar_Login_funcionario = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Imagem_user.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(Imagem_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 370, 370));
 
         Nome_login_telaLogin.setForeground(new java.awt.Color(255, 255, 255));
         Nome_login_telaLogin.setText("Nome");
@@ -79,15 +76,21 @@ public class Tela_login extends javax.swing.JFrame {
         });
         jPanel1.add(Entrar_Login_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\farne\\OneDrive\\Área de Trabalho\\JOTA_techn\\TECH_NIGHT-JOTA_auto_pecas\\Imagens\\Usuario_imagem.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 480, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 266, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
         );
 
         pack();
@@ -177,10 +180,10 @@ public class Tela_login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Entrar_Login_funcionario;
-    private javax.swing.JLabel Imagem_user;
     private javax.swing.JLabel Nome_login_telaLogin;
     private javax.swing.JPasswordField SenhaFuncionario;
     private javax.swing.JLabel Senha_login_telaLogin;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nome_funcionario;
