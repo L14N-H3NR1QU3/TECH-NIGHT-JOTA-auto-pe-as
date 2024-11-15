@@ -45,6 +45,31 @@ LOCK TABLES `cliente` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `estoque`
+--
+
+DROP TABLE IF EXISTS `estoque`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `estoque` (
+  `id_estoque` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pecas_estoque` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_estoque`),
+  KEY `id_pecas_estoque` (`id_pecas_estoque`),
+  CONSTRAINT `estoque_ibfk_1` FOREIGN KEY (`id_pecas_estoque`) REFERENCES `pecas` (`id_pecas`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estoque`
+--
+
+LOCK TABLES `estoque` WRITE;
+/*!40000 ALTER TABLE `estoque` DISABLE KEYS */;
+/*!40000 ALTER TABLE `estoque` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `fornecedor`
 --
 
@@ -164,4 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-15 14:26:48
+-- Dump completed on 2024-11-15 15:14:47
