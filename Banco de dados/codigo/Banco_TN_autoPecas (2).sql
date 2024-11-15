@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: jotaautopeca
+-- Host: 127.0.0.1    Database: jotaautopecas
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.32-MariaDB
 
@@ -132,7 +132,6 @@ DROP TABLE IF EXISTS `pedidos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pedidos` (
-  `id_pecas` int(11) NOT NULL AUTO_INCREMENT,
   `nome_cliente` varchar(50) DEFAULT NULL,
   `email_cliente` varchar(50) DEFAULT NULL,
   `Telefone_cliente` varchar(11) DEFAULT NULL,
@@ -140,7 +139,8 @@ CREATE TABLE `pedidos` (
   `precoT` int(11) DEFAULT NULL,
   `data_entrega` date DEFAULT NULL,
   `ID_cliente_pedidos` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_pecas`),
+  `id_pedidos` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id_pedidos`),
   KEY `ID_cliente_pedidos` (`ID_cliente_pedidos`),
   CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`ID_cliente_pedidos`) REFERENCES `cliente` (`id_cliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-08 18:42:40
+-- Dump completed on 2024-11-15 14:26:48
