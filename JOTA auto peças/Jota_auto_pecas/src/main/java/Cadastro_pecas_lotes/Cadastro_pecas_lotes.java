@@ -5,6 +5,7 @@
 package Cadastro_pecas_lotes;
 
 import Cadastro_funcionario.Frame_Cadastro_Funcionario;
+import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -47,7 +48,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         notaFiscal = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        AddImagem = new javax.swing.JButton();
         TipoPeca = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         InsirirNota = new javax.swing.JFileChooser();
@@ -94,7 +95,12 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Adicionar imagem");
+        AddImagem.setText("Adicionar imagem");
+        AddImagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddImagemActionPerformed(evt);
+            }
+        });
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Tipo da peça");
@@ -138,7 +144,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                                         .addComponent(jLabel2)
                                         .addGap(88, 88, 88)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton3)
+                                    .addComponent(AddImagem)
                                     .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
@@ -173,7 +179,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                             .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
+                            .addComponent(AddImagem)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -207,6 +213,9 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         // TODO add your handling code here:
+        Tela_Inicial telInicial = new Tela_Inicial();
+        telInicial.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -242,6 +251,12 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     private void InsirirNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsirirNotaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InsirirNotaActionPerformed
+
+    private void AddImagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddImagemActionPerformed
+        // TODO add your handling code here:
+        InsirirNota.setVisible(true);
+        int result = this.InsirirNota.showOpenDialog(this.AddImagem);
+    }//GEN-LAST:event_AddImagemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,13 +294,13 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddImagem;
     private javax.swing.JFileChooser InsirirNota;
     private javax.swing.JTextField NomePeça;
     private javax.swing.JTextField QuantidadeFornecida;
     private javax.swing.JTextField TipoPeca;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

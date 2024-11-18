@@ -214,9 +214,6 @@ public class Ordem_Servico extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void Voltar_ordem_servicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_ordem_servicoActionPerformed
-        Tela_Inicial telInicial = new Tela_Inicial();
-        telInicial.setVisible(true);
-        this.dispose();        
         
     }//GEN-LAST:event_Voltar_ordem_servicoActionPerformed
 
