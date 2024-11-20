@@ -51,7 +51,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         Pesquisa_Funcionario = new javax.swing.JRadioButton();
         Pesquisa_peça = new javax.swing.JRadioButton();
-        jLabel6 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -147,9 +146,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
             }
         });
         jPanel2.add(Pesquisa_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
-
-        jLabel6.setText("jLabel6");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
 
         jTextField2.setText("Pesquisa pelo ID");
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 227, -1));
@@ -351,7 +347,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
