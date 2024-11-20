@@ -4,11 +4,15 @@
  */
 package Cadastro_fornecedor;
 
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_num;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_str;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_tamanho_texto;
 import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -172,29 +176,124 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public static boolean validador_tamanho_texto(String num_str, int limite) {
+        boolean tamanho;
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() > limite) {
+            tamanho = false;
+        }
+        else {
+            tamanho = true;
+        }
+        
+        return tamanho;
+    }
+    
+    public static boolean validador_entrada_num(String num_str, int limite) {
+        boolean e_num = true;
+        
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() != limite) {
+            e_num = false;
+        }
 
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna false se uma posição for letra e acaba com o código, fazendo o usuário escrever denovo.
+        // Retorna true se for número e prossegue com o código.
+        
+        if (e_num == true) {
+            for (int i = 0; i < num_str.length(); i++) {
+                char c = num_str.charAt(i);
+                if ('0' <= c && c <= '9') {
+                    e_num = true;
+                }
+                else {
+                    e_num = false;
+                    break;
+                }
+            }
+        }
+
+        return e_num;
+    }
+    
+    public static boolean validador_entrada_str(String num_str, int limite) {
+        boolean e_letra;
+        
+        // Se e_letra for false o código não executa por completo.
+        e_letra = validador_tamanho_texto(num_str, limite);
+        
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna true se for letra e prossegue com o código. 
+        // Retorna false se for número e para o código, fazendo o usuário digitar novamente.
+        
+        for (int i = 0; i < num_str.length(); i++) {
+            char c = num_str.charAt(i);
+            if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')) {
+                e_letra = true;
+            }
+            else {
+                e_letra = false;
+                break;
+            }
+        }
+        
+        return e_letra;
+    }
+    
     private void Cadastro_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastro_fornecedorActionPerformed
-try {
-            // TODO add your handling code here:
-            Connection conexao = null;
-            PreparedStatement statement = null;
+        
+        String nome = Nome_fornecedor_cadastroF.getText();
+        String email = Email_fornecedor_cadastroF.getText();
+        String telefone = Telefone_fornecedor_cadastroF.getText();
+        String cidade = Cidade_fornecedor_cadastroF.getText();
+        
+        boolean nome_valido = validador_entrada_str(nome, 50);
+        boolean email_valido = validador_tamanho_texto(email, 50);
+        boolean telefone_valido_1 = validador_entrada_num(telefone, 9);
+        boolean telefone_valido_2 = validador_tamanho_texto(telefone, 9);
+        boolean cidade_valido = validador_tamanho_texto(cidade, 50);
+        
+        if (nome_valido && email_valido && telefone_valido_1 && telefone_valido_2 && cidade_valido) {
+            try {
+                // TODO add your handling code here:
+                Connection conexao = null;
+                PreparedStatement statement = null;
 
-            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
-            String usuario = "root";
-            String senha = "";
+                String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+                String usuario = "root";
+                String senha = "";
 
-            conexao = DriverManager.getConnection(url,usuario,senha);
-            String sql = "Insert Into Fornecedor (Nome_fornecedor,Telefone_fornecedor,Email_fornecedor,cidade_fornecedor) VALUES (?,?,?,?)";
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, Nome_fornecedor_cadastroF.getText());
-            statement.setString(2, Telefone_fornecedor_cadastroF.getText());
-            statement.setString(3, Email_fornecedor_cadastroF.getText());
-            statement.setString(4, Cidade_fornecedor_cadastroF.getText());
-            statement.executeUpdate();
-            System.out.println("cadastrado");
-        } catch (SQLException ex) {
-           System.out.println(ex.getMessage());
-        }        // TODO add your handling code here:
+                conexao = DriverManager.getConnection(url,usuario,senha);
+                String sql = "Insert Into Fornecedor (Nome_fornecedor,Telefone_fornecedor,Email_fornecedor,cidade_fornecedor) VALUES (?,?,?,?)";
+                statement = conexao.prepareStatement(sql);
+                statement.setString(1, Nome_fornecedor_cadastroF.getText());
+                statement.setString(2, Telefone_fornecedor_cadastroF.getText());
+                statement.setString(3, Email_fornecedor_cadastroF.getText());
+                statement.setString(4, Cidade_fornecedor_cadastroF.getText());
+                statement.executeUpdate();
+                System.out.println("PASS");
+            } catch (SQLException ex) {
+               JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
+            }        // TODO add your handling code here:
+        }
+        else {
+            if (nome_valido == false) {
+                JOptionPane.showMessageDialog(null, "NOME INVÁLIDO");
+            }
+            else if (email_valido == false) {
+                JOptionPane.showMessageDialog(null, "EMAIL INVÁLIDO");
+            }
+            else if (telefone_valido_1 == false || telefone_valido_2 == false) {
+                JOptionPane.showMessageDialog(null, "TELEFONE INVÁLIDO");
+            }
+            else if (cidade_valido == false) {
+                JOptionPane.showMessageDialog(null, "CIDADE INVÁLIDO");
+            }
+        }
     }//GEN-LAST:event_Cadastro_fornecedorActionPerformed
 
     private void Voltar_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_fornecedorActionPerformed

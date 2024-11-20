@@ -4,6 +4,9 @@
  */
 package Cadastro_funcionario;
 
+import static Cadastro_cliente.Cadastro_cliente.validador_entrada_num;
+import static Cadastro_cliente.Cadastro_cliente.validador_entrada_str;
+import static Cadastro_cliente.Cadastro_cliente.validador_tamanho_texto;
 import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -234,31 +238,128 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Cidade_funcionarioActionPerformed
 
-    private void Cadastrar_FunionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastrar_FunionarioActionPerformed
+    public static boolean validador_tamanho_texto(String num_str, int limite) {
+        boolean tamanho;
         
-        try {
-            Connection conexao = null;
-            PreparedStatement statement = null;
-            
-            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
-            String usuario = "root";
-            String senha = "";
-            
-            conexao = DriverManager.getConnection (url, usuario, senha) ;
-            String sql = "INSERT INTO Funcionario(nome_funcionario, CPF_funcionario, cidade_funcionario, Bairro_funcionario, email_funcionario, senha_funcionario) VALUES (?, ?, ?, ?, ?, ?)";
-            
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, Nome_funcionario_CadastroF.getText());
-            statement.setString(2, CPF_funcionario.getText());
-            statement.setString(3, Cidade_funcionario.getText());
-            statement.setString(4, Bairro_funcionario.getText());
-            statement.setString(5, Email_funcionario.getText());
-            statement.setString(6, String.valueOf(Senha_funcionario.getPassword()));
-            statement.executeUpdate();
-            
-            System.out.println("Deu certo");
-        } catch (SQLException ex) {
-            Logger.getLogger(Frame_Cadastro_Funcionario.class.getName()).log(Level.SEVERE, null, ex);
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() > limite) {
+            tamanho = false;
+        }
+        else {
+            tamanho = true;
+        }
+        
+        return tamanho;
+    }
+    
+    public static boolean validador_entrada_num(String num_str, int limite) {
+        boolean e_num = true;
+        
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() != limite) {
+            e_num = false;
+        }
+
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna false se uma posição for letra e acaba com o código, fazendo o usuário escrever denovo.
+        // Retorna true se for número e prossegue com o código.
+        
+        if (e_num == true) {
+            for (int i = 0; i < num_str.length(); i++) {
+                char c = num_str.charAt(i);
+                if ('0' <= c && c <= '9') {
+                    e_num = true;
+                }
+                else {
+                    e_num = false;
+                    break;
+                }
+            }
+        }
+
+        return e_num;
+    }
+    
+    public static boolean validador_entrada_str(String num_str, int limite) {
+        boolean e_letra;
+        
+        // Se e_letra for false o código não executa por completo.
+        e_letra = validador_tamanho_texto(num_str, limite);
+        
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna true se for letra e prossegue com o código. 
+        // Retorna false se for número e para o código, fazendo o usuário digitar novamente.
+        
+        for (int i = 0; i < num_str.length(); i++) {
+            char c = num_str.charAt(i);
+            if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')) {
+                e_letra = true;
+            }
+            else {
+                e_letra = false;
+                break;
+            }
+        }
+        
+        return e_letra;
+    }
+    
+    private void Cadastrar_FunionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastrar_FunionarioActionPerformed
+  
+        String nome = Nome_funcionario_CadastroF.getText();
+        String email = Email_funcionario.getText();
+        String cpf = CPF_funcionario.getText();
+        String cidade = Cidade_funcionario.getText();
+        String bairro = Bairro_funcionario.getText();
+        
+        boolean nome_valido = validador_entrada_str(nome, 50);
+        boolean email_valido = validador_tamanho_texto(email, 50);
+        boolean cpf_valido = validador_entrada_num(cpf, 11);
+        boolean cidade_valido = validador_tamanho_texto(cidade, 50);
+        boolean bairro_valido = validador_tamanho_texto(bairro, 50);
+        
+        if (nome_valido && email_valido && cpf_valido && cidade_valido && bairro_valido) {
+            try {
+                Connection conexao = null;
+                PreparedStatement statement = null;
+
+                String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+                String usuario = "root";
+                String senha = "";
+
+                conexao = DriverManager.getConnection (url, usuario, senha) ;
+                String sql = "INSERT INTO Funcionario(nome_funcionario, CPF_funcionario, cidade_funcionario, Bairro_funcionario, email_funcionario, senha_funcionario) VALUES (?, ?, ?, ?, ?, ?)";
+
+                statement = conexao.prepareStatement(sql);
+                statement.setString(1, Nome_funcionario_CadastroF.getText());
+                statement.setString(2, CPF_funcionario.getText());
+                statement.setString(3, Cidade_funcionario.getText());
+                statement.setString(4, Bairro_funcionario.getText());
+                statement.setString(5, Email_funcionario.getText());
+                statement.setString(6, String.valueOf(Senha_funcionario.getPassword()));
+                statement.executeUpdate();
+                System.out.println("PASS");
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
+            }
+        }
+        else {
+            if (nome_valido == false) {
+                JOptionPane.showMessageDialog(null, "NOME INVÁLIDO");
+            }
+            else if (email_valido == false) {
+                JOptionPane.showMessageDialog(null, "EMAIL INVÁLIDO");
+            }
+            else if (cpf_valido == false) {
+                JOptionPane.showMessageDialog(null, "CPF INVÁLIDO");
+            }
+            else if (bairro_valido == false) {
+                JOptionPane.showMessageDialog(null, "BAIRRO INVÁLIDO");
+            }
+            else if (cidade_valido == false) {
+                JOptionPane.showMessageDialog(null, "CIDADE INVÁLIDO");
+            }
         }
     }//GEN-LAST:event_Cadastrar_FunionarioActionPerformed
 

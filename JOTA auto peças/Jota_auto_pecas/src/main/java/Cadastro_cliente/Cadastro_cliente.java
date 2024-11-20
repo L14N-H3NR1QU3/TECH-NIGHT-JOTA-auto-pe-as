@@ -144,25 +144,15 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
     private void botaocadastro_cadastroclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaocadastro_cadastroclienteActionPerformed
         // TODO add your handling code here:
-        String nome;
-        String email;
-        String cpf;
-        String telefone;
-   
-        boolean nome_valido;
-        boolean email_valido;
-        boolean cpf_valido;
-        boolean telefone_valido;
+        String nome = nome_cadastrocliente.getText();
+        String email = Email_cadastrocliente.getText();
+        String cpf = cpf_cadastrocliente.getText();
+        String telefone = telefone_cadastrocliente.getText();
         
-        nome = nome_cadastrocliente.getText();
-        email = Email_cadastrocliente.getText();
-        cpf = cpf_cadastrocliente.getText();
-        telefone = telefone_cadastrocliente.getText();
-        
-        nome_valido = validador_entrada_str(nome, 50);
-        email_valido = validador_tamanho_texto(email, 50);
-        cpf_valido = validador_entrada_num(cpf, 11);
-        telefone_valido = validador_entrada_num(telefone, 11);
+        boolean nome_valido = validador_entrada_str(nome, 50);
+        boolean email_valido = validador_tamanho_texto(email, 50);
+        boolean cpf_valido = validador_entrada_num(cpf, 11);
+        boolean telefone_valido = validador_entrada_num(telefone, 11);
         
         if (nome_valido && email_valido && cpf_valido && telefone_valido) {
             try {
@@ -175,21 +165,19 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
                 conexao = DriverManager.getConnection(url, usuario, senha);
 
-                String sql = "INSERT INTO cliente(nome_cliente,CPF_cliente, email_cliente, telefone_cliente, bairro_clienet, rua_clienet) VALUES(?, ?, ?, ?, ?, ?);";
+                String sql = "INSERT INTO cliente(nome_cliente, CPF_cliente, email_cliente, telefone_cliente, bairro_clienet, rua_clienet) VALUES(?, ?, ?, ?, ?, ?);";
                 statement = conexao.prepareStatement(sql);
                 statement.setString(1, nome_cadastrocliente.getText());
                 statement.setString(2, cpf_cadastrocliente.getText());
                 statement.setString(3, Email_cadastrocliente.getText());
                 statement.setString(4, telefone_cadastrocliente.getText());
                 statement.setString(5, cidade_cadastrocliente1.getText());
-                statement.setString(6,Bairro_cadastrocliente.getText());
-
-
+                statement.setString(6, Bairro_cadastrocliente.getText());
                 statement.executeUpdate();
-                System.out.println("Deu certo aqui.");
-            
+                System.out.println("PASS");
             } catch (SQLException e) {
-                System.out.println("Deu esse erro aqui ô: " + e.getMessage());
+                JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
+                System.out.println(e);
             }
         }
         else {
@@ -261,8 +249,6 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         else {
             tamanho = true;
         }
-        
-        System.out.println(tamanho);
         
         return tamanho;
     }

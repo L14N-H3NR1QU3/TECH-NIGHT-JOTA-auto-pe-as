@@ -37,13 +37,13 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jlbl_atualizao_dados = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jfield_id_peca = new javax.swing.JTextField();
         jlbl_qtd_pecas = new javax.swing.JLabel();
-        jfield_qtd_pecas = new javax.swing.JTextField();
         jlbl_nome_peca = new javax.swing.JLabel();
-        jfield_nome_peca = new javax.swing.JTextField();
         Sai_Att_pecas = new javax.swing.JButton();
         jbutton_salvar = new javax.swing.JButton();
+        jfield_id_peca = new javax.swing.JTextField();
+        jfield_qtd_pecas = new javax.swing.JTextField();
+        jfield_nome_peca = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -59,37 +59,18 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ID peça:");
+        jLabel1.setText("ID peça");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
-
-        jfield_id_peca.setBorder(null);
-        jfield_id_peca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jfield_id_pecaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 90, -1));
 
         jlbl_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_qtd_pecas.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_qtd_pecas.setText("Nova quantidade de peças :");
+        jlbl_qtd_pecas.setText("Nova quantidade");
         jPanel1.add(jlbl_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
-
-        jfield_qtd_pecas.setBorder(null);
-        jPanel1.add(jfield_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 250, -1));
 
         jlbl_nome_peca.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_nome_peca.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_nome_peca.setText("Nome peça que foi atualizada :");
+        jlbl_nome_peca.setText("Nome");
         jPanel1.add(jlbl_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
-
-        jfield_nome_peca.setBorder(null);
-        jfield_nome_peca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jfield_nome_pecaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jfield_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 190, -1));
 
         Sai_Att_pecas.setText("Sair");
         Sai_Att_pecas.setBorder(null);
@@ -110,19 +91,14 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jbutton_salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 570, 80, 30));
+        jPanel1.add(jfield_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 295, -1));
+        jPanel1.add(jfield_qtd_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 295, -1));
+        jPanel1.add(jfield_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 295, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 612));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jfield_id_pecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_id_pecaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jfield_id_pecaActionPerformed
-
-    private void jfield_nome_pecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfield_nome_pecaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jfield_nome_pecaActionPerformed
 
     private void jbutton_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutton_salvarActionPerformed
         // TODO add your handling code here:

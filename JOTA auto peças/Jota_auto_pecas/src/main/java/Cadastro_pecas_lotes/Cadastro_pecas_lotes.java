@@ -5,12 +5,16 @@
 package Cadastro_pecas_lotes;
 
 import Cadastro_funcionario.Frame_Cadastro_Funcionario;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_num;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_str;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_tamanho_texto;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -84,8 +88,6 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel7.setText("jLabel7");
-
-        notaFiscal.setText(".");
 
         jButton2.setText("Cadastrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -209,29 +211,116 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public static boolean validador_tamanho_texto(String num_str, int limite) {
+        boolean tamanho;
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() > limite) {
+            tamanho = false;
+        }
+        else {
+            tamanho = true;
+        }
+        
+        return tamanho;
+    }
+    
+    public static boolean validador_entrada_num(String num_str, int limite) {
+        boolean e_num = true;
+        
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() != limite) {
+            e_num = false;
+        }
+
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna false se uma posição for letra e acaba com o código, fazendo o usuário escrever denovo.
+        // Retorna true se for número e prossegue com o código.
+        
+        if (e_num == true) {
+            for (int i = 0; i < num_str.length(); i++) {
+                char c = num_str.charAt(i);
+                if ('0' <= c && c <= '9') {
+                    e_num = true;
+                }
+                else {
+                    e_num = false;
+                    break;
+                }
+            }
+        }
+
+        return e_num;
+    }
+    
+    public static boolean validador_entrada_str(String num_str, int limite) {
+        boolean e_letra;
+        
+        // Se e_letra for false o código não executa por completo.
+        e_letra = validador_tamanho_texto(num_str, limite);
+        
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna true se for letra e prossegue com o código. 
+        // Retorna false se for número e para o código, fazendo o usuário digitar novamente.
+        
+        for (int i = 0; i < num_str.length(); i++) {
+            char c = num_str.charAt(i);
+            if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')) {
+                e_letra = true;
+            }
+            else {
+                e_letra = false;
+                break;
+            }
+        }
+        
+        return e_letra;
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
-        try {
-            Connection conexao = null;
-            PreparedStatement statement = null;
-            
-            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
-            String usuario = "root";
-            String senha = "";
-            
-            conexao = DriverManager.getConnection (url, usuario, senha) ;
-            String sql = "INSERT INTO pecas(nome_pecas, tipo_pecas, qtd_pecas) VALUES (?, ?, ?)";
-            
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, NomePeça.getText());
-            statement.setString(2, TipoPeca.getText());
-            statement.setString(3, QuantidadeFornecida.getText());
-            statement.executeUpdate();
-            
-            System.out.println("Deu certo");
-        } catch (SQLException ex) {
-            Logger.getLogger(Frame_Cadastro_Funcionario.class.getName()).log(Level.SEVERE, null, ex);
+        String nome = NomePeça.getText();
+        String tipo = TipoPeca.getText();
+        String qtd = QuantidadeFornecida.getText();
+        
+        boolean nome_valido = validador_entrada_str(nome, 50);
+        boolean tipo_valido = validador_tamanho_texto(tipo, 50);
+        boolean qtd_valido = validador_entrada_num(qtd, 4);
+        
+        if (nome_valido && tipo_valido && qtd_valido) {
+            try {
+                Connection conexao = null;
+                PreparedStatement statement = null;
+
+                String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+                String usuario = "root";
+                String senha = "";
+
+                conexao = DriverManager.getConnection (url, usuario, senha) ;
+                String sql = "INSERT INTO pecas(nome_pecas, tipo_pecas, qtd_pecas) VALUES (?, ?, ?)";
+
+                statement = conexao.prepareStatement(sql);
+                statement.setString(1, NomePeça.getText());
+                statement.setString(2, TipoPeca.getText());
+                statement.setString(3, QuantidadeFornecida.getText());
+                statement.executeUpdate();
+
+                System.out.println("PASS");
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
+            }
+        }else {
+            if (nome_valido == false) {
+                JOptionPane.showMessageDialog(null, "NOME INVÁLIDO");
+            }
+            else if (tipo_valido == false) {
+                JOptionPane.showMessageDialog(null, "TIPO INVÁLIDO");
+            }
+            else if (qtd_valido == false) {
+                JOptionPane.showMessageDialog(null, "QUANTIDADE FORNECIDA INVÁLIDA");
+            }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

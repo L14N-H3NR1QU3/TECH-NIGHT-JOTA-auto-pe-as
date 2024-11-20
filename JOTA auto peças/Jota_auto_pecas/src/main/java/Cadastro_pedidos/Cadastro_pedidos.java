@@ -5,6 +5,9 @@
 package Cadastro_pedidos;
 
 import Cadastro_funcionario.Frame_Cadastro_Funcionario;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_num;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_str;
+import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_tamanho_texto;
 import Tela_Inicial.Tela_Inicial;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -241,32 +244,137 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Voltar_Cadastro_pedidosActionPerformed
 
+    public static boolean validador_tamanho_texto(String num_str, int limite) {
+        boolean tamanho;
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() > limite) {
+            tamanho = false;
+        }
+        else {
+            tamanho = true;
+        }
+        
+        return tamanho;
+    }
+    
+    public static boolean validador_entrada_num(String num_str, int limite) {
+        boolean e_num = true;
+        
+        
+        // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
+        if (num_str.length() != limite) {
+            e_num = false;
+        }
+
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna false se uma posição for letra e acaba com o código, fazendo o usuário escrever denovo.
+        // Retorna true se for número e prossegue com o código.
+        
+        if (e_num == true) {
+            for (int i = 0; i < num_str.length(); i++) {
+                char c = num_str.charAt(i);
+                if ('0' <= c && c <= '9') {
+                    e_num = true;
+                }
+                else {
+                    e_num = false;
+                    break;
+                }
+            }
+        }
+
+        return e_num;
+    }
+    
+    public static boolean validador_entrada_str(String num_str, int limite) {
+        boolean e_letra;
+        
+        // Se e_letra for false o código não executa por completo.
+        e_letra = validador_tamanho_texto(num_str, limite);
+        
+        // Verifica cada posição da String para saber se é letra ou número.
+        // Retorna true se for letra e prossegue com o código. 
+        // Retorna false se for número e para o código, fazendo o usuário digitar novamente.
+        
+        for (int i = 0; i < num_str.length(); i++) {
+            char c = num_str.charAt(i);
+            if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')) {
+                e_letra = true;
+            }
+            else {
+                e_letra = false;
+                break;
+            }
+        }
+        
+        return e_letra;
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        try {
-            Connection conexao = null;
-            PreparedStatement statement = null;
+        
+        String nome = NomeCliente.getText();
+        String telefone = TelefoneCliente.getText();
+        String email = EmailCliente.getText();
+        String estabelecimento = NomeCliente.getText();
+        String precoTotal = TelefoneCliente.getText();
+        String dataEntrega = EmailCliente.getText();
+        
+        boolean nome_valido = validador_entrada_str(nome, 50);
+        boolean telefone_valido = validador_tamanho_texto(telefone, 9);
+        boolean email_valido = validador_tamanho_texto(email, 50);
+        boolean estabelecimento_valido = validador_tamanho_texto(estabelecimento, 50);
+        boolean precoTotal_valido = validador_entrada_num(precoTotal, 11);
+        boolean dataEntrega_valido = validador_tamanho_texto(dataEntrega, 8);
+        
+        if (nome_valido && telefone_valido && email_valido && estabelecimento_valido && precoTotal_valido && dataEntrega_valido) {
+            try {
+                Connection conexao = null;
+                PreparedStatement statement = null;
+
+                String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+                String usuario = "root";
+                String senha = "";
+
+                conexao = DriverManager.getConnection (url, usuario, senha) ;
+                String sql = "INSERT INTO pedidos(nome_cliente, email_cliente, telefone_cliente, local_estab, precoT, data_entrega, ID_cliente_pedidos) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+                statement = conexao.prepareStatement(sql);
+                statement.setString(1, NomeCliente.getText());
+                statement.setString(2, TelefoneCliente.getText());
+                statement.setString(3, EmailCliente.getText());
+                statement.setString(4, EstabelecimentoCliente.getText());
+                statement.setString(5, PrecoTotal.getText());
+                statement.setString(6, DataEntrega.getText());
+                statement.setString(7, IdCliente.getItemAt(WIDTH));
+                statement.executeUpdate();
+
+                System.out.println("PASS");
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
+            }
+        }
+        else {
+            if (nome_valido == false) {
+                JOptionPane.showMessageDialog(null, "NOME INVÁLIDO");
+            }
+            else if (email_valido == false) {
+                JOptionPane.showMessageDialog(null, "EMAIL INVÁLIDO");
+            }
+            else if (telefone_valido == false) {
+                JOptionPane.showMessageDialog(null, "TELEFONE INVÁLIDO");
+            }
+            else if (estabelecimento_valido == false) {
+                JOptionPane.showMessageDialog(null, "ESTABELECIMENTO INVÁLIDO");
+            }
+            else if (precoTotal_valido == false) {
+                JOptionPane.showMessageDialog(null, "PREÇO TOTAL INVÁLIDO");
+            }
+            else if (dataEntrega_valido == false) {
+                JOptionPane.showMessageDialog(null, "DATA DE ENTREGA INVÁLIDO");
+            }
             
-            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
-            String usuario = "root";
-            String senha = "";
-            
-            conexao = DriverManager.getConnection (url, usuario, senha) ;
-            String sql = "INSERT INTO pedidos(nome_cliente, email_cliente, telefone_cliente, local_estab, precoT, data_entrega, ID_cliente_pedidos) VALUES (?, ?, ?, ?, ?, ?, ?)";
-            
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, NomeCliente.getText());
-            statement.setString(2, TelefoneCliente.getText());
-            statement.setString(3, EmailCliente.getText());
-            statement.setString(4, EstabelecimentoCliente.getText());
-            statement.setString(5, PrecoTotal.getText());
-            statement.setString(6, DataEntrega.getText());
-            statement.setString(7, IdCliente.getItemAt(WIDTH));
-            statement.executeUpdate();
-            
-            System.out.println("Deu certo");
-        } catch (SQLException ex) {
-            Logger.getLogger(Frame_Cadastro_Funcionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
