@@ -165,6 +165,7 @@ CREATE TABLE `pedidos` (
   `data_entrega` date DEFAULT NULL,
   `ID_cliente_pedidos` int(11) DEFAULT NULL,
   `id_pedidos` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao_pedidos` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`id_pedidos`),
   KEY `ID_cliente_pedidos` (`ID_cliente_pedidos`),
   CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`ID_cliente_pedidos`) REFERENCES `cliente` (`id_cliente`)
@@ -189,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-15 15:14:47
+-- Dump completed on 2024-11-20  9:21:18
