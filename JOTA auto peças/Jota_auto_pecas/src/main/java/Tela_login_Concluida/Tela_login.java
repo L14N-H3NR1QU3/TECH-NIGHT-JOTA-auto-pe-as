@@ -76,7 +76,6 @@ public class Tela_login extends javax.swing.JFrame {
         });
         jPanel1.add(Entrar_Login_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\farne\\OneDrive\\Área de Trabalho\\JOTA_techn\\TECH_NIGHT-JOTA_auto_pecas\\Imagens\\Usuario_imagem.png")); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 480, -1));
 
@@ -84,9 +83,7 @@ public class Tela_login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 266, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
