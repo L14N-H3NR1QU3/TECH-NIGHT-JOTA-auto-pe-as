@@ -5,13 +5,16 @@
 package Cadastro_pecas_lotes;
 
 import Cadastro_funcionario.Frame_Cadastro_Funcionario;
-<<<<<<< HEAD
+import Tela_Inicial.Tela_Inicial;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_num;
 import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_entrada_str;
 import static Cadastro_funcionario.Frame_Cadastro_Funcionario.validador_tamanho_texto;
-=======
 import Tela_Inicial.Tela_Inicial;
->>>>>>> 4b7fff53de140208dc01b57b7cf1b81624308406
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -240,9 +243,8 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     public static boolean validador_entrada_num(String num_str, int limite) {
         boolean e_num = true;
         
-        
         // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
-        if (num_str.length() != limite) {
+        if (num_str.length() > limite && num_str.length() <= 0) {
             e_num = false;
         }
 
@@ -299,7 +301,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         
         boolean nome_valido = validador_entrada_str(nome, 50);
         boolean tipo_valido = validador_tamanho_texto(tipo, 50);
-        boolean qtd_valido = validador_entrada_num(qtd, 4);
+        boolean qtd_valido = validador_entrada_num(qtd, 3);
         
         if (nome_valido && tipo_valido && qtd_valido) {
             try {
