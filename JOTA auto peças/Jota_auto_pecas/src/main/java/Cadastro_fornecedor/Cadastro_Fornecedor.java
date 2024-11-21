@@ -37,18 +37,18 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel_tituloF = new javax.swing.JLabel();
         Nome_fornecedor_cadastroF = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel_nomeF = new javax.swing.JLabel();
+        jLabel_TelefoneF = new javax.swing.JLabel();
+        jLabel_emailF = new javax.swing.JLabel();
         Telefone_fornecedor_cadastroF = new javax.swing.JTextField();
         Email_fornecedor_cadastroF = new javax.swing.JTextField();
         Cidade_fornecedor_cadastroF = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel_CidadeF = new javax.swing.JLabel();
         Cadastro_fornecedor = new javax.swing.JButton();
         Voltar_fornecedor = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
+        jLabel_iconeF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,21 +56,21 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 600));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cadastro de Fornecedor");
+        jLabel_tituloF.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel_tituloF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_tituloF.setText("Cadastro de Fornecedor");
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText(" Nome do Fornecedor");
+        jLabel_nomeF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_nomeF.setText(" Nome do Fornecedor");
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Telefone");
+        jLabel_TelefoneF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_TelefoneF.setText("Telefone");
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("E-mail");
+        jLabel_emailF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_emailF.setText("E-mail");
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Cidade");
+        jLabel_CidadeF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_CidadeF.setText("Cidade");
 
         Cadastro_fornecedor.setText("Cadastrar");
         Cadastro_fornecedor.addActionListener(new java.awt.event.ActionListener() {
@@ -86,8 +86,8 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        jLabel_iconeF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        jLabel_iconeF.setText("jLabel11");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -97,7 +97,7 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel_tituloF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(Voltar_fornecedor)))
@@ -106,15 +106,15 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(Cadastro_fornecedor))
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_iconeF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(227, 227, 227)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_TelefoneF)
+                    .addComponent(jLabel_nomeF)
+                    .addComponent(jLabel_emailF)
+                    .addComponent(jLabel_CidadeF, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Nome_fornecedor_cadastroF)
@@ -129,26 +129,26 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel_tituloF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel_iconeF, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nome_fornecedor_cadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel_nomeF))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cidade_fornecedor_cadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                    .addComponent(jLabel_CidadeF))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Telefone_fornecedor_cadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel_TelefoneF))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Email_fornecedor_cadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel_emailF))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 285, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Voltar_fornecedor)
@@ -340,12 +340,12 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
     private javax.swing.JTextField Nome_fornecedor_cadastroF;
     private javax.swing.JTextField Telefone_fornecedor_cadastroF;
     private javax.swing.JButton Voltar_fornecedor;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_CidadeF;
+    private javax.swing.JLabel jLabel_TelefoneF;
+    private javax.swing.JLabel jLabel_emailF;
+    private javax.swing.JLabel jLabel_iconeF;
+    private javax.swing.JLabel jLabel_nomeF;
+    private javax.swing.JLabel jLabel_tituloF;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

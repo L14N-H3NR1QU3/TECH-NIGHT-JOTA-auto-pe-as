@@ -43,12 +43,12 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel_nomeC = new javax.swing.JLabel();
+        jLabel_telefone = new javax.swing.JLabel();
+        jLabel_estabelecimento = new javax.swing.JLabel();
+        jLabel_Emailp = new javax.swing.JLabel();
+        jLabel_Dataentrega = new javax.swing.JLabel();
+        jLabelPrecot = new javax.swing.JLabel();
         NomeCliente = new javax.swing.JTextField();
         TelefoneCliente = new javax.swing.JTextField();
         EmailCliente = new javax.swing.JTextField();
@@ -58,12 +58,12 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         Voltar_Cadastro_pedidos = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jLabel_tituloP = new javax.swing.JLabel();
+        jLabel_iconeP = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         IdCliente = new javax.swing.JTable();
         IdClienteText = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel_IdC = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -75,23 +75,23 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 600));
 
-        jLabel1.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel1.setText("Nome cliente");
+        jLabel_nomeC.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_nomeC.setText("Nome cliente");
 
-        jLabel2.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel2.setText("Telefone");
+        jLabel_telefone.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_telefone.setText("Telefone");
 
-        jLabel3.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel3.setText("Estabelecimento");
+        jLabel_estabelecimento.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_estabelecimento.setText("Estabelecimento");
 
-        jLabel4.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel4.setText("E-mail");
+        jLabel_Emailp.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_Emailp.setText("E-mail");
 
-        jLabel5.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel5.setText("Data de entrega");
+        jLabel_Dataentrega.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_Dataentrega.setText("Data de entrega");
 
-        jLabel6.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel6.setText("Preço/total");
+        jLabelPrecot.setForeground(new java.awt.Color(242, 242, 242));
+        jLabelPrecot.setText("Preço/total");
 
         NomeCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,12 +123,12 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(242, 242, 242));
         jLabel9.setText("hh : mm - dd/mm/aaaa");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel10.setText("Cadastro de pedidos");
+        jLabel_tituloP.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel_tituloP.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_tituloP.setText("Cadastro de pedidos");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        jLabel_iconeP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        jLabel_iconeP.setText("jLabel11");
 
         IdCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -154,8 +154,8 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel7.setText("ID cliente");
+        jLabel_IdC.setForeground(new java.awt.Color(242, 242, 242));
+        jLabel_IdC.setText("ID cliente");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -174,13 +174,13 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(75, 75, 75)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
+                                    .addComponent(jLabel_IdC)
+                                    .addComponent(jLabel_nomeC)
+                                    .addComponent(jLabel_telefone)
+                                    .addComponent(jLabel_Emailp)
+                                    .addComponent(jLabel_estabelecimento)
+                                    .addComponent(jLabel_Dataentrega)
+                                    .addComponent(jLabelPrecot))
                                 .addGap(24, 24, 24)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(EstabelecimentoCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,11 +193,11 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                                 .addGap(18, 37, Short.MAX_VALUE)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
+                                .addComponent(jLabel_tituloP)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel_iconeP, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(20, 20, 20))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -205,40 +205,40 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
+                    .addComponent(jLabel_tituloP)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel11)
+                        .addComponent(jLabel_iconeP)
                         .addComponent(jLabel9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 43, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
+                            .addComponent(jLabel_nomeC)
                             .addComponent(NomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
+                            .addComponent(jLabel_IdC)
                             .addComponent(IdClienteText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(34, 34, 34)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
+                            .addComponent(jLabel_telefone)
                             .addComponent(TelefoneCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(jLabel_Emailp)
                             .addComponent(EmailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
+                            .addComponent(jLabel_estabelecimento)
                             .addComponent(EstabelecimentoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(jLabelPrecot)
                             .addComponent(PrecoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(jLabel_Dataentrega)
                             .addComponent(DataEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(217, 217, 217)
@@ -524,16 +524,16 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     private javax.swing.JTextField TelefoneCliente;
     private javax.swing.JButton Voltar_Cadastro_pedidos;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelPrecot;
+    private javax.swing.JLabel jLabel_Dataentrega;
+    private javax.swing.JLabel jLabel_Emailp;
+    private javax.swing.JLabel jLabel_IdC;
+    private javax.swing.JLabel jLabel_estabelecimento;
+    private javax.swing.JLabel jLabel_iconeP;
+    private javax.swing.JLabel jLabel_nomeC;
+    private javax.swing.JLabel jLabel_telefone;
+    private javax.swing.JLabel jLabel_tituloP;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

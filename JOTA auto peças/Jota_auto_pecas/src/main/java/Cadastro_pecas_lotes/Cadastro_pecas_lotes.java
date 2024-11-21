@@ -48,42 +48,42 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
 
         jFileChooser1 = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel_titulopeca = new javax.swing.JLabel();
+        jLabel_Nf = new javax.swing.JLabel();
+        jLabel_nomeP = new javax.swing.JLabel();
+        jLabel_qtdpeca = new javax.swing.JLabel();
+        jButton_voltarPeca = new javax.swing.JButton();
         NomePeça = new javax.swing.JTextField();
         QuantidadeFornecida = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         notaFiscal = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButton_cadastropeca = new javax.swing.JButton();
         AddImagem = new javax.swing.JButton();
         TipoPeca = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel_tipopeca = new javax.swing.JLabel();
         InsirirNota = new javax.swing.JFileChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText(" Cadastro de peças e lotes das peças");
+        jLabel_titulopeca.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel_titulopeca.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_titulopeca.setText(" Cadastro de peças e lotes das peças");
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nota fiscal");
+        jLabel_Nf.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Nf.setText("Nota fiscal");
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Nome da peça");
+        jLabel_nomeP.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_nomeP.setText("Nome da peça");
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Quantidade fornecida");
+        jLabel_qtdpeca.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_qtdpeca.setText("Quantidade fornecida");
 
-        jButton1.setText("Voltar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_voltarPeca.setText("Voltar");
+        jButton_voltarPeca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_voltarPecaActionPerformed(evt);
             }
         });
 
@@ -96,10 +96,10 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel7.setText("jLabel7");
 
-        jButton2.setText("Cadastrar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_cadastropeca.setText("Cadastrar");
+        jButton_cadastropeca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_cadastropecaActionPerformed(evt);
             }
         });
 
@@ -110,8 +110,8 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Tipo da peça");
+        jLabel_tipopeca.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_tipopeca.setText("Tipo da peça");
 
         InsirirNota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,37 +125,37 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(jButton_voltarPeca)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(jButton_cadastropeca)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)
+                        .addComponent(jLabel_titulopeca)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
+                                .addComponent(jLabel_nomeP)
                                 .addGap(67, 67, 67)
                                 .addComponent(NomePeça, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
+                                        .addComponent(jLabel_qtdpeca)
                                         .addGap(29, 29, 29))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel_Nf)
                                         .addGap(88, 88, 88)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(AddImagem)
                                     .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
+                                .addComponent(jLabel_tipopeca)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(TipoPeca, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(36, 36, 36)
@@ -169,26 +169,26 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(jLabel_titulopeca)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
+                            .addComponent(jLabel_nomeP)
                             .addComponent(NomePeça, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(jLabel_tipopeca)
                             .addComponent(TipoPeca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(jLabel_qtdpeca)
                             .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(AddImagem)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel_Nf))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(64, 64, 64)
@@ -199,8 +199,8 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                             .addComponent(notaFiscal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton_voltarPeca)
+                    .addComponent(jButton_cadastropeca))
                 .addContainerGap())
         );
 
@@ -218,13 +218,13 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_voltarPecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_voltarPecaActionPerformed
 
         // TODO add your handling code here:
         Tela_Inicial telInicial = new Tela_Inicial();
         telInicial.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_voltarPecaActionPerformed
 
     public static boolean validador_tamanho_texto(String num_str, int limite) {
         boolean tamanho;
@@ -292,7 +292,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         return e_letra;
     }
     
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton_cadastropecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cadastropecaActionPerformed
         // TODO add your handling code here:
         
         String nome = NomePeça.getText();
@@ -336,7 +336,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "QUANTIDADE FORNECIDA INVÁLIDA");
             }
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton_cadastropecaActionPerformed
 
     private void NomePeçaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomePeçaActionPerformed
         // TODO add your handling code here:
@@ -393,15 +393,15 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     private javax.swing.JTextField NomePeça;
     private javax.swing.JTextField QuantidadeFornecida;
     private javax.swing.JTextField TipoPeca;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton_cadastropeca;
+    private javax.swing.JButton jButton_voltarPeca;
     private javax.swing.JFileChooser jFileChooser1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel_Nf;
+    private javax.swing.JLabel jLabel_nomeP;
+    private javax.swing.JLabel jLabel_qtdpeca;
+    private javax.swing.JLabel jLabel_tipopeca;
+    private javax.swing.JLabel jLabel_titulopeca;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel notaFiscal;
     // End of variables declaration//GEN-END:variables

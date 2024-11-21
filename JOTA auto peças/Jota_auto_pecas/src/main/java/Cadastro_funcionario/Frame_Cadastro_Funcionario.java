@@ -43,19 +43,19 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Nome_funcionario_CadastroF = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        jLabel_tituloFuncio = new javax.swing.JLabel();
+        jLabel_nomeFuncio = new javax.swing.JLabel();
+        jLabel_bairroFuncio = new javax.swing.JLabel();
+        jLabel_emailFuncio = new javax.swing.JLabel();
+        jLabel_cpfFuncio = new javax.swing.JLabel();
+        jLabel_cidadeFuncio = new javax.swing.JLabel();
+        jLabel_senhaF = new javax.swing.JLabel();
         Bairro_funcionario = new javax.swing.JTextField();
         Email_funcionario = new javax.swing.JTextField();
         CPF_funcionario = new javax.swing.JTextField();
         Cidade_funcionario = new javax.swing.JTextField();
         Cadastrar_Funionario = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel_iconeFuncio = new javax.swing.JLabel();
         Voltar_cadastro_funcionario = new javax.swing.JButton();
         Senha_funcionario = new javax.swing.JPasswordField();
 
@@ -75,28 +75,28 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
 
         Nome_funcionario_CadastroF.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cadastro de Funcionário");
+        jLabel_tituloFuncio.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_tituloFuncio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel_tituloFuncio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_tituloFuncio.setText("Cadastro de Funcionário");
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nome");
+        jLabel_nomeFuncio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_nomeFuncio.setText("Nome");
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Bairro");
+        jLabel_bairroFuncio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_bairroFuncio.setText("Bairro");
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("E-mail");
+        jLabel_emailFuncio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_emailFuncio.setText("E-mail");
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("CPF ");
+        jLabel_cpfFuncio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_cpfFuncio.setText("CPF ");
 
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Cidade");
+        jLabel_cidadeFuncio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_cidadeFuncio.setText("Cidade");
 
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Senha");
+        jLabel_senhaF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_senhaF.setText("Senha");
 
         Bairro_funcionario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -124,8 +124,8 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
+        jLabel_iconeFuncio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        jLabel_iconeFuncio.setText("jLabel3");
 
         Voltar_cadastro_funcionario.setText("Voltar");
         Voltar_cadastro_funcionario.addActionListener(new java.awt.event.ActionListener() {
@@ -142,9 +142,9 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel_tituloFuncio, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 468, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel_iconeFuncio, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Voltar_cadastro_funcionario)
@@ -156,21 +156,21 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(CPF_funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(jLabel_nomeFuncio)
                         .addGap(18, 18, 18)
                         .addComponent(Nome_funcionario_CadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel9)
+                        .addComponent(jLabel_cpfFuncio)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
+                                .addComponent(jLabel_cidadeFuncio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Cidade_funcionario))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel13))
+                                    .addComponent(jLabel_bairroFuncio)
+                                    .addComponent(jLabel_emailFuncio)
+                                    .addComponent(jLabel_senhaF))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(Email_funcionario, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
@@ -183,31 +183,31 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_tituloFuncio, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_iconeFuncio, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nome_funcionario_CadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel_nomeFuncio))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                    .addComponent(jLabel_cpfFuncio)
                     .addComponent(CPF_funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cidade_funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
+                    .addComponent(jLabel_cidadeFuncio))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jLabel_bairroFuncio)
                     .addComponent(Bairro_funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Email_funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel_emailFuncio))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
+                    .addComponent(jLabel_senhaF)
                     .addComponent(Senha_funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -420,14 +420,14 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
     private javax.swing.JTextField Nome_funcionario_CadastroF;
     private javax.swing.JPasswordField Senha_funcionario;
     private javax.swing.JButton Voltar_cadastro_funcionario;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_bairroFuncio;
+    private javax.swing.JLabel jLabel_cidadeFuncio;
+    private javax.swing.JLabel jLabel_cpfFuncio;
+    private javax.swing.JLabel jLabel_emailFuncio;
+    private javax.swing.JLabel jLabel_iconeFuncio;
+    private javax.swing.JLabel jLabel_nomeFuncio;
+    private javax.swing.JLabel jLabel_senhaF;
+    private javax.swing.JLabel jLabel_tituloFuncio;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
