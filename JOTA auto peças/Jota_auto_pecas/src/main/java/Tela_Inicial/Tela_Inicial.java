@@ -125,6 +125,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 469, -1, -1));
 
         jTextField1.setText("Pesquisa pelo nome");
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField1MouseClicked(evt);
+            }
+        });
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -134,6 +139,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
         Pesquisa_Funcionario.setForeground(new java.awt.Color(255, 255, 255));
         Pesquisa_Funcionario.setText("Funcionario");
+        Pesquisa_Funcionario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Pesquisa_FuncionarioMouseClicked(evt);
+            }
+        });
         Pesquisa_Funcionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pesquisa_FuncionarioActionPerformed(evt);
@@ -143,6 +153,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
         Pesquisa_peça.setForeground(new java.awt.Color(255, 255, 255));
         Pesquisa_peça.setText("Peças");
+        Pesquisa_peça.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Pesquisa_peçaMouseClicked(evt);
+            }
+        });
         Pesquisa_peça.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pesquisa_peçaActionPerformed(evt);
@@ -151,6 +166,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jPanel2.add(Pesquisa_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
 
         jTextField2.setText("Pesquisa pelo ID");
+        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField2MouseClicked(evt);
+            }
+        });
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 227, -1));
 
         jButton7.setText("Sair");
@@ -330,6 +350,30 @@ public class Tela_Inicial extends javax.swing.JFrame {
         estoque.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+        // TODO add your handling code here:
+        jTextField2.setText("");
+        jTextField1.setText("Pesquisa pelo nome");
+    }//GEN-LAST:event_jTextField2MouseClicked
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        // TODO add your handling code here:
+        jTextField1.setText("");
+        jTextField2.setText("Pesquisa pelo ID");
+    }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void Pesquisa_FuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_FuncionarioMouseClicked
+        // TODO add your handling code here:
+        jTextField1.setText("Pesquisa pelo nome");
+        jTextField2.setText("Pesquisa pelo ID");
+    }//GEN-LAST:event_Pesquisa_FuncionarioMouseClicked
+
+    private void Pesquisa_peçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_peçaMouseClicked
+        // TODO add your handling code here:
+        jTextField1.setText("Pesquisa pelo nome");
+        jTextField2.setText("Pesquisa pelo ID");
+    }//GEN-LAST:event_Pesquisa_peçaMouseClicked
 
     /**
      * @param args the command line arguments

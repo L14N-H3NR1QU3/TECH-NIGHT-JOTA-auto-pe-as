@@ -244,7 +244,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         boolean e_num = true;
         
         // Se o length da String for maior do que o limite, retorna false e o usuário devera digitar novamente.
-        if (num_str.length() > limite && num_str.length() <= 0) {
+        if (num_str.length() > limite && num_str.length() < 0) {
             e_num = false;
         }
 

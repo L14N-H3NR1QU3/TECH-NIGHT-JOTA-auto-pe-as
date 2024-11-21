@@ -250,6 +250,7 @@
                 <Property name="text" type="java.lang.String" value="Pesquisa pelo nome"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextField1MouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
               </Events>
               <Constraints>
@@ -266,6 +267,7 @@
                 <Property name="text" type="java.lang.String" value="Funcionario"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Pesquisa_FuncionarioMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Pesquisa_FuncionarioActionPerformed"/>
               </Events>
               <Constraints>
@@ -282,6 +284,7 @@
                 <Property name="text" type="java.lang.String" value="Pe&#xe7;as"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Pesquisa_pe&#xe7;aMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Pesquisa_pe&#xe7;aActionPerformed"/>
               </Events>
               <Constraints>
@@ -294,6 +297,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisa pelo ID"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextField2MouseClicked"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="180" y="50" width="227" height="-1"/>
