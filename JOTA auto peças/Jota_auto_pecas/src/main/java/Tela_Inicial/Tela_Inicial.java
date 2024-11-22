@@ -341,10 +341,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Pesquisa_FuncionarioActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         Tela_Mapa_Kevin TMap = new Tela_Mapa_Kevin();
         TMap.setVisible(true);
@@ -374,12 +370,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jTextField1.setText("Pesquisa pelo nome");
     }//GEN-LAST:event_jTextField2MouseClicked
 
-    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
-        // TODO add your handling code here:
-        jTextField1.setText("");
-        jTextField2.setText("Pesquisa pelo ID");
-    }//GEN-LAST:event_jTextField1MouseClicked
-
     private void Pesquisa_FuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_FuncionarioMouseClicked
         // TODO add your handling code here:
         jTextField1.setText("Pesquisa pelo nome");
@@ -398,6 +388,16 @@ public class Tela_Inicial extends javax.swing.JFrame {
         cadFor.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        // TODO add your handling code here:
+        jTextField1.setText("");
+        jTextField2.setText("Pesquisa pelo ID");
+    }//GEN-LAST:event_jTextField1MouseClicked
 
     /**
      * @param args the command line arguments
