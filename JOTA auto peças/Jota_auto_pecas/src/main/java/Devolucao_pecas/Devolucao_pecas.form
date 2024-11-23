@@ -240,8 +240,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="Cadastra_devol">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cadastrar"/>
+            <Property name="text" type="java.lang.String" value="Devolver"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cadastra_devolActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Voltar_devolucao_pecas">
           <Properties>

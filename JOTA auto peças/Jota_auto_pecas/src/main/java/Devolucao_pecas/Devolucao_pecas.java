@@ -85,7 +85,12 @@ public class Devolucao_pecas extends javax.swing.JFrame {
         Titulo_Devolucao.setForeground(new java.awt.Color(242, 242, 242));
         Titulo_Devolucao.setText("Devolução de peças");
 
-        Cadastra_devol.setText("Cadastrar");
+        Cadastra_devol.setText("Devolver");
+        Cadastra_devol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cadastra_devolActionPerformed(evt);
+            }
+        });
 
         Voltar_devolucao_pecas.setText("Voltar");
         Voltar_devolucao_pecas.addActionListener(new java.awt.event.ActionListener() {
@@ -201,6 +206,10 @@ public class Devolucao_pecas extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_Voltar_devolucao_pecasActionPerformed
+
+    private void Cadastra_devolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastra_devolActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Cadastra_devolActionPerformed
 
     /**
      * @param args the command line arguments

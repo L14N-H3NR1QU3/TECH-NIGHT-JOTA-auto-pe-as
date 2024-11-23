@@ -12,6 +12,14 @@ import Cadastro_pedidos.Cadastro_pedidos;
 import Ordem_Servico.Ordem_Servico;
 import Tela_estoque.Tela_estoque;
 import Tela_mapa.Tela_Mapa_Kevin;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -50,10 +58,10 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         Pesquisa_Funcionario = new javax.swing.JRadioButton();
         Pesquisa_peça = new javax.swing.JRadioButton();
-        jTextField2 = new javax.swing.JTextField();
+        Texto_id_nome = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -126,19 +134,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jButton6.setText("Pesquisar");
         jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 469, -1, -1));
 
-        jTextField1.setText("Pesquisa pelo nome");
-        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField1MouseClicked(evt);
-            }
-        });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, 227, -1));
-
         Pesquisa_Funcionario.setForeground(new java.awt.Color(255, 255, 255));
         Pesquisa_Funcionario.setText("Funcionario");
         Pesquisa_Funcionario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -167,13 +162,21 @@ public class Tela_Inicial extends javax.swing.JFrame {
         });
         jPanel2.add(Pesquisa_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
 
-        jTextField2.setText("Pesquisa pelo ID");
-        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+        Texto_id_nome.setText("Pesquisa pelo ID");
+        Texto_id_nome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField2MouseClicked(evt);
+                Texto_id_nomeMouseClicked(evt);
             }
         });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 227, -1));
+        jPanel2.add(Texto_id_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 227, -1));
+
+        jButton12.setText("Buscar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
 
         jButton7.setText("Sair");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -364,22 +367,19 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+    private void Texto_id_nomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_id_nomeMouseClicked
         // TODO add your handling code here:
-        jTextField2.setText("");
-        jTextField1.setText("Pesquisa pelo nome");
-    }//GEN-LAST:event_jTextField2MouseClicked
+       
+    }//GEN-LAST:event_Texto_id_nomeMouseClicked
 
     private void Pesquisa_FuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_FuncionarioMouseClicked
         // TODO add your handling code here:
-        jTextField1.setText("Pesquisa pelo nome");
-        jTextField2.setText("Pesquisa pelo ID");
+       
     }//GEN-LAST:event_Pesquisa_FuncionarioMouseClicked
 
     private void Pesquisa_peçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_peçaMouseClicked
         // TODO add your handling code here:
-        jTextField1.setText("Pesquisa pelo nome");
-        jTextField2.setText("Pesquisa pelo ID");
+       
     }//GEN-LAST:event_Pesquisa_peçaMouseClicked
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -389,15 +389,37 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
-        // TODO add your handling code here:
-        jTextField1.setText("");
-        jTextField2.setText("Pesquisa pelo ID");
-    }//GEN-LAST:event_jTextField1MouseClicked
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        try {
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://localhost:3306/jotaautopeca";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "SELECT funcionario WHERE ID_funcionario = ?, nome_funcioanrio = ?";
+            
+            
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, Texto_id_nome.getText());
+            // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
+            
+            
+            ResultSet resultSet =  statement.executeQuery();
+            
+            if(resultSet.next()){
+                JOptionPane.showMessageDialog(null, "Peça ou funcinario não encontrado. tente novamente.");
+            }
+            
+            
+            
+            // TODO add your handling code here:
+        } catch (SQLException ex) {
+            Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,11 +459,13 @@ public class Tela_Inicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Pesquisa_Funcionario;
     private javax.swing.JRadioButton Pesquisa_peça;
+    private javax.swing.JTextField Texto_id_nome;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -457,7 +481,5 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
