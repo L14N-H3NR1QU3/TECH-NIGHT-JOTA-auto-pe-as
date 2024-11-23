@@ -4,6 +4,7 @@
  */
 package Tela_Inicial;
 
+import Cadastro_carro.Cadastro_carro_tela;
 import Cadastro_cliente.Cadastro_cliente;
 import Cadastro_fornecedor.Cadastro_Fornecedor;
 import Cadastro_funcionario.Frame_Cadastro_Funcionario;
@@ -317,8 +318,8 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Cadastro_pecas_lotes cadPecas = new Cadastro_pecas_lotes();
-        cadPecas.setVisible(true);
+        Cadastro_carro_tela cadCar = new Cadastro_carro_tela();
+        cadCar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
