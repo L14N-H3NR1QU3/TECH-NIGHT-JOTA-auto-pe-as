@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: jotaautopecas
+-- Host: 127.0.0.1    Database: jotaautopeca
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.32-MariaDB
 
@@ -14,6 +14,34 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `carros`
+--
+
+DROP TABLE IF EXISTS `carros`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `carros` (
+  `id_carros` int(11) NOT NULL AUTO_INCREMENT,
+  `placa_carro` varchar(7) DEFAULT NULL,
+  `modelo_carro` varchar(40) DEFAULT NULL,
+  `data_entrada_carro` varchar(10) DEFAULT NULL,
+  `ID_cliente_carros` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_carros`),
+  KEY `ID_cliente_carros` (`ID_cliente_carros`),
+  CONSTRAINT `carros_ibfk_1` FOREIGN KEY (`ID_cliente_carros`) REFERENCES `cliente` (`id_cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carros`
+--
+
+LOCK TABLES `carros` WRITE;
+/*!40000 ALTER TABLE `carros` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carros` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `cliente`
@@ -111,19 +139,7 @@ CREATE TABLE `funcionario` (
   `Bairro_funcionario` varchar(50) DEFAULT NULL,
   `email_funcionario` varchar(50) DEFAULT NULL,
   `senha_funcionario` int(15) DEFAULT NULL,
-  `id_cliente_funcionario` int(11) DEFAULT NULL,
-  `id_fornecedor_funcionario` int(11) DEFAULT NULL,
-  `id_pecas_funcionario` int(11) DEFAULT NULL,
-  `id_pedidos_funcionario` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_funcionario`),
-  KEY `id_cliente_funcionario` (`id_cliente_funcionario`),
-  KEY `id_fornecedor_funcionario` (`id_fornecedor_funcionario`),
-  KEY `id_pecas_funcionario` (`id_pecas_funcionario`),
-  KEY `id_pedidos_funcionario` (`id_pedidos_funcionario`),
-  CONSTRAINT `funcionario_ibfk_1` FOREIGN KEY (`id_cliente_funcionario`) REFERENCES `cliente` (`id_cliente`),
-  CONSTRAINT `funcionario_ibfk_2` FOREIGN KEY (`id_fornecedor_funcionario`) REFERENCES `fornecedor` (`id_fornecedor`),
-  CONSTRAINT `funcionario_ibfk_3` FOREIGN KEY (`id_pecas_funcionario`) REFERENCES `pecas` (`id_pecas`),
-  CONSTRAINT `funcionario_ibfk_4` FOREIGN KEY (`id_pedidos_funcionario`) REFERENCES `pedidos` (`id_pedidos`)
+  PRIMARY KEY (`id_funcionario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -149,7 +165,7 @@ CREATE TABLE `pecas` (
   `tipo_pecas` varchar(50) DEFAULT NULL,
   `qtd_pecas` int(4) DEFAULT NULL,
   PRIMARY KEY (`id_pecas`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,6 +174,7 @@ CREATE TABLE `pecas` (
 
 LOCK TABLES `pecas` WRITE;
 /*!40000 ALTER TABLE `pecas` DISABLE KEYS */;
+INSERT INTO `pecas` VALUES (1,'Jorge','sim',100);
 /*!40000 ALTER TABLE `pecas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,4 +219,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-22 14:37:01
+-- Dump completed on 2024-11-22 21:13:10
