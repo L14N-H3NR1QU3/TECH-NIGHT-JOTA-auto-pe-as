@@ -111,7 +111,19 @@ CREATE TABLE `funcionario` (
   `Bairro_funcionario` varchar(50) DEFAULT NULL,
   `email_funcionario` varchar(50) DEFAULT NULL,
   `senha_funcionario` int(15) DEFAULT NULL,
-  PRIMARY KEY (`id_funcionario`)
+  `id_cliente_funcionario` int(11) DEFAULT NULL,
+  `id_fornecedor_funcionario` int(11) DEFAULT NULL,
+  `id_pecas_funcionario` int(11) DEFAULT NULL,
+  `id_pedidos_funcionario` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_funcionario`),
+  KEY `id_cliente_funcionario` (`id_cliente_funcionario`),
+  KEY `id_fornecedor_funcionario` (`id_fornecedor_funcionario`),
+  KEY `id_pecas_funcionario` (`id_pecas_funcionario`),
+  KEY `id_pedidos_funcionario` (`id_pedidos_funcionario`),
+  CONSTRAINT `funcionario_ibfk_1` FOREIGN KEY (`id_cliente_funcionario`) REFERENCES `cliente` (`id_cliente`),
+  CONSTRAINT `funcionario_ibfk_2` FOREIGN KEY (`id_fornecedor_funcionario`) REFERENCES `fornecedor` (`id_fornecedor`),
+  CONSTRAINT `funcionario_ibfk_3` FOREIGN KEY (`id_pecas_funcionario`) REFERENCES `pecas` (`id_pecas`),
+  CONSTRAINT `funcionario_ibfk_4` FOREIGN KEY (`id_pedidos_funcionario`) REFERENCES `pedidos` (`id_pedidos`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -190,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-20  9:21:18
+-- Dump completed on 2024-11-22 14:37:01
