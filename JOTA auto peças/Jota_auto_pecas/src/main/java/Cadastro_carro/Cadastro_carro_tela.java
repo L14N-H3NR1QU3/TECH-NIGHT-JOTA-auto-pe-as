@@ -5,6 +5,12 @@
 package Cadastro_carro;
 
 import Tela_Inicial.Tela_Inicial;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,11 +36,11 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Placa_cadastro_carro = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Text_Placa_cadastro_carro = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        Text_modelo_cadastro_carro = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        Text_data_cadastro_carro = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         Cadastra_carro = new javax.swing.JButton();
         Voltar_carro = new javax.swing.JButton();
@@ -50,23 +56,23 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
         Placa_cadastro_carro.setForeground(new java.awt.Color(255, 255, 255));
         Placa_cadastro_carro.setText("Placa do carro");
         jPanel1.add(Placa_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 240, -1));
+        jPanel1.add(Text_Placa_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 240, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Modelo do carro");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 240, -1));
+        jPanel1.add(Text_modelo_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 240, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Data de entrada do carro");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Text_data_cadastro_carro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                Text_data_cadastro_carroActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 240, -1));
+        jPanel1.add(Text_data_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 240, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -74,7 +80,12 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         Cadastra_carro.setText("Cadastrar");
-        jPanel1.add(Cadastra_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 540, -1, -1));
+        Cadastra_carro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cadastra_carroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Cadastra_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, -1, -1));
 
         Voltar_carro.setText("Voltar");
         Voltar_carro.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +93,7 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
                 Voltar_carroActionPerformed(evt);
             }
         });
-        jPanel1.add(Voltar_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, -1, -1));
+        jPanel1.add(Voltar_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,9 +115,9 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void Text_data_cadastro_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_data_cadastro_carroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_Text_data_cadastro_carroActionPerformed
 
     private void Voltar_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Voltar_carroActionPerformed
         Tela_Inicial telInicial = new Tela_Inicial();
@@ -117,6 +128,35 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_Voltar_carroActionPerformed
+
+    private void Cadastra_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastra_carroActionPerformed
+
+        try {
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+            String usuario = "root";
+            String senha = "";
+            
+            conexao = DriverManager.getConnection (url, usuario, senha) ;
+            String sql = "INSERT INTO carros(placa_carro,modelo_carro,data_entrada_carro) VALUES (?, ?, ?)";
+            
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, Text_Placa_cadastro_carro.getText());
+            statement.setString(2, Text_modelo_cadastro_carro.getText());
+            statement.setString(3, Text_modelo_cadastro_carro.getText());
+            statement.executeUpdate();
+            
+            System.out.println("PASS");
+            
+            
+            
+            // TODO add your handling code here:
+        } catch (SQLException ex) {
+            Logger.getLogger(Cadastro_carro_tela.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Cadastra_carroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,13 +196,13 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cadastra_carro;
     private javax.swing.JLabel Placa_cadastro_carro;
+    private javax.swing.JTextField Text_Placa_cadastro_carro;
+    private javax.swing.JTextField Text_data_cadastro_carro;
+    private javax.swing.JTextField Text_modelo_cadastro_carro;
     private javax.swing.JButton Voltar_carro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
