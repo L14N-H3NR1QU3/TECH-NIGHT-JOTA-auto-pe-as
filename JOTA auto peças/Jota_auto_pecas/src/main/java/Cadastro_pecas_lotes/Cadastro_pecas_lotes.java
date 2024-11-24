@@ -35,6 +35,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
      */
     public Cadastro_pecas_lotes() {
         initComponents();
+        InsirirNota.setVisible(false);
     }
 
     /**
@@ -62,6 +63,8 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         TipoPeca = new javax.swing.JTextField();
         jLabel_tipopeca = new javax.swing.JLabel();
         InsirirNota = new javax.swing.JFileChooser();
+        Preço_peça = new javax.swing.JTextField();
+        jLabel_qtdpeca1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,6 +122,15 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
             }
         });
 
+        Preço_peça.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Preço_peçaActionPerformed(evt);
+            }
+        });
+
+        jLabel_qtdpeca1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_qtdpeca1.setText("Preço da peça");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -144,20 +156,25 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                                 .addGap(67, 67, 67)
                                 .addComponent(NomePeça, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel_qtdpeca)
-                                        .addGap(29, 29, 29))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel_Nf)
-                                        .addGap(88, 88, 88)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(AddImagem)
-                                    .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel_tipopeca)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(TipoPeca, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(TipoPeca, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel_qtdpeca1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Preço_peça, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel_qtdpeca)
+                                            .addGap(29, 29, 29))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel_Nf)
+                                            .addGap(88, 88, 88)))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(AddImagem)
+                                        .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(36, 36, 36)
                         .addComponent(InsirirNota, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -186,9 +203,13 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                             .addComponent(jLabel_qtdpeca)
                             .addComponent(QuantidadeFornecida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AddImagem)
-                            .addComponent(jLabel_Nf))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Preço_peça, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_qtdpeca1))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel_Nf)
+                            .addComponent(AddImagem))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(64, 64, 64)
@@ -313,12 +334,14 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                 String senha = "";
 
                 conexao = DriverManager.getConnection (url, usuario, senha) ;
-                String sql = "INSERT INTO pecas(nome_pecas, tipo_pecas, qtd_pecas) VALUES (?, ?, ?)";
+                String sql = "INSERT INTO pecas(nome_pecas, tipo_pecas, qtd_pecas,preco_peca) VALUES (?, ?, ?,?)";
 
                 statement = conexao.prepareStatement(sql);
                 statement.setString(1, NomePeça.getText());
                 statement.setString(2, TipoPeca.getText());
                 statement.setString(3, QuantidadeFornecida.getText());
+                statement.setString(4, Preço_peça.getText());
+
                 statement.executeUpdate();
 
                 System.out.println("PASS");
@@ -351,6 +374,10 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
         InsirirNota.setVisible(true);
         int result = this.InsirirNota.showOpenDialog(this.AddImagem);
     }//GEN-LAST:event_AddImagemActionPerformed
+
+    private void Preço_peçaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Preço_peçaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Preço_peçaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -391,6 +418,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     private javax.swing.JButton AddImagem;
     private javax.swing.JFileChooser InsirirNota;
     private javax.swing.JTextField NomePeça;
+    private javax.swing.JTextField Preço_peça;
     private javax.swing.JTextField QuantidadeFornecida;
     private javax.swing.JTextField TipoPeca;
     private javax.swing.JButton jButton_cadastropeca;
@@ -400,6 +428,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Nf;
     private javax.swing.JLabel jLabel_nomeP;
     private javax.swing.JLabel jLabel_qtdpeca;
+    private javax.swing.JLabel jLabel_qtdpeca1;
     private javax.swing.JLabel jLabel_tipopeca;
     private javax.swing.JLabel jLabel_titulopeca;
     private javax.swing.JPanel jPanel1;
