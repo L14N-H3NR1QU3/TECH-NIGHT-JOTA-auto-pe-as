@@ -53,6 +53,8 @@ public class solicitacao_pecas extends javax.swing.JFrame {
 
         jLabel4.setText("Quantidade");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 106, -1, -1));
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 103, 759, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
