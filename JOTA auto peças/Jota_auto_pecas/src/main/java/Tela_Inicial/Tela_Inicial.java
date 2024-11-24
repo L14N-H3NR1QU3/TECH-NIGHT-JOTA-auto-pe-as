@@ -405,83 +405,13 @@ public class Tela_Inicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void Busca_funcionario_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Busca_funcionario_tela_inicialActionPerformed
-        try {
-            Connection conexao = null;
-            PreparedStatement statement = null;
-            
-            String url = "jdbc:mysql://localhost:3306/jotaautopeca";
-            String user = "root";
-            String password = "";
-            
-            conexao = DriverManager.getConnection(url, user, password);
-            String sql = "SELECT funcionario WHERE ID_funcionario = ?, nome_funcioanrio = ?" + "%";
-            
-            
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, Texto_id_nome_funcionario.getText());
-            // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
-            
-            
-            ResultSet resultSet =  statement.executeQuery();
-            
-            if(resultSet.next()){
-                JOptionPane.showMessageDialog(null, "Peça ou funcinario não encontrado. tente novamente.");
-            }
-            
-            
-            
-            // TODO add your handling code here:
-        } catch (SQLException ex) {
-            Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
     }//GEN-LAST:event_Busca_funcionario_tela_inicialActionPerformed
 
     private void Buscar_peça_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar_peça_tela_inicialActionPerformed
-        try {
-            Connection conexao = null;
-            PreparedStatement statement = null;
-            
-            String url = "jdbc:mysql://localhost:3306/jotaautopeca";
-            String user = "root";
-            String password = "";
-            
-            conexao = DriverManager.getConnection(url, user, password);
-            String sql = "SELECT peca WHERE ID_peca = ?, nome_peca = ?" + "%";
-            
-            
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, Texto_id_nome_peça.getText());
-            // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
-            
-            
-            ResultSet resultSet =  statement.executeQuery();
-            
-            if(resultSet.next()){
-                JOptionPane.showMessageDialog(null, "Peça ou funcinario não encontrado. tente novamente.");
-            }
-            
-            
-            
-            // TODO add your handling code here:
-        } catch (SQLException ex) {
-            Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
-        }
+     
     }//GEN-LAST:event_Buscar_peça_tela_inicialActionPerformed
 
-   /* public List<Funcionario> getTodosFuncionariosDAD(){
-        List<Funcionario>  listaFuncionario = null;
-        
-        Session session = null;
-        
-        return listaFuncionario;
-    }
-    
-    private void Poplar_tabela_Funcionario(){
-       DefaultTableModel modeloTabela = new DefaultTableModel () ;
-       
-       this.Lista_nome_fun.setModel(modeloTabela);
-       modeloTabela.addColumn("nome_funcionario");
-    }
     
     
     /**
