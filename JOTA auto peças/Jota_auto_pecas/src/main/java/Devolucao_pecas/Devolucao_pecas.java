@@ -5,6 +5,7 @@
 package Devolucao_pecas;
 
 import Tela_Inicial.Tela_Inicial;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -220,6 +221,10 @@ public class Devolucao_pecas extends javax.swing.JFrame {
     }//GEN-LAST:event_Voltar_devolucao_pecasActionPerformed
 
     private void Cadastra_devolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadastra_devolActionPerformed
+
+         JOptionPane.showMessageDialog(null, "Devolução feita");
+
+
         // TODO add your handling code here:
     }//GEN-LAST:event_Cadastra_devolActionPerformed
 
