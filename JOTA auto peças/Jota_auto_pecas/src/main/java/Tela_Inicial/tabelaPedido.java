@@ -155,7 +155,7 @@ public class tabelaPedido extends javax.swing.JFrame {
 
         conexao = DriverManager.getConnection (url, usuario, senha) ;
         
-        String sql = "SELECT * FROM funcionario where nome_funcionario like ?;"; // Substitua pelo nome da sua tabela
+        String sql = "SELECT * FROM pedidos where nome_cliente like ?;"; // Substitua pelo nome da sua tabela
         statement = conexao.prepareStatement(sql);
         statement.setString(1, nomePesquisa); // Adiciona o filtro na consulta
         ResultSet rs = statement.executeQuery();
@@ -163,15 +163,14 @@ public class tabelaPedido extends javax.swing.JFrame {
         try {
 
             // Adicionar colunas ao modelo, se necessário
-            modelo.setColumnIdentifiers(new String[]{"ID", "Nome", "CPF", "Email"}); // Colunas da tabela
+            modelo.setColumnIdentifiers(new String[]{"ID", "Cliente", "Descrição"}); // Colunas da tabela
 
             // Adiciona as linhas à tabela
             while (rs.next()) {
                 modelo.addRow(new Object[]{
-                    rs.getInt("id_funcionario"),       // Substitua pelos nomes das colunas do banco
-                    rs.getString("nome_funcionario"),
-                    rs.getString("CPF_Funcionario"),
-                    rs.getString("email_funcionario")
+                    rs.getInt("id_pedido"),       // Substitua pelos nomes das colunas do banco
+                    rs.getString("nome_cliente"),
+                    rs.getString("descricao_pedido")
                 });
             }
 

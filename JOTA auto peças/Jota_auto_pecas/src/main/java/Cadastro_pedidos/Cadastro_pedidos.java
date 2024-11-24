@@ -57,7 +57,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         DataEntrega = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         Voltar_Cadastro_pedidos = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
         jLabel_tituloP = new javax.swing.JLabel();
         jLabel_iconeP = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -119,9 +118,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 Voltar_Cadastro_pedidosActionPerformed(evt);
             }
         });
-
-        jLabel9.setForeground(new java.awt.Color(242, 242, 242));
-        jLabel9.setText("hh : mm - dd/mm/aaaa");
 
         jLabel_tituloP.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel_tituloP.setForeground(new java.awt.Color(242, 242, 242));
@@ -195,8 +191,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel_tituloP)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
                                 .addComponent(jLabel_iconeP, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(20, 20, 20))))
         );
@@ -206,9 +200,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_tituloP)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel_iconeP)
-                        .addComponent(jLabel9)))
+                    .addComponent(jLabel_iconeP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -524,7 +516,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     private javax.swing.JTextField TelefoneCliente;
     private javax.swing.JButton Voltar_Cadastro_pedidos;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelPrecot;
     private javax.swing.JLabel jLabel_Dataentrega;
     private javax.swing.JLabel jLabel_Emailp;
