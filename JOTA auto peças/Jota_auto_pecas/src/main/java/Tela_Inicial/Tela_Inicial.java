@@ -163,6 +163,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jPanel2.add(Texto_id_nome_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 210, -1));
 
         Buscar_peça_tela_inicial.setText("Buscar");
+        Buscar_peça_tela_inicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Buscar_peça_tela_inicialActionPerformed(evt);
+            }
+        });
         jPanel2.add(Buscar_peça_tela_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, -1, -1));
 
         jLabel6.setText("Funcionario");
@@ -430,6 +435,38 @@ public class Tela_Inicial extends javax.swing.JFrame {
             Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_Busca_funcionario_tela_inicialActionPerformed
+
+    private void Buscar_peça_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar_peça_tela_inicialActionPerformed
+        try {
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://localhost:3306/jotaautopeca";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "SELECT peca WHERE ID_peca = ?, nome_peca = ?" + "%";
+            
+            
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, Texto_id_nome_peça.getText());
+            // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
+            
+            
+            ResultSet resultSet =  statement.executeQuery();
+            
+            if(resultSet.next()){
+                JOptionPane.showMessageDialog(null, "Peça ou funcinario não encontrado. tente novamente.");
+            }
+            
+            
+            
+            // TODO add your handling code here:
+        } catch (SQLException ex) {
+            Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Buscar_peça_tela_inicialActionPerformed
 
    /* public List<Funcionario> getTodosFuncionariosDAD(){
         List<Funcionario>  listaFuncionario = null;
