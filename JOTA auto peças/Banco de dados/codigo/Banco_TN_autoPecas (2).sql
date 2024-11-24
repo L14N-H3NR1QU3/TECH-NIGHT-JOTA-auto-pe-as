@@ -56,6 +56,7 @@ CREATE TABLE `cliente` (
   `bairro_cliente` varchar(50) DEFAULT NULL,
   `rua_cliente` varchar(50) DEFAULT NULL,
   `ID_carro_Cliente` int(11) DEFAULT NULL,
+  `placa_carro_cliente` varchar(7) DEFAULT NULL,
   PRIMARY KEY (`id_cliente`),
   KEY `ID_carro_Cliente` (`ID_carro_Cliente`),
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`ID_carro_Cliente`) REFERENCES `carros` (`id_carros`)
@@ -267,4 +268,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-24 16:00:57
+-- Dump completed on 2024-11-24 16:41:26
