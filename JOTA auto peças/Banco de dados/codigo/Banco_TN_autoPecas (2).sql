@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `carros`
+--
+
+DROP TABLE IF EXISTS `carros`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `carros` (
+  `id_carros` int(11) NOT NULL AUTO_INCREMENT,
+  `placa_carro` varchar(7) DEFAULT NULL,
+  `modelo_carro` varchar(40) DEFAULT NULL,
+  `data_entrada_carro` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id_carros`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carros`
+--
+
+LOCK TABLES `carros` WRITE;
+/*!40000 ALTER TABLE `carros` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carros` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cliente`
 --
 
@@ -28,10 +53,12 @@ CREATE TABLE `cliente` (
   `CPF_cliente` varchar(11) DEFAULT NULL,
   `email_cliente` varchar(50) DEFAULT NULL,
   `Telefone_cliente` varchar(11) DEFAULT NULL,
-  `bairro_clienet` varchar(50) DEFAULT NULL,
-  `rua_clienet` varchar(50) DEFAULT NULL,
-  `ID_carro_Clienet` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_cliente`)
+  `bairro_cliente` varchar(50) DEFAULT NULL,
+  `rua_cliente` varchar(50) DEFAULT NULL,
+  `ID_carro_Cliente` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_cliente`),
+  KEY `ID_carro_Cliente` (`ID_carro_Cliente`),
+  CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`ID_carro_Cliente`) REFERENCES `carros` (`id_carros`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -240,4 +267,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-24  1:07:36
+-- Dump completed on 2024-11-24 14:27:04

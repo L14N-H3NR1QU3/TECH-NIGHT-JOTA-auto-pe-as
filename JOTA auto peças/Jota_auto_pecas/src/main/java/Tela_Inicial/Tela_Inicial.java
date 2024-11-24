@@ -164,6 +164,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
         });
         jPanel2.add(filtroFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
 
+<<<<<<< HEAD
         filtroCliente.setBackground(new java.awt.Color(65, 65, 65));
         filtro.add(filtroCliente);
         filtroCliente.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,6 +172,31 @@ public class Tela_Inicial extends javax.swing.JFrame {
         filtroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 filtroClienteActionPerformed(evt);
+=======
+        Buscar_peça_tela_inicial.setText("Buscar");
+        Buscar_peça_tela_inicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Buscar_peça_tela_inicialActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Buscar_peça_tela_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, -1, -1));
+
+        jLabel6.setText("Funcionario");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        jLabel7.setText("Peça");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        Estoque.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "Quantidade"
+>>>>>>> 5745ebc1425ef47dcdfba487e9ec1f08cf14c906
             }
         });
         jPanel2.add(filtroCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
@@ -467,6 +493,38 @@ public class Tela_Inicial extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void Buscar_peça_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar_peça_tela_inicialActionPerformed
+        try {
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://localhost:3306/jotaautopeca";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "SELECT peca WHERE ID_peca = ?, nome_peca = ?" + "%";
+            
+            
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, Texto_id_nome_peça.getText());
+            // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
+            
+            
+            ResultSet resultSet =  statement.executeQuery();
+            
+            if(resultSet.next()){
+                JOptionPane.showMessageDialog(null, "Peça ou funcinario não encontrado. tente novamente.");
+            }
+            
+            
+            
+            // TODO add your handling code here:
+        } catch (SQLException ex) {
+            Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Buscar_peça_tela_inicialActionPerformed
 
    /* public List<Funcionario> getTodosFuncionariosDAD(){
         List<Funcionario>  listaFuncionario = null;
