@@ -37,7 +37,7 @@ public class Tela_estoque extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Estoque = new javax.swing.JTable();
+        TabelaEstoque = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,7 +50,7 @@ public class Tela_estoque extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 600));
 
-        Estoque.setModel(new javax.swing.table.DefaultTableModel(
+        TabelaEstoque.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -61,7 +61,7 @@ public class Tela_estoque extends javax.swing.JFrame {
                 "ID", "Nome", "Tipo", "Quantidade"
             }
         ));
-        jScrollPane1.setViewportView(Estoque);
+        jScrollPane1.setViewportView(TabelaEstoque);
 
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +137,7 @@ public class Tela_estoque extends javax.swing.JFrame {
     }
     
     private void carregarDados() {
-        DefaultTableModel modelo = (DefaultTableModel) Estoque.getModel();
+        DefaultTableModel modelo = (DefaultTableModel) TabelaEstoque.getModel();
         modelo.setRowCount(0); // Limpa a tabela antes de adicionar novos dados
 
         String sql = "SELECT * FROM pecas"; // Substitua pelo nome da sua tabela
@@ -200,7 +200,7 @@ public class Tela_estoque extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Estoque;
+    private javax.swing.JTable TabelaEstoque;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

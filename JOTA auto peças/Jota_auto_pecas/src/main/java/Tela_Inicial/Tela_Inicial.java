@@ -39,28 +39,28 @@ public class Tela_Inicial extends javax.swing.JFrame {
         Filtro = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        IDA_cadastro_carrro = new javax.swing.JButton();
+        IDA_cadastro_funcionario = new javax.swing.JButton();
+        IDA_cadastro_pedidos = new javax.swing.JButton();
+        IDA_ordemServiço = new javax.swing.JButton();
+        IDA_cadastro_cliente = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         Filtragem = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        Filtragem_funcionario = new javax.swing.JRadioButton();
+        Filtragem_fornecedor = new javax.swing.JRadioButton();
+        Filtragem_Peca = new javax.swing.JRadioButton();
+        Filtragem_cliente = new javax.swing.JRadioButton();
+        Filtragem_carro = new javax.swing.JRadioButton();
+        Filtragem_pedido = new javax.swing.JRadioButton();
+        IDA_login = new javax.swing.JButton();
+        IDA_mapaestoque = new javax.swing.JButton();
+        IDA_cadastro_pecas = new javax.swing.JButton();
+        IDA_estoque = new javax.swing.JButton();
+        IDA_cadastro_fornecedor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,38 +71,38 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menu Principal");
 
-        jButton1.setText("Cadastro de carros");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        IDA_cadastro_carrro.setText("Cadastro de carros");
+        IDA_cadastro_carrro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                IDA_cadastro_carrroActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cadastro de funcionário");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        IDA_cadastro_funcionario.setText("Cadastro de funcionário");
+        IDA_cadastro_funcionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                IDA_cadastro_funcionarioActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Cadastro de pedidos");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        IDA_cadastro_pedidos.setText("Cadastro de pedidos");
+        IDA_cadastro_pedidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                IDA_cadastro_pedidosActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Ordem de serviço");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        IDA_ordemServiço.setText("Ordem de serviço");
+        IDA_ordemServiço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                IDA_ordemServiçoActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Cadastro de cliente");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        IDA_cadastro_cliente.setText("Cadastro de cliente");
+        IDA_cadastro_cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                IDA_cadastro_clienteActionPerformed(evt);
             }
         });
 
@@ -137,98 +137,98 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jLabel6.setText("Nome");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
 
-        Filtro.add(jRadioButton1);
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Funcionario");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        Filtro.add(Filtragem_funcionario);
+        Filtragem_funcionario.setForeground(new java.awt.Color(255, 255, 255));
+        Filtragem_funcionario.setText("Funcionario");
+        Filtragem_funcionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                Filtragem_funcionarioActionPerformed(evt);
             }
         });
-        jPanel2.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
+        jPanel2.add(Filtragem_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
 
-        Filtro.add(jRadioButton2);
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Fornecedor");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        Filtro.add(Filtragem_fornecedor);
+        Filtragem_fornecedor.setForeground(new java.awt.Color(255, 255, 255));
+        Filtragem_fornecedor.setText("Fornecedor");
+        Filtragem_fornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                Filtragem_fornecedorActionPerformed(evt);
             }
         });
-        jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+        jPanel2.add(Filtragem_fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
-        Filtro.add(jRadioButton3);
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Peça");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        Filtro.add(Filtragem_Peca);
+        Filtragem_Peca.setForeground(new java.awt.Color(255, 255, 255));
+        Filtragem_Peca.setText("Peça");
+        Filtragem_Peca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                Filtragem_PecaActionPerformed(evt);
             }
         });
-        jPanel2.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
+        jPanel2.add(Filtragem_Peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
 
-        Filtro.add(jRadioButton4);
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("Cliente");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        Filtro.add(Filtragem_cliente);
+        Filtragem_cliente.setForeground(new java.awt.Color(255, 255, 255));
+        Filtragem_cliente.setText("Cliente");
+        Filtragem_cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                Filtragem_clienteActionPerformed(evt);
             }
         });
-        jPanel2.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
+        jPanel2.add(Filtragem_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
-        Filtro.add(jRadioButton5);
-        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("Carro");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        Filtro.add(Filtragem_carro);
+        Filtragem_carro.setForeground(new java.awt.Color(255, 255, 255));
+        Filtragem_carro.setText("Carro");
+        Filtragem_carro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                Filtragem_carroActionPerformed(evt);
             }
         });
-        jPanel2.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+        jPanel2.add(Filtragem_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
 
-        Filtro.add(jRadioButton6);
-        jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("Pedido");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        Filtro.add(Filtragem_pedido);
+        Filtragem_pedido.setForeground(new java.awt.Color(255, 255, 255));
+        Filtragem_pedido.setText("Pedido");
+        Filtragem_pedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                Filtragem_pedidoActionPerformed(evt);
             }
         });
-        jPanel2.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
+        jPanel2.add(Filtragem_pedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
 
-        jButton7.setText("Sair");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        IDA_login.setText("Sair");
+        IDA_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        jButton8.setText("Mapa do esoque");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                IDA_loginActionPerformed(evt);
             }
         });
 
-        jButton9.setText("Cadastro de peças");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        IDA_mapaestoque.setText("Mapa do esoque");
+        IDA_mapaestoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                IDA_mapaestoqueActionPerformed(evt);
             }
         });
 
-        jButton10.setText("Estoque");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        IDA_cadastro_pecas.setText("Cadastro de peças");
+        IDA_cadastro_pecas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                IDA_cadastro_pecasActionPerformed(evt);
             }
         });
 
-        jButton11.setText("Cadastro de fornecedor");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        IDA_estoque.setText("Estoque");
+        IDA_estoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                IDA_estoqueActionPerformed(evt);
+            }
+        });
+
+        IDA_cadastro_fornecedor.setText("Cadastro de fornecedor");
+        IDA_cadastro_fornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDA_cadastro_fornecedorActionPerformed(evt);
             }
         });
 
@@ -247,16 +247,16 @@ public class Tela_Inicial extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(IDA_cadastro_fornecedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDA_cadastro_pedidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDA_cadastro_funcionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                                .addComponent(IDA_login, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(IDA_cadastro_carrro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDA_cadastro_cliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDA_mapaestoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDA_cadastro_pecas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDA_estoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(IDA_ordemServiço, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -272,25 +272,25 @@ public class Tela_Inicial extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jButton1)
+                        .addComponent(IDA_cadastro_carrro)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(IDA_cadastro_funcionario)
                         .addGap(20, 20, 20)
-                        .addComponent(jButton3)
+                        .addComponent(IDA_cadastro_pedidos)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5)
+                        .addComponent(IDA_cadastro_cliente)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton9)
+                        .addComponent(IDA_cadastro_pecas)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton11)
+                        .addComponent(IDA_cadastro_fornecedor)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
+                        .addComponent(IDA_ordemServiço)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton10)
+                        .addComponent(IDA_estoque)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton8)
+                        .addComponent(IDA_mapaestoque)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton7))
+                        .addComponent(IDA_login))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)))
@@ -311,74 +311,77 @@ public class Tela_Inicial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void IDA_cadastro_carrroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_cadastro_carrroActionPerformed
         // TODO add your handling code here:
         Cadastro_carro_tela cadCar = new Cadastro_carro_tela();
         cadCar.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_IDA_cadastro_carrroActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void IDA_cadastro_funcionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_cadastro_funcionarioActionPerformed
         // TODO add your handling code here:
         Frame_Cadastro_Funcionario cadFunc = new Frame_Cadastro_Funcionario();
         cadFunc.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_IDA_cadastro_funcionarioActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void IDA_cadastro_pedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_cadastro_pedidosActionPerformed
         // TODO add your handling code here:
         Cadastro_pedidos cadPed = new Cadastro_pedidos();
         cadPed.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_IDA_cadastro_pedidosActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void IDA_ordemServiçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_ordemServiçoActionPerformed
         // TODO add your handling code here:
         Ordem_Servico ordServ = new Ordem_Servico();
         ordServ.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_IDA_ordemServiçoActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void IDA_cadastro_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_cadastro_clienteActionPerformed
         // TODO add your handling code here:
         Cadastro_cliente cadCli = new Cadastro_cliente();
         cadCli.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_IDA_cadastro_clienteActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void IDA_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_loginActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+        Tela_login_Concluida ifaLog = new Tela_login_Concluida();
+        ifaLog.setVisible(true);
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_IDA_loginActionPerformed
+
+    private void IDA_mapaestoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_mapaestoqueActionPerformed
         Tela_Mapa_Kevin TMap = new Tela_Mapa_Kevin();
         TMap.setVisible(true);
         this.dispose();
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_IDA_mapaestoqueActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void IDA_cadastro_pecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_cadastro_pecasActionPerformed
         // TODO add your handling code here:
         Cadastro_pecas_lotes cadPeca = new Cadastro_pecas_lotes();
         cadPeca.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_IDA_cadastro_pecasActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void IDA_estoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_estoqueActionPerformed
         // TODO add your handling code here:
         Tela_estoque estoque = new Tela_estoque();
         estoque.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_IDA_estoqueActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void IDA_cadastro_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_cadastro_fornecedorActionPerformed
         // TODO add your handling code here:
         Cadastro_Fornecedor cadFor = new Cadastro_Fornecedor();
         cadFor.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_IDA_cadastro_fornecedorActionPerformed
 
     private void FiltragemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltragemMouseClicked
         // TODO add your handling code here:
@@ -386,35 +389,35 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     public int escolhaFiltragem;
     
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void Filtragem_funcionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Filtragem_funcionarioActionPerformed
         // TODO add your handling code here:
         escolhaFiltragem = 1;
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_Filtragem_funcionarioActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void Filtragem_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Filtragem_fornecedorActionPerformed
         // TODO add your handling code here:
         escolhaFiltragem = 3;
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_Filtragem_fornecedorActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void Filtragem_PecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Filtragem_PecaActionPerformed
         // TODO add your handling code here:
         escolhaFiltragem = 5;
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_Filtragem_PecaActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void Filtragem_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Filtragem_clienteActionPerformed
         // TODO add your handling code here:
         escolhaFiltragem = 2;
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_Filtragem_clienteActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void Filtragem_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Filtragem_carroActionPerformed
         // TODO add your handling code here:
         escolhaFiltragem = 4;
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_Filtragem_carroActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void Filtragem_pedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Filtragem_pedidoActionPerformed
         // TODO add your handling code here:
         escolhaFiltragem = 6;
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_Filtragem_pedidoActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -497,29 +500,29 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Filtragem;
+    private javax.swing.JRadioButton Filtragem_Peca;
+    private javax.swing.JRadioButton Filtragem_carro;
+    private javax.swing.JRadioButton Filtragem_cliente;
+    private javax.swing.JRadioButton Filtragem_fornecedor;
+    private javax.swing.JRadioButton Filtragem_funcionario;
+    private javax.swing.JRadioButton Filtragem_pedido;
     private javax.swing.ButtonGroup Filtro;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton IDA_cadastro_carrro;
+    private javax.swing.JButton IDA_cadastro_cliente;
+    private javax.swing.JButton IDA_cadastro_fornecedor;
+    private javax.swing.JButton IDA_cadastro_funcionario;
+    private javax.swing.JButton IDA_cadastro_pecas;
+    private javax.swing.JButton IDA_cadastro_pedidos;
+    private javax.swing.JButton IDA_estoque;
+    private javax.swing.JButton IDA_login;
+    private javax.swing.JButton IDA_mapaestoque;
+    private javax.swing.JButton IDA_ordemServiço;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     // End of variables declaration//GEN-END:variables
 }

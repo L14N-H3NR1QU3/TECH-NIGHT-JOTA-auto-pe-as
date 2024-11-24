@@ -37,13 +37,14 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Placa_cadastro_carro = new javax.swing.JLabel();
         Text_Placa_cadastro_carro = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        Modelo_carro_cadastro = new javax.swing.JLabel();
         Text_modelo_cadastro_carro = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        Data_cadastro_carro = new javax.swing.JLabel();
         Text_data_cadastro_carro = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         Cadastra_carro = new javax.swing.JButton();
         Voltar_carro = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,14 +58,14 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
         jPanel1.add(Placa_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
         jPanel1.add(Text_Placa_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 240, -1));
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Modelo do carro");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
+        Modelo_carro_cadastro.setForeground(new java.awt.Color(255, 255, 255));
+        Modelo_carro_cadastro.setText("Modelo do carro");
+        jPanel1.add(Modelo_carro_cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
         jPanel1.add(Text_modelo_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 240, -1));
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Data de entrada do carro");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+        Data_cadastro_carro.setForeground(new java.awt.Color(255, 255, 255));
+        Data_cadastro_carro.setText("Data de entrada do carro");
+        jPanel1.add(Data_cadastro_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
 
         Text_data_cadastro_carro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +94,10 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Voltar_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        jLabel2.setText("jLabel1");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 10, 130, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +193,8 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cadastra_carro;
+    private javax.swing.JLabel Data_cadastro_carro;
+    private javax.swing.JLabel Modelo_carro_cadastro;
     private javax.swing.JLabel Placa_cadastro_carro;
     private javax.swing.JTextField Text_Placa_cadastro_carro;
     private javax.swing.JTextField Text_data_cadastro_carro;
@@ -195,7 +202,6 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
     private javax.swing.JButton Voltar_carro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

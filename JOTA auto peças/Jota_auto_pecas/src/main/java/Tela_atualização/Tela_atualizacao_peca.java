@@ -36,7 +36,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jlbl_atualizao_dados = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel1_id_peca = new javax.swing.JLabel();
         jlbl_qtd_pecas = new javax.swing.JLabel();
         jlbl_nome_peca = new javax.swing.JLabel();
         Sai_Att_pecas = new javax.swing.JButton();
@@ -46,6 +46,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jfield_QTD_peca = new javax.swing.JTextField();
         jlbl_nome_peca1 = new javax.swing.JLabel();
         jfield_nome_peca = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -59,10 +60,10 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jlbl_atualizao_dados.setText("Atualização de dados de peça");
         jPanel1.add(jlbl_atualizao_dados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ID peça");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        jLabel1_id_peca.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1_id_peca.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1_id_peca.setText("ID peça");
+        jPanel1.add(jLabel1_id_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         jlbl_qtd_pecas.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_qtd_pecas.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,6 +103,10 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jlbl_nome_peca1.setText("Nome");
         jPanel1.add(jlbl_nome_peca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
         jPanel1.add(jfield_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 295, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 10, 130, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 612));
 
@@ -188,6 +193,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
     private javax.swing.JTextField Novo_preço;
     private javax.swing.JButton Sai_Att_pecas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel1_id_peca;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbutton_salvar;
     private javax.swing.JTextField jfield_ID_pecas;

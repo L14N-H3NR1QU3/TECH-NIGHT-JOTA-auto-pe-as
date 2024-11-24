@@ -48,10 +48,12 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         Email_cadastrocliente = new javax.swing.JTextField();
         jlbl_cidade = new javax.swing.JLabel();
         nome_cadastrocliente = new javax.swing.JTextField();
-        Bairro_cadastrocliente = new javax.swing.JTextField();
+        Text_placa_carro = new javax.swing.JTextField();
         cidade_cadastrocliente1 = new javax.swing.JTextField();
-        jlbl_bairro = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jlbl_placa_carro = new javax.swing.JLabel();
+        Imagem_cadastro_cliente = new javax.swing.JLabel();
+        jlbl_bairro1 = new javax.swing.JLabel();
+        Bairro_cadastrocliente1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -116,16 +118,20 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jlbl_cidade.setText("Cidade");
         jpanel_background.add(jlbl_cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
         jpanel_background.add(nome_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 280, -1));
-        jpanel_background.add(Bairro_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 280, -1));
+        jpanel_background.add(Text_placa_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 280, -1));
         jpanel_background.add(cidade_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 280, -1));
 
-        jlbl_bairro.setForeground(new java.awt.Color(255, 255, 255));
-        jlbl_bairro.setText("Bairro");
-        jpanel_background.add(jlbl_bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+        jlbl_placa_carro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_placa_carro.setText("Placa do carro");
+        jpanel_background.add(jlbl_placa_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\farne\\OneDrive\\Área de Trabalho\\JOTA_techn\\TECH_NIGHT-JOTA_auto_pecas\\Imagens\\Usuario_imagem.png")); // NOI18N
-        jLabel2.setText("jLabel2");
-        jpanel_background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 42, 510, 520));
+        Imagem_cadastro_cliente.setText("jLabel2");
+        jpanel_background.add(Imagem_cadastro_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 42, 510, 520));
+
+        jlbl_bairro1.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_bairro1.setText("Bairro");
+        jpanel_background.add(jlbl_bairro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+        jpanel_background.add(Bairro_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 280, -1));
 
         getContentPane().add(jpanel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -165,14 +171,16 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
                 conexao = DriverManager.getConnection(url, usuario, senha);
 
-                String sql = "INSERT INTO cliente(nome_cliente, CPF_cliente, email_cliente, telefone_cliente, bairro_cliente, rua_cliente) VALUES(?, ?, ?, ?, ?, ?);";
+                String sql = "INSERT INTO cliente(nome_cliente, CPF_cliente, email_cliente, telefone_cliente, bairro_cliente, rua_cliente,placa_carro_cliente) VALUES(?, ?, ?, ?, ?, ?,?);";
                 statement = conexao.prepareStatement(sql);
                 statement.setString(1, nome_cadastrocliente.getText());
                 statement.setString(2, cpf_cadastrocliente.getText());
                 statement.setString(3, Email_cadastrocliente.getText());
                 statement.setString(4, telefone_cadastrocliente.getText());
-                statement.setString(5, cidade_cadastrocliente1.getText());
-                statement.setString(6, Bairro_cadastrocliente.getText());
+                statement.setString(5, Bairro_cadastrocliente1.getText());
+                statement.setString(6, cidade_cadastrocliente1.getText());
+                statement.setString(7, Text_placa_carro.getText());
+
                 statement.executeUpdate();
                 System.out.println("PASS");
             } catch (SQLException e) {
@@ -313,20 +321,22 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Bairro_cadastrocliente;
+    private javax.swing.JTextField Bairro_cadastrocliente1;
     private javax.swing.JTextField Email_cadastrocliente;
+    private javax.swing.JLabel Imagem_cadastro_cliente;
+    private javax.swing.JTextField Text_placa_carro;
     private javax.swing.JButton botaocadastro_cadastrocliente;
     private javax.swing.JButton botaosair_cadastrocliente;
     private javax.swing.JTextField cidade_cadastrocliente1;
     private javax.swing.JTextField cpf_cadastrocliente;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JLabel jlbl_bairro;
+    private javax.swing.JLabel jlbl_bairro1;
     private javax.swing.JLabel jlbl_cidade;
     private javax.swing.JLabel jlbl_cpf;
     private javax.swing.JLabel jlbl_email;
     private javax.swing.JLabel jlbl_nome;
+    private javax.swing.JLabel jlbl_placa_carro;
     private javax.swing.JLabel jlbl_telefone;
     private javax.swing.JPanel jpanel_background;
     private javax.swing.JTextField nome_cadastrocliente;

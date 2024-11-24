@@ -60,7 +60,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         jLabel_tituloP = new javax.swing.JLabel();
         jLabel_iconeP = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        IdCliente = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         IdClienteText = new javax.swing.JTextField();
         jLabel_IdC = new javax.swing.JLabel();
 
@@ -98,6 +98,12 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
             }
         });
 
+        TelefoneCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelefoneClienteActionPerformed(evt);
+            }
+        });
+
         DataEntrega.setText("AAAA-MM-DD");
         DataEntrega.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -126,7 +132,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         jLabel_iconeP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel_iconeP.setText("jLabel11");
 
-        IdCliente.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -137,12 +143,12 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 "ID", "Nome"
             }
         ));
-        IdCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IdClienteMouseClicked(evt);
+                tableMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(IdCliente);
+        jScrollPane1.setViewportView(table);
 
         IdClienteText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -347,7 +353,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         boolean precoTotal_valido = validador_entrada_num(precoTotal, 11);
         boolean dataEntrega_valido = validador_tamanho_texto(dataEntrega, 10);
         
-        int linhaSelecionada = IdCliente.getSelectedRow();
+        int linhaSelecionada = table.getSelectedRow();
         
         if (nome_valido && telefone_valido && email_valido && estabelecimento_valido && precoTotal_valido && dataEntrega_valido) {
             try {
@@ -368,7 +374,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 statement.setString(4, EstabelecimentoCliente.getText());
                 statement.setString(5, PrecoTotal.getText());
                 statement.setString(6, DataEntrega.getText());
-                statement.setString(7, String.valueOf(IdCliente.getValueAt(linhaSelecionada, 0)));
+                statement.setString(7, String.valueOf(table.getValueAt(linhaSelecionada, 0)));
                 statement.executeUpdate();
 
                 System.out.println("PASS");
@@ -404,15 +410,15 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NomeClienteActionPerformed
 
-    private void IdClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IdClienteMouseClicked
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
         // TODO add your handling code here:
-        int linhaSelecionada = IdCliente.getSelectedRow();
-        Object id = IdCliente.getValueAt(linhaSelecionada, 0);
-        Object nome = IdCliente.getValueAt(linhaSelecionada, 1);
+        int linhaSelecionada = table.getSelectedRow();
+        Object id = table.getValueAt(linhaSelecionada, 0);
+        Object nome = table.getValueAt(linhaSelecionada, 1);
 
         NomeCliente.setText(""+nome);
         IdClienteText.setText(""+id);
-    }//GEN-LAST:event_IdClienteMouseClicked
+    }//GEN-LAST:event_tableMouseClicked
 
     public class DatabaseConnection {
         public static Connection getConnection() {
@@ -431,7 +437,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     }
     
     private void carregarDados() {
-        DefaultTableModel modelo = (DefaultTableModel) IdCliente.getModel();
+        DefaultTableModel modelo = (DefaultTableModel) table.getModel();
         modelo.setRowCount(0); // Limpa a tabela antes de adicionar novos dados
 
         String sql = "SELECT * FROM cliente"; // Substitua pelo nome da sua tabela
@@ -469,6 +475,10 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
         // TODO add your handling code here:
         DataEntrega.setText("");
     }//GEN-LAST:event_DataEntregaMouseClicked
+
+    private void TelefoneClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefoneClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TelefoneClienteActionPerformed
     
     /**
      * @param args the command line arguments
@@ -509,7 +519,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     private javax.swing.JTextField DataEntrega;
     private javax.swing.JTextField EmailCliente;
     private javax.swing.JTextField EstabelecimentoCliente;
-    private javax.swing.JTable IdCliente;
     private javax.swing.JTextField IdClienteText;
     private javax.swing.JTextField NomeCliente;
     private javax.swing.JTextField PrecoTotal;
@@ -527,5 +536,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_tituloP;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }
