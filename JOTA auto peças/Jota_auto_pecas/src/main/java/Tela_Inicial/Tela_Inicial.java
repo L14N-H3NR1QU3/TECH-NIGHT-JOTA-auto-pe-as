@@ -18,9 +18,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 
 /**
  *
@@ -59,10 +64,16 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        Pesquisa_Funcionario = new javax.swing.JRadioButton();
-        Pesquisa_peça = new javax.swing.JRadioButton();
-        Texto_id_nome = new javax.swing.JTextField();
-        jButton12 = new javax.swing.JButton();
+        Texto_id_nome_funcionario = new javax.swing.JTextField();
+        Busca_funcionario_tela_inicial = new javax.swing.JButton();
+        Texto_id_nome_peça = new javax.swing.JTextField();
+        Buscar_peça_tela_inicial = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Estoque = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Lista_nome_fun = new javax.swing.JTable();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -135,49 +146,65 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jButton6.setText("Pesquisar");
         jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 469, -1, -1));
 
-        Pesquisa_Funcionario.setForeground(new java.awt.Color(255, 255, 255));
-        Pesquisa_Funcionario.setText("Funcionario");
-        Pesquisa_Funcionario.addMouseListener(new java.awt.event.MouseAdapter() {
+        Texto_id_nome_funcionario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Pesquisa_FuncionarioMouseClicked(evt);
+                Texto_id_nome_funcionarioMouseClicked(evt);
             }
         });
-        Pesquisa_Funcionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pesquisa_FuncionarioActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Pesquisa_Funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
+        jPanel2.add(Texto_id_nome_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 227, -1));
 
-        Pesquisa_peça.setForeground(new java.awt.Color(255, 255, 255));
-        Pesquisa_peça.setText("Peças");
-        Pesquisa_peça.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Pesquisa_peçaMouseClicked(evt);
-            }
-        });
-        Pesquisa_peça.addActionListener(new java.awt.event.ActionListener() {
+        Busca_funcionario_tela_inicial.setText("Buscar");
+        Busca_funcionario_tela_inicial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pesquisa_peçaActionPerformed(evt);
+                Busca_funcionario_tela_inicialActionPerformed(evt);
             }
         });
-        jPanel2.add(Pesquisa_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
+        jPanel2.add(Busca_funcionario_tela_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+        jPanel2.add(Texto_id_nome_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 210, -1));
 
-        Texto_id_nome.setText("Pesquisa pelo ID");
-        Texto_id_nome.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Texto_id_nomeMouseClicked(evt);
-            }
-        });
-        jPanel2.add(Texto_id_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 227, -1));
+        Buscar_peça_tela_inicial.setText("Buscar");
+        jPanel2.add(Buscar_peça_tela_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, -1, -1));
 
-        jButton12.setText("Buscar");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+        jLabel6.setText("Funcionario");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        jLabel7.setText("Peça");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        Estoque.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "Quantidade"
             }
-        });
-        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
+        ));
+        jScrollPane1.setViewportView(Estoque);
+        if (Estoque.getColumnModel().getColumnCount() > 0) {
+            Estoque.getColumnModel().getColumn(0).setHeaderValue("ID");
+            Estoque.getColumnModel().getColumn(2).setResizable(false);
+            Estoque.getColumnModel().getColumn(2).setHeaderValue("Quantidade");
+        }
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 290, 300));
+
+        Lista_nome_fun.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Nome"
+            }
+        ));
+        jScrollPane2.setViewportView(Lista_nome_fun);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 290, 300));
 
         jButton7.setText("Sair");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -287,7 +314,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1029, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -337,14 +364,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void Pesquisa_peçaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pesquisa_peçaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Pesquisa_peçaActionPerformed
-
-    private void Pesquisa_FuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pesquisa_FuncionarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Pesquisa_FuncionarioActionPerformed
-
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         Tela_Mapa_Kevin TMap = new Tela_Mapa_Kevin();
         TMap.setVisible(true);
@@ -368,20 +387,10 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void Texto_id_nomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_id_nomeMouseClicked
+    private void Texto_id_nome_funcionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_id_nome_funcionarioMouseClicked
         // TODO add your handling code here:
        
-    }//GEN-LAST:event_Texto_id_nomeMouseClicked
-
-    private void Pesquisa_FuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_FuncionarioMouseClicked
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_Pesquisa_FuncionarioMouseClicked
-
-    private void Pesquisa_peçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pesquisa_peçaMouseClicked
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_Pesquisa_peçaMouseClicked
+    }//GEN-LAST:event_Texto_id_nome_funcionarioMouseClicked
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
@@ -390,7 +399,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void Busca_funcionario_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Busca_funcionario_tela_inicialActionPerformed
         try {
             Connection conexao = null;
             PreparedStatement statement = null;
@@ -400,11 +409,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
             String password = "";
             
             conexao = DriverManager.getConnection(url, user, password);
-            String sql = "SELECT funcionario WHERE ID_funcionario = ?, nome_funcioanrio = ?";
+            String sql = "SELECT funcionario WHERE ID_funcionario = ?, nome_funcioanrio = ?" + "%";
             
             
             statement = conexao.prepareStatement(sql);
-            statement.setString(1, Texto_id_nome.getText());
+            statement.setString(1, Texto_id_nome_funcionario.getText());
             // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
             
             
@@ -420,8 +429,24 @@ public class Tela_Inicial extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Tela_Inicial.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_Busca_funcionario_tela_inicialActionPerformed
 
+   /* public List<Funcionario> getTodosFuncionariosDAD(){
+        List<Funcionario>  listaFuncionario = null;
+        
+        Session session = null;
+        
+        return listaFuncionario;
+    }
+    
+    private void Poplar_tabela_Funcionario(){
+       DefaultTableModel modeloTabela = new DefaultTableModel () ;
+       
+       this.Lista_nome_fun.setModel(modeloTabela);
+       modeloTabela.addColumn("nome_funcionario");
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -458,15 +483,17 @@ public class Tela_Inicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Pesquisa_Funcionario;
-    private javax.swing.JRadioButton Pesquisa_peça;
-    private javax.swing.JTextField Texto_id_nome;
+    private javax.swing.JButton Busca_funcionario_tela_inicial;
+    private javax.swing.JButton Buscar_peça_tela_inicial;
+    private javax.swing.JTable Estoque;
+    private javax.swing.JTable Lista_nome_fun;
+    private javax.swing.JTextField Texto_id_nome_funcionario;
+    private javax.swing.JTextField Texto_id_nome_peça;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -480,7 +507,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
