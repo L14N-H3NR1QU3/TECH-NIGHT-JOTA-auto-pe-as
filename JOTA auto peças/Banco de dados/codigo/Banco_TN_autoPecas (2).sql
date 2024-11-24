@@ -193,6 +193,43 @@ LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `pesquisa`
+--
+
+DROP TABLE IF EXISTS `pesquisa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pesquisa` (
+  `id_pesquisa` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pesquisa_cliente` int(11) DEFAULT NULL,
+  `id_pesquisa_fornecedor` int(11) DEFAULT NULL,
+  `id_pesquisa_funcionario` int(11) DEFAULT NULL,
+  `id_pesquisa_pecas` int(11) DEFAULT NULL,
+  `id_pesquisa_pedidos` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_pesquisa`),
+  KEY `id_pesquisa_cliente` (`id_pesquisa_cliente`),
+  KEY `id_pesquisa_fornecedor` (`id_pesquisa_fornecedor`),
+  KEY `id_pesquisa_funcionario` (`id_pesquisa_funcionario`),
+  KEY `id_pesquisa_pecas` (`id_pesquisa_pecas`),
+  KEY `id_pesquisa_pedidos` (`id_pesquisa_pedidos`),
+  CONSTRAINT `pesquisa_ibfk_1` FOREIGN KEY (`id_pesquisa_cliente`) REFERENCES `cliente` (`id_cliente`),
+  CONSTRAINT `pesquisa_ibfk_2` FOREIGN KEY (`id_pesquisa_fornecedor`) REFERENCES `fornecedor` (`id_fornecedor`),
+  CONSTRAINT `pesquisa_ibfk_3` FOREIGN KEY (`id_pesquisa_funcionario`) REFERENCES `funcionario` (`id_funcionario`),
+  CONSTRAINT `pesquisa_ibfk_4` FOREIGN KEY (`id_pesquisa_pecas`) REFERENCES `pecas` (`id_pecas`),
+  CONSTRAINT `pesquisa_ibfk_5` FOREIGN KEY (`id_pesquisa_pedidos`) REFERENCES `pedidos` (`id_pedidos`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pesquisa`
+--
+
+LOCK TABLES `pesquisa` WRITE;
+/*!40000 ALTER TABLE `pesquisa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pesquisa` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -203,4 +240,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-24  0:33:37
+-- Dump completed on 2024-11-24  1:07:36
