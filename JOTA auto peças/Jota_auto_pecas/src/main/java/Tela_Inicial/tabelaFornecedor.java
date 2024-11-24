@@ -4,6 +4,15 @@
  */
 package Tela_Inicial;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Ryzen
@@ -27,20 +36,60 @@ public class tabelaFornecedor extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaFiltroFornecedor = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
+
+        tabelaFiltroFornecedor.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "Telefone", "Email"
+            }
+        ));
+        jScrollPane1.setViewportView(tabelaFiltroFornecedor);
+
+        jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -51,12 +100,88 @@ public class tabelaFornecedor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Tela_Inicial telInit = new Tela_Inicial();
+        telInit.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        try {
+            // TODO add your handling code here:
+            carregarDados();
+        } catch (SQLException ex) {
+            Logger.getLogger(tabelaFornecedor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowActivated
+
+    public class DatabaseConnection {
+        public static Connection getConnection() {
+            Connection connection = null;
+            try {
+                String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+                String user = "root";
+                String password = "";
+
+                connection = DriverManager.getConnection(url, user, password);
+            } catch (SQLException e) {
+                System.out.println("Erro ao conectar: " + e.getMessage());
+            }
+            return connection;
+        }
+    }
+    
+    public String nomePesquisa;
+    
+    public void setValores(String nome){
+        nomePesquisa = nome;
+    }
+    
+    private void carregarDados() throws SQLException {
+        DefaultTableModel modelo = (DefaultTableModel) tabelaFiltroFornecedor.getModel();
+        modelo.setRowCount(0); // Limpa a tabela antes de adicionar novos dados
+        
+        Connection conexao = null;
+        PreparedStatement statement = null;
+        
+        String url = "jdbc:mysql://localhost:3306/JOTAautopeca";
+        String usuario = "root";
+        String senha = "";
+
+        conexao = DriverManager.getConnection (url, usuario, senha) ;
+        
+        String sql = "SELECT * FROM fornecedor where nome_fornecedor like ?;"; // Substitua pelo nome da sua tabela
+        statement = conexao.prepareStatement(sql);
+        statement.setString(1, nomePesquisa); // Adiciona o filtro na consulta
+        ResultSet rs = statement.executeQuery();
+        
+        try {
+
+            // Adicionar colunas ao modelo, se necessário
+            modelo.setColumnIdentifiers(new String[]{"ID", "Nome", "Telefone", "Email"}); // Colunas da tabela
+
+            // Adiciona as linhas à tabela
+            while (rs.next()) {
+                modelo.addRow(new Object[]{
+                    rs.getInt("id_fornecedor"),       // Substitua pelos nomes das colunas do banco
+                    rs.getString("nome_fornecedor"),
+                    rs.getString("telefone_fornecedor"),
+                    rs.getString("email_fornecedor")
+                });
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Erro ao carregar dados: " + e.getMessage());
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -93,6 +218,9 @@ public class tabelaFornecedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabelaFiltroFornecedor;
     // End of variables declaration//GEN-END:variables
 }

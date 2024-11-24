@@ -9,6 +9,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -47,7 +49,7 @@ public class tabelaCliente extends javax.swing.JFrame {
     }
     
     private void carregarDados() throws SQLException {
-        DefaultTableModel modelo = (DefaultTableModel) tabelaFiltroCliente.getModel();
+        DefaultTableModel modelo = (DefaultTableModel) tabela_filtro_cliente.getModel();
         modelo.setRowCount(0); // Limpa a tabela antes de adicionar novos dados
         
         Connection conexao = null;
@@ -59,7 +61,7 @@ public class tabelaCliente extends javax.swing.JFrame {
 
         conexao = DriverManager.getConnection (url, usuario, senha) ;
         
-        String sql = "SELECT * FROM cliente where nome_funcionario like ?;"; // Substitua pelo nome da sua tabela
+        String sql = "SELECT * FROM cliente where nome_cliente like ?;"; // Substitua pelo nome da sua tabela
         statement = conexao.prepareStatement(sql);
         statement.setString(1, nomePesquisa); // Adiciona o filtro na consulta
         ResultSet rs = statement.executeQuery();
@@ -67,7 +69,7 @@ public class tabelaCliente extends javax.swing.JFrame {
         try {
 
             // Adicionar colunas ao modelo, se necessário
-            modelo.setColumnIdentifiers(new String[]{"ID", "Nome", "Email", "Placa carro"}); // Colunas da tabela
+            modelo.setColumnIdentifiers(new String[]{"ID", "Nome", "Email", "Telefone"}); // Colunas da tabela
 
             // Adiciona as linhas à tabela
             while (rs.next()) {
@@ -75,7 +77,7 @@ public class tabelaCliente extends javax.swing.JFrame {
                     rs.getInt("id_cliente"),       // Substitua pelos nomes das colunas do banco
                     rs.getString("nome_cliente"),
                     rs.getString("email_cliente"),
-                    rs.getString("email_funcionario")
+                    rs.getString("telefone_cliente")
                 });
             }
 
@@ -101,7 +103,7 @@ public class tabelaCliente extends javax.swing.JFrame {
         jTextPane1 = new javax.swing.JTextPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabela_filtro_cliente = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
 
         tabelaFiltroCliente.setModel(new javax.swing.table.DefaultTableModel(
@@ -123,10 +125,15 @@ public class tabelaCliente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(46, 46, 46));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(46, 46, 46));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabela_filtro_cliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -134,12 +141,17 @@ public class tabelaCliente extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "ID", "Nome", "Email", "Placa"
+                "ID", "Nome", "Email", "Telefone"
             }
         ));
-        jScrollPane3.setViewportView(jTable1);
+        jScrollPane3.setViewportView(tabela_filtro_cliente);
 
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -148,11 +160,9 @@ public class tabelaCliente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jButton2)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,6 +187,22 @@ public class tabelaCliente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Tela_Inicial telInit = new Tela_Inicial();
+        telInit.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        try {
+            // TODO add your handling code here:
+            carregarDados();
+        } catch (SQLException ex) {
+            Logger.getLogger(tabelaCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -220,8 +246,8 @@ public class tabelaCliente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTable tabelaFiltroCliente;
+    private javax.swing.JTable tabela_filtro_cliente;
     // End of variables declaration//GEN-END:variables
 }

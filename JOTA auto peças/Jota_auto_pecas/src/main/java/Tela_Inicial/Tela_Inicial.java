@@ -13,28 +13,15 @@ import Cadastro_pedidos.Cadastro_pedidos;
 import Ordem_Servico.Ordem_Servico;
 import Tela_estoque.Tela_estoque;
 import Tela_mapa.Tela_Mapa_Kevin;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-
 
 /**
  *
- * @author f.silva
+ * @author farne
  */
 public class Tela_Inicial extends javax.swing.JFrame {
 
     /**
-     * Creates new form Tela_Inicial
+     * Creates new form Menu_principal_002
      */
     public Tela_Inicial() {
         initComponents();
@@ -49,7 +36,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        filtro = new javax.swing.ButtonGroup();
+        Filtro = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -60,17 +47,15 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        filtroFuncionario = new javax.swing.JRadioButton();
-        filtroCliente = new javax.swing.JRadioButton();
-        filtroFornecedor = new javax.swing.JRadioButton();
-        filtroCarro = new javax.swing.JRadioButton();
-        filtroPeca = new javax.swing.JRadioButton();
-        filtroPedido = new javax.swing.JRadioButton();
         Filtragem = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -132,121 +117,85 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jLabel3.setText("Pesquisa");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 6, -1, -1));
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("dd/mm/aaaa");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 8, 83, 26));
-
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("hh:mm");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 40, 47, -1));
-
         jButton6.setText("Pesquisar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 469, -1, -1));
-
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Nome");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
-
-        filtroFuncionario.setBackground(new java.awt.Color(65, 65, 65));
-        filtro.add(filtroFuncionario);
-        filtroFuncionario.setForeground(new java.awt.Color(255, 255, 255));
-        filtroFuncionario.setText("Funcionario");
-        filtroFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filtroFuncionarioActionPerformed(evt);
-            }
-        });
-        jPanel2.add(filtroFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
-
-<<<<<<< HEAD
-        filtroCliente.setBackground(new java.awt.Color(65, 65, 65));
-        filtro.add(filtroCliente);
-        filtroCliente.setForeground(new java.awt.Color(255, 255, 255));
-        filtroCliente.setText("Cliente");
-        filtroCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filtroClienteActionPerformed(evt);
-=======
-        Buscar_peça_tela_inicial.setText("Buscar");
-        Buscar_peça_tela_inicial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buscar_peça_tela_inicialActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Buscar_peça_tela_inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, -1, -1));
-
-        jLabel6.setText("Funcionario");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
-
-        jLabel7.setText("Peça");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        Estoque.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "ID", "Nome", "Quantidade"
->>>>>>> 5745ebc1425ef47dcdfba487e9ec1f08cf14c906
-            }
-        });
-        jPanel2.add(filtroCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
-
-        filtroFornecedor.setBackground(new java.awt.Color(65, 65, 65));
-        filtro.add(filtroFornecedor);
-        filtroFornecedor.setForeground(new java.awt.Color(255, 255, 255));
-        filtroFornecedor.setText("Fornecedor");
-        filtroFornecedor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filtroFornecedorActionPerformed(evt);
-            }
-        });
-        jPanel2.add(filtroFornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
-
-        filtroCarro.setBackground(new java.awt.Color(65, 65, 65));
-        filtro.add(filtroCarro);
-        filtroCarro.setForeground(new java.awt.Color(255, 255, 255));
-        filtroCarro.setText("Carro");
-        filtroCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filtroCarroActionPerformed(evt);
-            }
-        });
-        jPanel2.add(filtroCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, -1, -1));
-
-        filtroPeca.setBackground(new java.awt.Color(65, 65, 65));
-        filtro.add(filtroPeca);
-        filtroPeca.setForeground(new java.awt.Color(255, 255, 255));
-        filtroPeca.setText("Peça");
-        filtroPeca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filtroPecaActionPerformed(evt);
-            }
-        });
-        jPanel2.add(filtroPeca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
-
-        filtroPedido.setBackground(new java.awt.Color(65, 65, 65));
-        filtro.add(filtroPedido);
-        filtroPedido.setForeground(new java.awt.Color(255, 255, 255));
-        filtroPedido.setText("Pedido");
-        filtroPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filtroPedidoActionPerformed(evt);
-            }
-        });
-        jPanel2.add(filtroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, -1, -1));
 
         Filtragem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(Filtragem, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 759, -1));
+        Filtragem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FiltragemMouseClicked(evt);
+            }
+        });
+        jPanel2.add(Filtragem, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 60, 630, -1));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Nome");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+
+        Filtro.add(jRadioButton1);
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("Funcionario");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
+
+        Filtro.add(jRadioButton2);
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setText("Fornecedor");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+
+        Filtro.add(jRadioButton3);
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.setText("Peça");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
+
+        Filtro.add(jRadioButton4);
+        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton4.setText("Cliente");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
+
+        Filtro.add(jRadioButton5);
+        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton5.setText("Carro");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        Filtro.add(jRadioButton6);
+        jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton6.setText("Pedido");
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
 
         jButton7.setText("Sair");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -297,20 +246,19 @@ public class Tela_Inicial extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                                .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -345,7 +293,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
                         .addComponent(jButton7))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -353,15 +301,22 @@ public class Tela_Inicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1094, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 598, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Cadastro_carro_tela cadCar = new Cadastro_carro_tela();
+        cadCar.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -377,18 +332,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        Cadastro_carro_tela cadCar = new Cadastro_carro_tela();
-        cadCar.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         Ordem_Servico ordServ = new Ordem_Servico();
@@ -403,11 +346,15 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         Tela_Mapa_Kevin TMap = new Tela_Mapa_Kevin();
         TMap.setVisible(true);
         this.dispose();
-
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
@@ -433,49 +380,46 @@ public class Tela_Inicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
 
-<<<<<<< HEAD
-    private void Busca_funcionario_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Busca_funcionario_tela_inicialActionPerformed
-       
-    }//GEN-LAST:event_Busca_funcionario_tela_inicialActionPerformed
-=======
-    public int filter;
+    private void FiltragemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltragemMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FiltragemMouseClicked
+
+    public int escolhaFiltragem;
     
-    private void filtroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroClienteActionPerformed
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
-        filter = 2;
-    }//GEN-LAST:event_filtroClienteActionPerformed
+        escolhaFiltragem = 1;
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void filtroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroFuncionarioActionPerformed
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-        filter = 1;
-    }//GEN-LAST:event_filtroFuncionarioActionPerformed
+        escolhaFiltragem = 3;
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void filtroPecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroPecaActionPerformed
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
-        filter = 3;
-    }//GEN-LAST:event_filtroPecaActionPerformed
+        escolhaFiltragem = 5;
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
 
-    private void filtroCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroCarroActionPerformed
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
-        filter = 4;
-    }//GEN-LAST:event_filtroCarroActionPerformed
+        escolhaFiltragem = 2;
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
-    private void filtroFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroFornecedorActionPerformed
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
-        filter = 5;
-    }//GEN-LAST:event_filtroFornecedorActionPerformed
+        escolhaFiltragem = 4;
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
 
-    private void filtroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroPedidoActionPerformed
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // TODO add your handling code here:
-        filter = 6;
-    }//GEN-LAST:event_filtroPedidoActionPerformed
+        escolhaFiltragem = 6;
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
 
-    public static String pesquisa;
-    
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        pesquisa = Filtragem.getText();
-        switch(filter){
+        String pesquisa = Filtragem.getText();
+        switch(escolhaFiltragem){
             case 1:
                 tabelaFuncionario tabFun = new tabelaFuncionario();
                 tabFun.setValores(pesquisa);
@@ -489,23 +433,32 @@ public class Tela_Inicial extends javax.swing.JFrame {
                 this.dispose();
                 break;
             case 3:
+                tabelaFornecedor tabFor = new tabelaFornecedor();
+                tabFor.setValores(pesquisa);
+                tabFor.setVisible(true);
+                this.dispose();
                 break;
             case 4:
+                tabelaCarro tabCar = new tabelaCarro();
+                tabCar.setValores(pesquisa);
+                tabCar.setVisible(true);
+                this.dispose();
                 break;
             case 5:
+                tabelaPeca tabPeca = new tabelaPeca();
+                tabPeca.setValores(pesquisa);
+                tabPeca.setVisible(true);
+                this.dispose();
                 break;
             case 6:
+                tabelaPedido tabPed = new tabelaPedido();
+                tabPed.setValores(pesquisa);
+                tabPed.setVisible(true);
+                this.dispose();
                 break;
         }
     }//GEN-LAST:event_jButton6ActionPerformed
->>>>>>> 0e72c97aaf97f0fca115504a0798add25af7c97c
 
-    private void Buscar_peça_tela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buscar_peça_tela_inicialActionPerformed
-     
-    }//GEN-LAST:event_Buscar_peça_tela_inicialActionPerformed
-
-    
-    
     /**
      * @param args the command line arguments
      */
@@ -532,6 +485,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Tela_Inicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -543,13 +497,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Filtragem;
-    private javax.swing.ButtonGroup filtro;
-    private javax.swing.JRadioButton filtroCarro;
-    private javax.swing.JRadioButton filtroCliente;
-    private javax.swing.JRadioButton filtroFornecedor;
-    private javax.swing.JRadioButton filtroFuncionario;
-    private javax.swing.JRadioButton filtroPeca;
-    private javax.swing.JRadioButton filtroPedido;
+    private javax.swing.ButtonGroup Filtro;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -564,10 +512,14 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
     // End of variables declaration//GEN-END:variables
 }

@@ -165,7 +165,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
                 conexao = DriverManager.getConnection(url, usuario, senha);
 
-                String sql = "INSERT INTO cliente(nome_cliente, CPF_cliente, email_cliente, telefone_cliente, bairro_clienet, rua_clienet) VALUES(?, ?, ?, ?, ?, ?);";
+                String sql = "INSERT INTO cliente(nome_cliente, CPF_cliente, email_cliente, telefone_cliente, bairro_cliente, rua_cliente) VALUES(?, ?, ?, ?, ?, ?);";
                 statement = conexao.prepareStatement(sql);
                 statement.setString(1, nome_cadastrocliente.getText());
                 statement.setString(2, cpf_cadastrocliente.getText());
