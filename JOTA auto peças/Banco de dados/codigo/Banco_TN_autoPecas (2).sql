@@ -165,6 +165,34 @@ LOCK TABLES `funcionario` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `ordem_servico`
+--
+
+DROP TABLE IF EXISTS `ordem_servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ordem_servico` (
+  `id_ordem` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_cliente` varchar(50) DEFAULT NULL,
+  `cpf_cliente` varchar(11) DEFAULT NULL,
+  `Data_nascimento_Cliente` varchar(10) DEFAULT NULL,
+  `descricao_ordem` varchar(150) DEFAULT NULL,
+  `Data_criação_Cliente` varchar(50) DEFAULT NULL,
+  `Data_ultimodia_Cliente` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_ordem`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ordem_servico`
+--
+
+LOCK TABLES `ordem_servico` WRITE;
+/*!40000 ALTER TABLE `ordem_servico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ordem_servico` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pecas`
 --
 
@@ -268,4 +296,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-24 16:41:26
+-- Dump completed on 2024-11-24 18:13:19
