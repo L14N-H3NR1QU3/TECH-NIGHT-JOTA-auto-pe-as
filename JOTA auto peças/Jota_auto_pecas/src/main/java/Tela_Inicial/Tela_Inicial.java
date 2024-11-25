@@ -12,6 +12,7 @@ import Cadastro_pecas_lotes.Cadastro_pecas_lotes;
 import Cadastro_pedidos.Cadastro_pedidos;
 import Ordem_Servico.Ordem_Servico;
 import Tela_estoque.Tela_estoque;
+import Tela_login_Concluida.Tela_login;
 import Tela_mapa.Tela_Mapa_Kevin;
 
 /**
@@ -348,9 +349,8 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     private void IDA_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDA_loginActionPerformed
         // TODO add your handling code here:
-        Tela_login_Concluida ifaLog = new Tela_login_Concluida();
+        Tela_login ifaLog = new Tela_login();
         ifaLog.setVisible(true);
-
         this.dispose();
     }//GEN-LAST:event_IDA_loginActionPerformed
 
