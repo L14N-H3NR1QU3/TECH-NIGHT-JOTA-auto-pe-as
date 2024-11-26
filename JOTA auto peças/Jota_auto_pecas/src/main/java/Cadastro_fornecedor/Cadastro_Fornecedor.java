@@ -60,15 +60,19 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
         jLabel_tituloF.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_tituloF.setText("Cadastro de Fornecedor");
 
+        jLabel_nomeF.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel_nomeF.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_nomeF.setText(" Nome do Fornecedor");
+        jLabel_nomeF.setText("Nome do Fornecedor");
 
+        jLabel_TelefoneF.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel_TelefoneF.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_TelefoneF.setText("Telefone");
 
+        jLabel_emailF.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel_emailF.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_emailF.setText("E-mail");
 
+        jLabel_CidadeF.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel_CidadeF.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_CidadeF.setText("Cidade");
 
@@ -96,32 +100,38 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel_tituloF))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel_tituloF))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(Voltar_fornecedor)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(91, 91, 91)
+                                .addComponent(Cadastro_fornecedor))
+                            .addComponent(jLabel_iconeF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Voltar_fornecedor)))
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(Cadastro_fornecedor))
-                    .addComponent(jLabel_iconeF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(227, 227, 227)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_TelefoneF)
+                                    .addComponent(jLabel_emailF)
+                                    .addComponent(jLabel_CidadeF, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(89, 89, 89))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel_nomeF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Nome_fornecedor_cadastroF, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(Cidade_fornecedor_cadastroF)
+                            .addComponent(Telefone_fornecedor_cadastroF)
+                            .addComponent(Email_fornecedor_cadastroF))
+                        .addGap(337, 337, 337)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(227, 227, 227)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_TelefoneF)
-                    .addComponent(jLabel_nomeF)
-                    .addComponent(jLabel_emailF)
-                    .addComponent(jLabel_CidadeF, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Nome_fornecedor_cadastroF)
-                    .addComponent(Telefone_fornecedor_cadastroF)
-                    .addComponent(Email_fornecedor_cadastroF)
-                    .addComponent(Cidade_fornecedor_cadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(471, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +159,7 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Email_fornecedor_cadastroF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_emailF))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 285, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 269, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Voltar_fornecedor)
                     .addComponent(Cadastro_fornecedor))

@@ -51,7 +51,6 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         Text_placa_carro = new javax.swing.JTextField();
         cidade_cadastrocliente1 = new javax.swing.JTextField();
         jlbl_placa_carro = new javax.swing.JLabel();
-        Imagem_cadastro_cliente = new javax.swing.JLabel();
         jlbl_bairro1 = new javax.swing.JLabel();
         Bairro_cadastrocliente1 = new javax.swing.JTextField();
 
@@ -73,7 +72,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
 
         jlbl_telefone.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_telefone.setText("Telefone");
-        jpanel_background.add(jlbl_telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
+        jpanel_background.add(jlbl_telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, -1, -1));
 
         jlbl_email.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_email.setText("E-mail");
@@ -86,7 +85,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
                 botaosair_cadastroclienteActionPerformed(evt);
             }
         });
-        jpanel_background.add(botaosair_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 90, -1));
+        jpanel_background.add(botaosair_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 90, -1));
 
         botaocadastro_cadastrocliente.setText("Cadastrar");
         botaocadastro_cadastrocliente.setPreferredSize(new java.awt.Dimension(70, 25));
@@ -104,7 +103,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jpanel_background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 10, 130, 80));
-        jpanel_background.add(telefone_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 280, -1));
+        jpanel_background.add(telefone_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 280, -1));
 
         cpf_cadastrocliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,20 +117,17 @@ public class Cadastro_cliente extends javax.swing.JFrame {
         jlbl_cidade.setText("Cidade");
         jpanel_background.add(jlbl_cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
         jpanel_background.add(nome_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 280, -1));
-        jpanel_background.add(Text_placa_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 280, -1));
+        jpanel_background.add(Text_placa_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 280, -1));
         jpanel_background.add(cidade_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 280, -1));
 
         jlbl_placa_carro.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_placa_carro.setText("Placa do carro");
-        jpanel_background.add(jlbl_placa_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
-
-        Imagem_cadastro_cliente.setText("jLabel2");
-        jpanel_background.add(Imagem_cadastro_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 42, 510, 520));
+        jpanel_background.add(jlbl_placa_carro, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, -1, -1));
 
         jlbl_bairro1.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_bairro1.setText("Bairro");
-        jpanel_background.add(jlbl_bairro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
-        jpanel_background.add(Bairro_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 280, -1));
+        jpanel_background.add(jlbl_bairro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
+        jpanel_background.add(Bairro_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 280, -1));
 
         getContentPane().add(jpanel_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -323,7 +319,6 @@ public class Cadastro_cliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Bairro_cadastrocliente1;
     private javax.swing.JTextField Email_cadastrocliente;
-    private javax.swing.JLabel Imagem_cadastro_cliente;
     private javax.swing.JTextField Text_placa_carro;
     private javax.swing.JButton botaocadastro_cadastrocliente;
     private javax.swing.JButton botaosair_cadastrocliente;

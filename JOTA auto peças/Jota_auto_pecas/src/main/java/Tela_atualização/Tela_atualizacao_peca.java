@@ -76,24 +76,22 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
         jPanel1.add(jlbl_nome_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
         Sai_Att_pecas.setText("Sair");
-        Sai_Att_pecas.setBorder(null);
         Sai_Att_pecas.setPreferredSize(new java.awt.Dimension(80, 30));
         Sai_Att_pecas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Sai_Att_pecasActionPerformed(evt);
             }
         });
-        jPanel1.add(Sai_Att_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 80, 30));
+        jPanel1.add(Sai_Att_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 80, 20));
 
         jbutton_salvar.setText("Salvar");
-        jbutton_salvar.setBorder(null);
         jbutton_salvar.setPreferredSize(new java.awt.Dimension(80, 30));
         jbutton_salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbutton_salvarActionPerformed(evt);
             }
         });
-        jPanel1.add(jbutton_salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 570, 80, 30));
+        jPanel1.add(jbutton_salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 580, 80, 20));
         jPanel1.add(Novo_preço, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 295, -1));
         jPanel1.add(jfield_ID_pecas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 295, -1));
         jPanel1.add(jfield_QTD_peca, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 295, -1));

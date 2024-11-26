@@ -49,18 +49,25 @@ public class solicitacao_pecas extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Nome_cliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Nome_cliente.setForeground(new java.awt.Color(255, 255, 255));
         Nome_cliente.setText("Nome cliente");
-        jPanel1.add(Nome_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        jPanel1.add(Nome_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
 
+        Nome_peça.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Nome_peça.setForeground(new java.awt.Color(255, 255, 255));
         Nome_peça.setText("Nome peça");
-        jPanel1.add(Nome_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jPanel1.add(Nome_peça, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
 
+        Nome_fornecedor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Nome_fornecedor.setForeground(new java.awt.Color(255, 255, 255));
         Nome_fornecedor.setText("Nome fornecedor");
-        jPanel1.add(Nome_fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
+        jPanel1.add(Nome_fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Solicitação de peças");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +75,7 @@ public class solicitacao_pecas extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 759, -1));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 260, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel6.setText("jLabel1");
@@ -81,7 +88,7 @@ public class solicitacao_pecas extends javax.swing.JFrame {
                 botaoSolicitar_cadastroclienteActionPerformed(evt);
             }
         });
-        jPanel1.add(botaoSolicitar_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 550, 90, -1));
+        jPanel1.add(botaoSolicitar_cadastrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 570, 80, -1));
 
         botaosair_cadastrocliente1.setText("Sair");
         botaosair_cadastrocliente1.setPreferredSize(new java.awt.Dimension(70, 25));
@@ -90,13 +97,15 @@ public class solicitacao_pecas extends javax.swing.JFrame {
                 botaosair_cadastrocliente1ActionPerformed(evt);
             }
         });
-        jPanel1.add(botaosair_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 90, -1));
+        jPanel1.add(botaosair_cadastrocliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 70, -1));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Quantidade");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
 
         jTextField5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 759, -1));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 260, -1));
 
         jTextField6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +113,7 @@ public class solicitacao_pecas extends javax.swing.JFrame {
                 jTextField6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 759, -1));
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 260, -1));
 
         jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +121,7 @@ public class solicitacao_pecas extends javax.swing.JFrame {
                 jTextField7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 759, -1));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 260, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel5.setText("jLabel1");

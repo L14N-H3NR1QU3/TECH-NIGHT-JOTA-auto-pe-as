@@ -45,7 +45,6 @@ public class Tela_login extends javax.swing.JFrame {
         nome_funcionario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         Entrar_Login_funcionario = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,14 +54,14 @@ public class Tela_login extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Nome_login_telaLogin.setForeground(new java.awt.Color(255, 255, 255));
-        Nome_login_telaLogin.setText("Nome");
-        jPanel1.add(Nome_login_telaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+        Nome_login_telaLogin.setText("Usúario");
+        jPanel1.add(Nome_login_telaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, -1, -1));
 
         Senha_login_telaLogin.setForeground(new java.awt.Color(255, 255, 255));
         Senha_login_telaLogin.setText("Senha");
-        jPanel1.add(Senha_login_telaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
-        jPanel1.add(SenhaFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 295, -1));
-        jPanel1.add(nome_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 295, -1));
+        jPanel1.add(Senha_login_telaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
+        jPanel1.add(SenhaFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 540, -1));
+        jPanel1.add(nome_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 540, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,10 +74,7 @@ public class Tela_login extends javax.swing.JFrame {
                 Entrar_Login_funcionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(Entrar_Login_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
-
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 480, -1));
+        jPanel1.add(Entrar_Login_funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
         jLabel3.setText("jLabel1");
@@ -185,7 +181,6 @@ public class Tela_login extends javax.swing.JFrame {
     private javax.swing.JLabel Nome_login_telaLogin;
     private javax.swing.JPasswordField SenhaFuncionario;
     private javax.swing.JLabel Senha_login_telaLogin;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
