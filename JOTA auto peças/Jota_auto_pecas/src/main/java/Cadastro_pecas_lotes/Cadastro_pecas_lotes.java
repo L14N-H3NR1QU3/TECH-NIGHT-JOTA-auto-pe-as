@@ -343,7 +343,7 @@ public class Cadastro_pecas_lotes extends javax.swing.JFrame {
                 statement.setString(4, Preço_peça.getText());
 
                 statement.executeUpdate();
-
+                JOptionPane.showMessageDialog(null, "Cadastro concluido!");
                 System.out.println("PASS");
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");

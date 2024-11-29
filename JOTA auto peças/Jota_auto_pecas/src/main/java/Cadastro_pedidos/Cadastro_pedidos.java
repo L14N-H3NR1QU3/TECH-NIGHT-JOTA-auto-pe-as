@@ -338,7 +338,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        JOptionPane.showMessageDialog(null, "Cadastro concluido!");
         String nome = NomeCliente.getText();
         String telefone = TelefoneCliente.getText();
         String email = EmailCliente.getText();
@@ -376,7 +376,7 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 statement.setString(6, DataEntrega.getText());
                 statement.setString(7, String.valueOf(table.getValueAt(linhaSelecionada, 0)));
                 statement.executeUpdate();
-
+                JOptionPane.showMessageDialog(null, "Criada concluido!");
                 System.out.println("PASS");
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");

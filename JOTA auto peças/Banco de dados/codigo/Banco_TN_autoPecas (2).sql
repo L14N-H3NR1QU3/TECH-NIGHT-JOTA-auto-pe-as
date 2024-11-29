@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: jotaautopecas
+-- Host: 127.0.0.1    Database: jotaautopeca
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.32-MariaDB
 
@@ -177,10 +177,10 @@ CREATE TABLE `ordem_servico` (
   `cpf_cliente` varchar(11) DEFAULT NULL,
   `Data_nascimento_Cliente` varchar(10) DEFAULT NULL,
   `descricao_ordem` varchar(150) DEFAULT NULL,
-  `Data_criação_Cliente` varchar(50) DEFAULT NULL,
   `Data_ultimodia_Cliente` varchar(50) DEFAULT NULL,
+  `data_criacao_servico` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id_ordem`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,6 +189,7 @@ CREATE TABLE `ordem_servico` (
 
 LOCK TABLES `ordem_servico` WRITE;
 /*!40000 ALTER TABLE `ordem_servico` DISABLE KEYS */;
+INSERT INTO `ordem_servico` VALUES (1,'asd','12345678901','12/12/1234','asd','12/12/1234','12/12/1234'),(2,'asd','12345678901','12/12/1234','asfsdgasgaga','12/12/1234','12/12/1234'),(3,'asd','12345678910','12/12/1234','12/12/1234asfd','12/12/1234','12/12/1234');
 /*!40000 ALTER TABLE `ordem_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -296,4 +297,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-24 18:13:19
+-- Dump completed on 2024-11-29 20:23:30

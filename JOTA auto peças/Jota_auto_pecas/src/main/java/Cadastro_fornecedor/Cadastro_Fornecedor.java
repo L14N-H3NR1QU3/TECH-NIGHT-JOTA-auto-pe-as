@@ -278,6 +278,7 @@ public class Cadastro_Fornecedor extends javax.swing.JFrame {
                 statement.setString(3, Email_fornecedor_cadastroF.getText());
                 statement.setString(4, Cidade_fornecedor_cadastroF.getText());
                 statement.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Cadastro concluido!");
                 System.out.println("PASS");
             } catch (SQLException ex) {
                JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");

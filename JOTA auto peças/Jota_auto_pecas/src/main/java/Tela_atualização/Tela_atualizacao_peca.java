@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -133,7 +134,7 @@ public class Tela_atualizacao_peca extends javax.swing.JFrame {
 
             
             statement.executeUpdate();
-            
+            JOptionPane.showMessageDialog(null, "Atualização concluido!");
             System.out.println("Quantidade de pecas e nome atualizados com sucesso.");
         } catch (SQLException e) {
             System.out.println("Deu esse erro aqui ô: " + e.getMessage());

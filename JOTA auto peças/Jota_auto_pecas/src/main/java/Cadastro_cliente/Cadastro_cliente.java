@@ -178,6 +178,7 @@ public class Cadastro_cliente extends javax.swing.JFrame {
                 statement.setString(7, Text_placa_carro.getText());
 
                 statement.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Cadastro concluido!");
                 System.out.println("PASS");
             } catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");

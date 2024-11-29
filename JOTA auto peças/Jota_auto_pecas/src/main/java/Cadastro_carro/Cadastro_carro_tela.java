@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -145,7 +146,7 @@ public class Cadastro_carro_tela extends javax.swing.JFrame {
             statement.setString(2, Text_modelo_cadastro_carro.getText());
             statement.setString(3, Text_modelo_cadastro_carro.getText());
             statement.executeUpdate();
-            
+            JOptionPane.showMessageDialog(null, "Cadastro concluido!");
             System.out.println("PASS");
             
             

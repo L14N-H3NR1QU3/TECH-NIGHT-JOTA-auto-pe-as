@@ -345,6 +345,7 @@ public class Frame_Cadastro_Funcionario extends javax.swing.JFrame {
                 statement.setString(5, Email_funcionario.getText());
                 statement.setString(6, String.valueOf(Senha_funcionario.getPassword()));
                 statement.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Cadastro concluido!");
                 System.out.println("PASS");
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
