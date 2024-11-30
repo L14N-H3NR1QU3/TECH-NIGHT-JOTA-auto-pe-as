@@ -376,7 +376,6 @@ public class Cadastro_pedidos extends javax.swing.JFrame {
                 statement.setString(6, DataEntrega.getText());
                 statement.setString(7, String.valueOf(table.getValueAt(linhaSelecionada, 0)));
                 statement.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Criada concluido!");
                 System.out.println("PASS");
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "CADASTRO INVALIDO");
